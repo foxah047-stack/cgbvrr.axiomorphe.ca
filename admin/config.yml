@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: foxah047-stack/cgbvrr.axiomorphe.ca
+  branch: main
+
+media_folder: assets/img
+public_folder: /assets/img
+
+collections:
+  - name: posts
+    label: Nouvelles / News
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: post }
+      - { label: Titre (FR), name: title_fr, widget: string }
+      - { label: Title (EN), name: title_en, widget: string }
+      - { label: Image, name: image, widget: image, required: false }
+      - { label: Catégorie / Category, name: categorie, widget: string }
+      - { label: Projet / Project, name: projet, widget: string }
+      - { label: Auteur / Author, name: auteur, widget: string }
+      - { label: Extrait (FR), name: excerpt_fr, widget: text }
+      - { label: Excerpt (EN), name: excerpt_en, widget: text }
+      - { label: Contenu (FR), name: body_fr, widget: markdown }
+      - { label: Content (EN), name: body_en, widget: markdown }
