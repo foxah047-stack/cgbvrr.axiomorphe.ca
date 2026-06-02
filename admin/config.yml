@@ -2,7 +2,6 @@ backend:
   name: github
   repo: foxah047-stack/cgbvrr.axiomorphe.ca
   branch: main
-  base_url: https://sveltia-cms-auth.pages.dev
 
 media_folder: assets/img
 public_folder: /assets/img
