@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Caméras anti-braconnage déployées aux bassins prioritaires"
-image: "/assets/img/news-cameras.jpg"
-categorie: "Protection"
-projet: "Réseau de surveillance anti-braconnage"
-auteur: "Équipe terrain CGBVRR"
-excerpt: "De nouveaux équipements de surveillance ont été installés à plusieurs bassins à saumon prioritaires du bassin versant dans le cadre de notre programme de protection des ressources."
+title: Caméras anti-braconnage déployées aux bassins prioritaires
+image: /assets/img/news-cameras.jpg
+categorie: Protection
+projet: Réseau de surveillance anti-braconnage
+auteur: Équipe terrain CGBVRR
+excerpt: De nouveaux équipements de surveillance ont été installés à plusieurs bassins à saumon prioritaires du bassin versant dans le cadre de notre programme de protection des ressources.
 ---
 
 De nouveaux équipements de surveillance ont été installés à plusieurs bassins à saumon prioritaires du bassin versant. Ces caméras à déclenchement automatique permettent de documenter les activités de pêche illégale sans nécessiter de présence humaine permanente sur les sites.
