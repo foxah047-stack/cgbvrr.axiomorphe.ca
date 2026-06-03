@@ -137,7 +137,7 @@ body {
     radial-gradient(ellipse at 80% 30%, rgba(58,90,46,0.4) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 100%, rgba(92,64,51,0.3) 0%, transparent 40%),
     linear-gradient(170deg, rgba(26,42,24,0.7) 0%, rgba(30,56,40,0.7) 35%, rgba(22,40,48,0.7) 65%, rgba(14,30,36,0.7) 100%),
-    url('../img/hero-1920.webp');
+    url('../img/hero-2560.webp');
   background-size: cover;
   background-position: center;
 }
