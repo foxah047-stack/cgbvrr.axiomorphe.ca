@@ -44,8 +44,48 @@ document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.getElementById('nav-hamburger');
   const navLinks  = document.querySelector('.nav-links');
   if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
   }
+
+  // Director preview dropdown panels
+  const panelItems = document.querySelectorAll('.nav-has-panel');
+  panelItems.forEach(item => {
+    const trigger = item.querySelector('.nav-panel-trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', event => {
+      event.preventDefault();
+      const willOpen = !item.classList.contains('open');
+      panelItems.forEach(other => {
+        other.classList.remove('open');
+        const otherTrigger = other.querySelector('.nav-panel-trigger');
+        if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+      });
+      item.classList.toggle('open', willOpen);
+      trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+  });
+
+  document.addEventListener('click', event => {
+    if (event.target.closest('.nav-has-panel')) return;
+    panelItems.forEach(item => {
+      item.classList.remove('open');
+      const trigger = item.querySelector('.nav-panel-trigger');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    panelItems.forEach(item => {
+      item.classList.remove('open');
+      const trigger = item.querySelector('.nav-panel-trigger');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    });
+  });
 
   // ── LEAFLET MAP ──
   if (!document.getElementById('watershed-map')) return;

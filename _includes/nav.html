@@ -7,16 +7,85 @@
       <span class="nav-name-sub" data-lang="fr">Restigouche River Watershed Management Council</span>
     </a>
   </div>
-  <ul class="nav-links">
-    <li><a href="/#mission" data-lang="en">Mission</a><a href="/#mission" data-lang="fr">Mission</a></li>
-    <li><a href="/#carte" data-lang="en">Watershed</a><a href="/#carte" data-lang="fr">Bassin versant</a></li>
+
+  <ul class="nav-links" id="primary-navigation">
+    <li><a href="/" data-lang="en">Home</a><a href="/" data-lang="fr">Accueil</a></li>
+
+    <li class="nav-item nav-has-panel">
+      <button class="nav-panel-trigger" type="button" aria-expanded="false" aria-controls="about-panel">
+        <span data-lang="en">About</span><span data-lang="fr">À propos</span>
+      </button>
+      <div class="nav-panel" id="about-panel">
+        <div class="nav-panel-intro">
+          <p class="nav-panel-kicker" data-lang="en">Organization</p>
+          <p class="nav-panel-kicker" data-lang="fr">Organisation</p>
+          <h2 data-lang="en">About the Council</h2>
+          <h2 data-lang="fr">À propos du Conseil</h2>
+          <p data-lang="en">Gouvernance, territory, mission and the people behind watershed management.</p>
+          <p data-lang="fr">Gouvernance, territoire, mission et personnes derrière la gestion du bassin versant.</p>
+        </div>
+        <div class="nav-panel-links">
+          <a href="/#mission"><span>Mission</span><small>Rôle et mission publique</small></a>
+          <a href="/#carte"><span>Territoire</span><small>Bassin versant et communautés</small></a>
+          <a href="/equipe/"><span>Équipe</span><small>Équipe et collaborateurs</small></a>
+          <a href="/#partenaires"><span>Gouvernance</span><small>Partenaires et structure</small></a>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item nav-has-panel">
+      <button class="nav-panel-trigger" type="button" aria-expanded="false" aria-controls="projects-panel">
+        <span data-lang="en">Projects</span><span data-lang="fr">Projets</span>
+      </button>
+      <div class="nav-panel nav-panel-wide" id="projects-panel">
+        <div class="nav-panel-intro">
+          <p class="nav-panel-kicker" data-lang="en">Current work</p>
+          <p class="nav-panel-kicker" data-lang="fr">Travaux en cours</p>
+          <h2 data-lang="en">Current projects</h2>
+          <h2 data-lang="fr">Projets en cours</h2>
+          <p data-lang="en">Field work, restoration, science monitoring and watershed protection.</p>
+          <p data-lang="fr">Travaux de terrain, restauration, suivi scientifique et protection du bassin versant.</p>
+        </div>
+        <div class="nav-panel-links nav-panel-links-two">
+          <a href="/projets/watershade/"><span>WaterShade</span><small>Stratégie des refuges d’eau froide</small></a>
+          <a href="/#projets"><span>Refuges d’eau froide</span><small>Protection et amélioration</small></a>
+          <a href="/projets/watershade/#ten-mile-pool"><span>10 Mile Pool</span><small>Sanctuaire prioritaire pour le saumon</small></a>
+          <a href="/projets/watershade/#coxs-brook"><span>Coxs Brook</span><small>Exemple de stabilisation de cours d’eau</small></a>
+          <a href="/#projets"><span>Surveillance anti-braconnage</span><small>Travail saisonnier de protection</small></a>
+          <a href="/#projets"><span>Reboisement riverain</span><small>Restauration des berges</small></a>
+        </div>
+      </div>
+    </li>
+
     <li><a href="/nouvelles/" data-lang="en">News</a><a href="/nouvelles/" data-lang="fr">Nouvelles</a></li>
-    <li><a href="/#projets" data-lang="en">Projects</a><a href="/#projets" data-lang="fr">Projets</a></li>
-    <li><a href="/#partenaires" data-lang="en">Partners</a><a href="/#partenaires" data-lang="fr">Partenaires</a></li>
+
+    <li class="nav-item nav-has-panel">
+      <button class="nav-panel-trigger" type="button" aria-expanded="false" aria-controls="resources-panel">
+        <span data-lang="en">Resources</span><span data-lang="fr">Ressources</span>
+      </button>
+      <div class="nav-panel" id="resources-panel">
+        <div class="nav-panel-intro">
+          <p class="nav-panel-kicker" data-lang="en">Public information</p>
+          <p class="nav-panel-kicker" data-lang="fr">Information publique</p>
+          <h2 data-lang="en">Resources</h2>
+          <h2 data-lang="fr">Ressources</h2>
+          <p data-lang="en">A future home for reports, maps, technical documents and useful links.</p>
+          <p data-lang="fr">Un futur espace pour les rapports, cartes, documents techniques et liens utiles.</p>
+        </div>
+        <div class="nav-panel-links">
+          <a href="/#carte"><span>Cartes</span><small>Vue du bassin versant</small></a>
+          <a href="/#projets"><span>Rapports</span><small>Documents de projets</small></a>
+          <a href="/#partenaires"><span>Partenaires</span><small>Organismes et bailleurs de fonds</small></a>
+          <a href="/#contact"><span>Liens utiles</span><small>À confirmer</small></a>
+        </div>
+      </div>
+    </li>
+
     <li><a href="/#contact" data-lang="en">Contact</a><a href="/#contact" data-lang="fr">Contact</a></li>
     <li><button class="lang-toggle" id="lang-btn" onclick="toggleLang()">FR</button></li>
   </ul>
-  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-controls="primary-navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
