@@ -27,7 +27,7 @@
         <div class="nav-panel-links">
           <a href="/#mission"><span>Mission</span><small>Rôle et mission publique</small></a>
           <a href="/#carte"><span>Territoire</span><small>Bassin versant et communautés</small></a>
-          <a href="/equipe/"><span>Équipe</span><small>Équipe et collaborateurs</small></a>
+          <a href="/team/"><span>Équipe</span><small>Équipe et collaborateurs</small></a>
           <a href="/#partenaires"><span>Gouvernance</span><small>Partenaires et structure</small></a>
         </div>
       </div>
@@ -47,17 +47,35 @@
           <p data-lang="fr">Travaux de terrain, restauration, suivi scientifique et protection du bassin versant.</p>
         </div>
         <div class="nav-panel-links nav-panel-links-two">
-          <a href="/projets/watershade/"><span>WaterShade</span><small>Stratégie des refuges d’eau froide</small></a>
-          <a href="/#projets"><span>Refuges d’eau froide</span><small>Protection et amélioration</small></a>
-          <a href="/projets/watershade/#ten-mile-pool"><span>10 Mile Pool</span><small>Sanctuaire prioritaire pour le saumon</small></a>
-          <a href="/projets/watershade/#coxs-brook"><span>Coxs Brook</span><small>Exemple de stabilisation de cours d’eau</small></a>
-          <a href="/#projets"><span>Surveillance anti-braconnage</span><small>Travail saisonnier de protection</small></a>
-          <a href="/#projets"><span>Reboisement riverain</span><small>Restauration des berges</small></a>
+          <a href="/projects/watershade/"><span>WaterShade</span><small>Stratégie des refuges d’eau froide</small></a>
+          <a href="/#projects"><span>Refuges d’eau froide</span><small>Protection et amélioration</small></a>
+          <a href="/projects/watershade/#ten-mile-pool"><span>10 Mile Pool</span><small>Sanctuaire prioritaire pour le saumon</small></a>
+          <a href="/projects/watershade/#coxs-brook"><span>Coxs Brook</span><small>Exemple de stabilisation de cours d’eau</small></a>
+          <a href="/#projects"><span>Surveillance anti-braconnage</span><small>Travail saisonnier de protection</small></a>
+          <a href="/#projects"><span>Reboisement riverain</span><small>Restauration des berges</small></a>
         </div>
       </div>
     </li>
 
-    <li><a href="/nouvelles/" data-lang="en">News</a><a href="/nouvelles/" data-lang="fr">Nouvelles</a></li>
+    <li class="nav-item nav-has-panel">
+      <button class="nav-panel-trigger" type="button" aria-expanded="false" aria-controls="news-panel">
+        <span data-lang="en">News</span><span data-lang="fr">Nouvelles</span>
+      </button>
+      <div class="nav-panel" id="news-panel">
+        <div class="nav-panel-intro">
+          <p class="nav-panel-kicker" data-lang="en">Updates</p>
+          <p class="nav-panel-kicker" data-lang="fr">Mises à jour</p>
+          <h2 data-lang="en">News &amp; events</h2>
+          <h2 data-lang="fr">Nouvelles et événements</h2>
+          <p data-lang="en">Field updates, conservation news, public notices and community events.</p>
+          <p data-lang="fr">Nouvelles du terrain, conservation, avis publics et événements communautaires.</p>
+        </div>
+        <div class="nav-panel-links">
+          <a href="/news/"><span>Nouvelles</span><small>Articles et mises à jour</small></a>
+          <a href="/news/events/"><span>Événements</span><small>Activités publiques et rencontres</small></a>
+        </div>
+      </div>
+    </li>
 
     <li class="nav-item nav-has-panel">
       <button class="nav-panel-trigger" type="button" aria-expanded="false" aria-controls="resources-panel">
@@ -73,15 +91,16 @@
           <p data-lang="fr">Un futur espace pour les rapports, cartes, documents techniques et liens utiles.</p>
         </div>
         <div class="nav-panel-links">
+          <a href="/resources/"><span>Ressources</span><small>Page d’accueil des ressources</small></a>
+          <a href="/resources/research/"><span>Recherche</span><small>Études, publications et documents</small></a>
           <a href="/#carte"><span>Cartes</span><small>Vue du bassin versant</small></a>
-          <a href="/#projets"><span>Rapports</span><small>Documents de projets</small></a>
           <a href="/#partenaires"><span>Partenaires</span><small>Organismes et bailleurs de fonds</small></a>
-          <a href="/#contact"><span>Liens utiles</span><small>À confirmer</small></a>
         </div>
       </div>
     </li>
 
     <li><a href="/#contact" data-lang="en">Contact</a><a href="/#contact" data-lang="fr">Contact</a></li>
+    <li><a href="/donations/" data-lang="en">Donations</a><a href="/donations/" data-lang="fr">Dons</a></li>
     <li><button class="lang-toggle" id="lang-btn" onclick="toggleLang()">FR</button></li>
   </ul>
 

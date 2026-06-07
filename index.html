@@ -134,16 +134,18 @@ lang: fr
       <div class="section-label">Dernières nouvelles</div>
       <h2>Du terrain</h2>
     </div>
-    <a href="/nouvelles/" class="btn-text">Toutes les nouvelles →</a>
+    <a href="/news/" class="btn-text">Toutes les nouvelles →</a>
   </div>
   <div class="news-grid">
     {% assign posts = site.posts | limit: 4 %}
     {% for post in posts %}
     <article class="news-card {% if forloop.first %}featured{% endif %}">
-      <img src="{{ post.image }}" alt="{{ post.title }}">
+      {% if post.image %}
+      <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+      {% endif %}
       <div class="news-body">
         <div class="news-tag">{{ post.categorie | default: "Nouvelles" }}</div>
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
         <div class="news-date">{{ post.date | date: "%d %B %Y" }}</div>
       </div>
@@ -156,7 +158,7 @@ lang: fr
 </section>
 
 <!-- PROJECTS -->
-<section class="projects-section" id="projets">
+<section class="projects-section" id="projects">
   <div class="section-label">Actifs et récents</div>
   <h2>Nos projets</h2>
   <div class="projects-grid">

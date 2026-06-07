@@ -9,7 +9,7 @@ lang: fr
 
 # Build
 markdown: kramdown
-permalink: /nouvelles/:year/:slug/
+permalink: /news/:year/:slug/
 
 # Plugins
 plugins:

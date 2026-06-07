@@ -49,13 +49,13 @@ layout: default
   <nav class="post-nav">
     <div class="post-nav-inner">
       {% if page.previous.url %}
-      <a href="{{ page.previous.url }}" class="post-nav-link prev">
+      <a href="{{ page.previous.url | relative_url }}" class="post-nav-link prev">
         <span class="nav-label">← Article précédent</span>
         <span class="nav-title">{{ page.previous.title }}</span>
       </a>
       {% endif %}
       {% if page.next.url %}
-      <a href="{{ page.next.url }}" class="post-nav-link next">
+      <a href="{{ page.next.url | relative_url }}" class="post-nav-link next">
         <span class="nav-label">Article suivant →</span>
         <span class="nav-title">{{ page.next.title }}</span>
       </a>

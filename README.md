@@ -135,7 +135,7 @@ cgbvrr/
 ├── assets/
 │   ├── css/main.css     ← Styles (modifier avec précaution)
 │   └── js/main.js       ← Scripts (carte, menu mobile)
-├── nouvelles/
+├── news/
 │   └── index.html       ← Page liste des nouvelles
 ├── Gemfile              ← Dépendances Ruby
 └── index.html           ← Page d'accueil

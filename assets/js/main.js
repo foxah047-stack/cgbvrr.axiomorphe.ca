@@ -1,4 +1,4 @@
-// ── LANGUAGE SYSTEM ──
+﻿// ── LANGUAGE SYSTEM ──
 // Global functions so onclick in HTML can call them directly
 
 function detectLang() {

@@ -1,4 +1,4 @@
-CGBVRR Director Preview Patch v3
+﻿CGBVRR Director Preview Patch v3
 
 Apply to test copy first:
 D:\Work\Restigouche\test\cgbvrr-preview\
@@ -7,8 +7,8 @@ Modified files:
 - _includes/nav.html
 - assets/css/main.css
 - assets/js/main.js
-- projets/watershade/index.html
-- equipe/index.html
+- projects/watershade/index.html
+- team/index.html
 
 Purpose:
 - Keep the full-width institutional navbar dropdown panels.

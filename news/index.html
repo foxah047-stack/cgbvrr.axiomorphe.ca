@@ -2,7 +2,7 @@
 layout: default
 title: Nouvelles
 lang: fr
-permalink: /nouvelles/
+permalink: /news/
 ---
 <section class="news-listing">
   <div class="news-listing-header">
@@ -19,7 +19,7 @@ permalink: /nouvelles/
       </div>
       <div class="news-body">
         <div class="news-tag">{{ post.categorie | default: "Nouvelles" }}</div>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
         <div class="news-date">{{ post.date | date: "%d %B %Y" }}</div>
       </div>
