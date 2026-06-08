@@ -1,6 +1,6 @@
 ---
 layout: project
-title: 'Title : For testing purpose only'
+title: Title
 hero_title: 'Hero Title : For testing purpose only'
 status: published
 featured: false
