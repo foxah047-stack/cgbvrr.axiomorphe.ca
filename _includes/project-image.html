@@ -1,0 +1,9 @@
+{% assign image_show = include.show %}
+{% if image_show == true or image_show == 'true' %}
+  {% if include.image %}
+    <figure class="project-image-frame {{ include.class }}">
+      <img src="{{ include.image | relative_url }}" alt="{{ include.alt | default: '' | escape }}" loading="lazy">
+      {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+    </figure>
+  {% endif %}
+{% endif %}

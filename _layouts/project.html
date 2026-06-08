@@ -1,0 +1,124 @@
+---
+layout: default
+---
+
+{% assign project_status = page.status | default: 'draft' %}
+
+<article class="project-page">
+  <header class="project-hero{% unless page.hero_image %} project-hero-no-image{% endunless %}"{% if page.hero_image %} style="background-image: linear-gradient(rgba(17, 17, 17, 0.56), rgba(17, 17, 17, 0.72)), url('{{ page.hero_image | relative_url }}');"{% endif %}>
+    <div class="project-hero-inner">
+      <p class="section-label">Project / Projet</p>
+      {% if project_status and project_status != 'published' %}
+        <p class="project-status-pill project-status-{{ project_status }}">{{ project_status | capitalize }}</p>
+      {% endif %}
+      <h1>{{ page.hero_title | default: page.title }}</h1>
+      {% if page.subtitle %}<p class="project-lead">{{ page.subtitle }}</p>{% endif %}
+      {% if page.hero_caption %}<p class="project-hero-caption">{{ page.hero_caption }}</p>{% endif %}
+    </div>
+  </header>
+
+  <main class="project-content">
+    {% if page.summary or page.intro %}
+    <section class="project-section project-summary-section">
+      <div class="project-section-kicker">Overview</div>
+      {% if page.summary_title %}<h2>{{ page.summary_title }}</h2>{% endif %}
+      {% if page.summary %}<div class="project-richtext">{{ page.summary | markdownify }}</div>{% endif %}
+      {% if page.intro %}<div class="project-richtext project-intro-text">{{ page.intro | markdownify }}</div>{% endif %}
+    </section>
+    {% endif %}
+
+    {% if page.context_show and page.context_body %}
+    <section class="project-section project-split-section">
+      <div>
+        <div class="project-section-kicker">Context</div>
+        {% if page.context_title %}<h2>{{ page.context_title }}</h2>{% endif %}
+        <div class="project-richtext">{{ page.context_body | markdownify }}</div>
+      </div>
+      {% include project-image.html show=page.image_1_show image=page.image_1 alt=page.image_1_alt caption=page.image_1_caption class='project-side-image' %}
+    </section>
+    {% endif %}
+
+    {% if page.key_concept_show and page.key_concept_body %}
+    <section class="project-section project-highlight-section">
+      <div class="project-section-kicker">Key concept</div>
+      {% if page.key_concept_title %}<h2>{{ page.key_concept_title }}</h2>{% endif %}
+      <div class="project-richtext">{{ page.key_concept_body | markdownify }}</div>
+    </section>
+    {% endif %}
+
+    {% if page.process_show and page.steps %}
+    <section class="project-section project-process-section">
+      <div class="project-section-kicker">Process</div>
+      {% if page.process_title %}<h2>{{ page.process_title }}</h2>{% endif %}
+      {% if page.process_intro %}<div class="project-richtext">{{ page.process_intro | markdownify }}</div>{% endif %}
+      <div class="project-steps">
+        {% for step in page.steps %}
+          <div class="project-step-card">
+            <span>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            {% if step.title %}<h3>{{ step.title }}</h3>{% endif %}
+            {% if step.text %}<p>{{ step.text }}</p>{% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      {% include project-image.html show=page.image_2_show image=page.image_2 alt=page.image_2_alt caption=page.image_2_caption class='project-wide-image' %}
+    </section>
+    {% endif %}
+
+    {% if page.scope_show and page.stats %}
+    <section class="project-section project-scope-section">
+      <div class="project-section-kicker">Scope</div>
+      {% if page.scope_title %}<h2>{{ page.scope_title }}</h2>{% endif %}
+      {% if page.scope_body %}<div class="project-richtext">{{ page.scope_body | markdownify }}</div>{% endif %}
+      <div class="project-stats-grid">
+        {% for stat in page.stats %}
+          <div class="project-stat-card">
+            {% if stat.value %}<strong>{{ stat.value }}</strong>{% endif %}
+            {% if stat.label %}<span>{{ stat.label }}</span>{% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% include project-image.html show=page.image_3_show image=page.image_3 alt=page.image_3_alt caption=page.image_3_caption class='project-wide-image project-standalone-image' %}
+
+    {% if page.related_show and page.related_cards %}
+    <section class="project-section project-related-section">
+      <div class="project-section-kicker">Related work</div>
+      {% if page.related_title %}<h2>{{ page.related_title }}</h2>{% endif %}
+      <div class="project-related-grid">
+        {% for card in page.related_cards %}
+          <a class="project-related-card" href="{{ card.url | default: '#' | relative_url }}">
+            {% if card.label %}<span>{{ card.label }}</span>{% endif %}
+            {% if card.title %}<h3>{{ card.title }}</h3>{% endif %}
+            {% if card.text %}<p>{{ card.text }}</p>{% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if page.note_show and page.note_body %}
+    <aside class="project-note-box">
+      {% if page.note_title %}<h2>{{ page.note_title }}</h2>{% endif %}
+      <div class="project-richtext">{{ page.note_body | markdownify }}</div>
+    </aside>
+    {% endif %}
+
+    {% if page.closing_show and page.closing_body %}
+    <section class="project-section project-closing-section">
+      {% if page.closing_title %}<h2>{{ page.closing_title }}</h2>{% endif %}
+      <div class="project-richtext">{{ page.closing_body | markdownify }}</div>
+      {% if page.closing_link_url and page.closing_link_label %}
+        <a class="project-button" href="{{ page.closing_link_url | relative_url }}">{{ page.closing_link_label }}</a>
+      {% endif %}
+    </section>
+    {% endif %}
+
+    {% if content and content != '' %}
+    <section class="project-section project-body-section">
+      <div class="project-richtext">{{ content }}</div>
+    </section>
+    {% endif %}
+  </main>
+</article>

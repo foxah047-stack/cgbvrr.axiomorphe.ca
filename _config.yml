@@ -22,6 +22,19 @@ feed:
   path: feed.xml
   posts_limit: 20
 
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
 # Exclude from build
 exclude:
   - Gemfile

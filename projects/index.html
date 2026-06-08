@@ -1,0 +1,42 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+<section class="page-hero projects-list-hero">
+  <div class="page-hero-inner">
+    <p class="section-label">Projects / Projets</p>
+    <h1>Watershed projects</h1>
+    <p class="page-lead">Public project pages for major CGBVRR work, field initiatives, and long-term watershed strategies.</p>
+  </div>
+</section>
+
+<main class="project-list-page">
+  {% assign published_projects = site.projects | where: 'status', 'published' | sort: 'order' %}
+
+  {% if published_projects.size > 0 %}
+    <section class="project-list-grid" aria-label="Published projects">
+      {% for project in published_projects %}
+        <article class="project-list-card">
+          {% if project.hero_image %}
+            <a class="project-list-image" href="{{ project.url | relative_url }}" aria-label="Open {{ project.title | escape }}">
+              <img src="{{ project.hero_image | relative_url }}" alt="{{ project.hero_alt | default: project.title | escape }}" loading="lazy">
+            </a>
+          {% endif %}
+          <div class="project-list-card-body">
+            <p class="project-list-status">{{ project.status | capitalize }}</p>
+            <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+            {% if project.subtitle %}<p>{{ project.subtitle }}</p>{% endif %}
+            <a class="btn-text" href="{{ project.url | relative_url }}">Read project</a>
+          </div>
+        </article>
+      {% endfor %}
+    </section>
+  {% else %}
+    <section class="project-empty-state">
+      <h2>No published projects yet</h2>
+      <p>Project pages with status set to <strong>published</strong> will appear here automatically.</p>
+    </section>
+  {% endif %}
+</main>
