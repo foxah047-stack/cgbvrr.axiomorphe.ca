@@ -4,27 +4,61 @@ layout: default
 
 {% assign project_status = page.status | default: 'draft' %}
 {% assign hero_image = page.hero_image | default: '' | strip %}
-{% assign hero_title = page.hero_title | default: page.title | default: '' | strip %}
-{% assign subtitle = page.subtitle | default: '' | strip %}
-{% assign hero_caption = page.hero_caption | default: '' | strip %}
-{% assign summary_title = page.summary_title | default: '' | strip %}
-{% assign summary = page.summary | default: '' | strip %}
-{% assign intro = page.intro | default: '' | strip %}
-{% assign context_title = page.context_title | default: '' | strip %}
-{% assign context_body = page.context_body | default: '' | strip %}
-{% assign key_concept_title = page.key_concept_title | default: '' | strip %}
-{% assign key_concept_body = page.key_concept_body | default: '' | strip %}
-{% assign process_title = page.process_title | default: '' | strip %}
-{% assign process_intro = page.process_intro | default: '' | strip %}
-{% assign scope_title = page.scope_title | default: '' | strip %}
-{% assign scope_body = page.scope_body | default: '' | strip %}
-{% assign related_title = page.related_title | default: '' | strip %}
-{% assign note_title = page.note_title | default: '' | strip %}
-{% assign note_body = page.note_body | default: '' | strip %}
-{% assign closing_title = page.closing_title | default: '' | strip %}
-{% assign closing_body = page.closing_body | default: '' | strip %}
+
+{% assign title_en = page.title_en | default: page.title | default: '' | strip %}
+{% assign title_fr = page.title_fr | default: page.title_en | default: page.title | default: '' | strip %}
+{% assign hero_title_en = page.hero_title_en | default: page.hero_title | default: title_en | strip %}
+{% assign hero_title_fr = page.hero_title_fr | default: page.title_fr | default: page.hero_title_en | default: page.hero_title | default: title_fr | strip %}
+{% assign subtitle_en = page.subtitle_en | default: page.subtitle | default: '' | strip %}
+{% assign subtitle_fr = page.subtitle_fr | default: page.subtitle_en | default: page.subtitle | default: '' | strip %}
+{% assign hero_caption_en = page.hero_caption_en | default: page.hero_caption | default: '' | strip %}
+{% assign hero_caption_fr = page.hero_caption_fr | default: page.hero_caption_en | default: page.hero_caption | default: '' | strip %}
+
+{% assign summary_title_en = page.summary_title_en | default: page.summary_title | default: '' | strip %}
+{% assign summary_title_fr = page.summary_title_fr | default: page.summary_title_en | default: page.summary_title | default: '' | strip %}
+{% assign summary_en = page.summary_en | default: page.summary | default: '' | strip %}
+{% assign summary_fr = page.summary_fr | default: page.summary_en | default: page.summary | default: '' | strip %}
+{% assign intro_en = page.intro_en | default: page.intro | default: '' | strip %}
+{% assign intro_fr = page.intro_fr | default: page.intro_en | default: page.intro | default: '' | strip %}
+
+{% assign context_title_en = page.context_title_en | default: page.context_title | default: '' | strip %}
+{% assign context_title_fr = page.context_title_fr | default: page.context_title_en | default: page.context_title | default: '' | strip %}
+{% assign context_body_en = page.context_body_en | default: page.context_body | default: '' | strip %}
+{% assign context_body_fr = page.context_body_fr | default: page.context_body_en | default: page.context_body | default: '' | strip %}
+
+{% assign key_concept_title_en = page.key_concept_title_en | default: page.key_concept_title | default: '' | strip %}
+{% assign key_concept_title_fr = page.key_concept_title_fr | default: page.key_concept_title_en | default: page.key_concept_title | default: '' | strip %}
+{% assign key_concept_body_en = page.key_concept_body_en | default: page.key_concept_body | default: '' | strip %}
+{% assign key_concept_body_fr = page.key_concept_body_fr | default: page.key_concept_body_en | default: page.key_concept_body | default: '' | strip %}
+
+{% assign process_title_en = page.process_title_en | default: page.process_title | default: '' | strip %}
+{% assign process_title_fr = page.process_title_fr | default: page.process_title_en | default: page.process_title | default: '' | strip %}
+{% assign process_intro_en = page.process_intro_en | default: page.process_intro | default: '' | strip %}
+{% assign process_intro_fr = page.process_intro_fr | default: page.process_intro_en | default: page.process_intro | default: '' | strip %}
+
+{% assign scope_title_en = page.scope_title_en | default: page.scope_title | default: '' | strip %}
+{% assign scope_title_fr = page.scope_title_fr | default: page.scope_title_en | default: page.scope_title | default: '' | strip %}
+{% assign scope_body_en = page.scope_body_en | default: page.scope_body | default: '' | strip %}
+{% assign scope_body_fr = page.scope_body_fr | default: page.scope_body_en | default: page.scope_body | default: '' | strip %}
+
+{% assign related_title_en = page.related_title_en | default: page.related_title | default: '' | strip %}
+{% assign related_title_fr = page.related_title_fr | default: page.related_title_en | default: page.related_title | default: '' | strip %}
+
+{% assign note_title_en = page.note_title_en | default: page.note_title | default: '' | strip %}
+{% assign note_title_fr = page.note_title_fr | default: page.note_title_en | default: page.note_title | default: '' | strip %}
+{% assign note_body_en = page.note_body_en | default: page.note_body | default: '' | strip %}
+{% assign note_body_fr = page.note_body_fr | default: page.note_body_en | default: page.note_body | default: '' | strip %}
+
+{% assign closing_title_en = page.closing_title_en | default: page.closing_title | default: '' | strip %}
+{% assign closing_title_fr = page.closing_title_fr | default: page.closing_title_en | default: page.closing_title | default: '' | strip %}
+{% assign closing_body_en = page.closing_body_en | default: page.closing_body | default: '' | strip %}
+{% assign closing_body_fr = page.closing_body_fr | default: page.closing_body_en | default: page.closing_body | default: '' | strip %}
 {% assign closing_link_url = page.closing_link_url | default: '' | strip %}
-{% assign closing_link_label = page.closing_link_label | default: '' | strip %}
+{% assign closing_link_label_en = page.closing_link_label_en | default: page.closing_link_label | default: '' | strip %}
+{% assign closing_link_label_fr = page.closing_link_label_fr | default: page.closing_link_label_en | default: page.closing_link_label | default: '' | strip %}
+
+{% assign extra_body_en = page.extra_body_en | default: content | default: '' | strip %}
+{% assign extra_body_fr = page.extra_body_fr | default: page.extra_body_en | default: content | default: '' | strip %}
 
 {% assign image_1 = page.image_1 | default: '' | strip %}
 {% assign image_2 = page.image_2 | default: '' | strip %}
@@ -33,35 +67,36 @@ layout: default
 {% assign has_steps = false %}
 {% if page.steps %}
   {% for step in page.steps %}
-    {% assign step_title = step.title | default: '' | strip %}
-    {% assign step_text = step.text | default: '' | strip %}
-    {% if step_title != '' or step_text != '' %}
-      {% assign has_steps = true %}
-    {% endif %}
+    {% assign step_title_en = step.title_en | default: step.title | default: '' | strip %}
+    {% assign step_title_fr = step.title_fr | default: step.title_en | default: step.title | default: '' | strip %}
+    {% assign step_text_en = step.text_en | default: step.text | default: '' | strip %}
+    {% assign step_text_fr = step.text_fr | default: step.text_en | default: step.text | default: '' | strip %}
+    {% if step_title_en != '' or step_title_fr != '' or step_text_en != '' or step_text_fr != '' %}{% assign has_steps = true %}{% endif %}
   {% endfor %}
 {% endif %}
 
 {% assign has_stats = false %}
 {% if page.stats %}
   {% for stat in page.stats %}
-    {% assign stat_value = stat.value | default: '' | strip %}
-    {% assign stat_label = stat.label | default: '' | strip %}
-    {% if stat_value != '' or stat_label != '' %}
-      {% assign has_stats = true %}
-    {% endif %}
+    {% assign stat_value_en = stat.value_en | default: stat.value | default: '' | strip %}
+    {% assign stat_value_fr = stat.value_fr | default: stat.value_en | default: stat.value | default: '' | strip %}
+    {% assign stat_label_en = stat.label_en | default: stat.label | default: '' | strip %}
+    {% assign stat_label_fr = stat.label_fr | default: stat.label_en | default: stat.label | default: '' | strip %}
+    {% if stat_value_en != '' or stat_value_fr != '' or stat_label_en != '' or stat_label_fr != '' %}{% assign has_stats = true %}{% endif %}
   {% endfor %}
 {% endif %}
 
 {% assign has_related_cards = false %}
 {% if page.related_cards %}
   {% for card in page.related_cards %}
-    {% assign card_label = card.label | default: '' | strip %}
-    {% assign card_title = card.title | default: '' | strip %}
-    {% assign card_text = card.text | default: '' | strip %}
+    {% assign card_label_en = card.label_en | default: card.label | default: '' | strip %}
+    {% assign card_label_fr = card.label_fr | default: card.label_en | default: card.label | default: '' | strip %}
+    {% assign card_title_en = card.title_en | default: card.title | default: '' | strip %}
+    {% assign card_title_fr = card.title_fr | default: card.title_en | default: card.title | default: '' | strip %}
+    {% assign card_text_en = card.text_en | default: card.text | default: '' | strip %}
+    {% assign card_text_fr = card.text_fr | default: card.text_en | default: card.text | default: '' | strip %}
     {% assign card_url = card.url | default: '' | strip %}
-    {% if card_label != '' or card_title != '' or card_text != '' or card_url != '' %}
-      {% assign has_related_cards = true %}
-    {% endif %}
+    {% if card_label_en != '' or card_label_fr != '' or card_title_en != '' or card_title_fr != '' or card_text_en != '' or card_text_fr != '' or card_url != '' %}{% assign has_related_cards = true %}{% endif %}
   {% endfor %}
 {% endif %}
 
@@ -73,120 +108,129 @@ layout: default
 {% if page.image_3_show and image_3 != '' %}{% assign show_image_3 = true %}{% endif %}
 
 {% assign show_summary = false %}
-{% if summary_title != '' or summary != '' or intro != '' %}{% assign show_summary = true %}{% endif %}
+{% if summary_title_en != '' or summary_title_fr != '' or summary_en != '' or summary_fr != '' or intro_en != '' or intro_fr != '' %}{% assign show_summary = true %}{% endif %}
 {% assign show_context = false %}
-{% if page.context_show %}
-  {% if context_title != '' or context_body != '' or show_image_1 %}{% assign show_context = true %}{% endif %}
-{% endif %}
+{% if page.context_show %}{% if context_title_en != '' or context_title_fr != '' or context_body_en != '' or context_body_fr != '' or show_image_1 %}{% assign show_context = true %}{% endif %}{% endif %}
 {% assign show_key_concept = false %}
-{% if page.key_concept_show %}
-  {% if key_concept_title != '' or key_concept_body != '' %}{% assign show_key_concept = true %}{% endif %}
-{% endif %}
+{% if page.key_concept_show %}{% if key_concept_title_en != '' or key_concept_title_fr != '' or key_concept_body_en != '' or key_concept_body_fr != '' %}{% assign show_key_concept = true %}{% endif %}{% endif %}
 {% assign show_process = false %}
-{% if page.process_show %}
-  {% if process_title != '' or process_intro != '' or has_steps or show_image_2 %}{% assign show_process = true %}{% endif %}
-{% endif %}
+{% if page.process_show %}{% if process_title_en != '' or process_title_fr != '' or process_intro_en != '' or process_intro_fr != '' or has_steps or show_image_2 %}{% assign show_process = true %}{% endif %}{% endif %}
 {% assign show_scope = false %}
-{% if page.scope_show %}
-  {% if scope_title != '' or scope_body != '' or has_stats %}{% assign show_scope = true %}{% endif %}
-{% endif %}
+{% if page.scope_show %}{% if scope_title_en != '' or scope_title_fr != '' or scope_body_en != '' or scope_body_fr != '' or has_stats %}{% assign show_scope = true %}{% endif %}{% endif %}
 {% assign show_related = false %}
-{% if page.related_show %}
-  {% if related_title != '' or has_related_cards %}{% assign show_related = true %}{% endif %}
-{% endif %}
+{% if page.related_show %}{% if related_title_en != '' or related_title_fr != '' or has_related_cards %}{% assign show_related = true %}{% endif %}{% endif %}
 {% assign show_note = false %}
-{% if page.note_show %}
-  {% if note_title != '' or note_body != '' %}{% assign show_note = true %}{% endif %}
-{% endif %}
+{% if page.note_show %}{% if note_title_en != '' or note_title_fr != '' or note_body_en != '' or note_body_fr != '' %}{% assign show_note = true %}{% endif %}{% endif %}
 {% assign show_closing_link = false %}
-{% if closing_link_url != '' and closing_link_label != '' %}{% assign show_closing_link = true %}{% endif %}
+{% if closing_link_url != '' %}{% if closing_link_label_en != '' or closing_link_label_fr != '' %}{% assign show_closing_link = true %}{% endif %}{% endif %}
 {% assign show_closing = false %}
-{% if page.closing_show %}
-  {% if closing_title != '' or closing_body != '' or show_closing_link %}{% assign show_closing = true %}{% endif %}
-{% endif %}
+{% if page.closing_show %}{% if closing_title_en != '' or closing_title_fr != '' or closing_body_en != '' or closing_body_fr != '' or show_closing_link %}{% assign show_closing = true %}{% endif %}{% endif %}
+{% assign show_body = false %}
+{% if extra_body_en != '' or extra_body_fr != '' %}{% assign show_body = true %}{% endif %}
 
 <article class="project-page">
   <header class="project-hero{% if hero_image == '' %} project-hero-no-image{% endif %}"{% if hero_image != '' %} style="background-image: linear-gradient(rgba(17, 17, 17, 0.56), rgba(17, 17, 17, 0.72)), url('{{ hero_image | relative_url }}');"{% endif %}>
     <div class="project-hero-inner">
-      <p class="section-label">Project / Projet</p>
+      <p class="section-label"><span data-lang="en">Project</span><span data-lang="fr">Projet</span></p>
       {% if project_status and project_status != 'published' %}
         <p class="project-status-pill project-status-{{ project_status }}">{{ project_status | capitalize }}</p>
       {% endif %}
-      {% if hero_title != '' %}<h1>{{ hero_title }}</h1>{% endif %}
-      {% if subtitle != '' %}<p class="project-lead">{{ subtitle }}</p>{% endif %}
-      {% if hero_caption != '' %}<p class="project-hero-caption">{{ hero_caption }}</p>{% endif %}
+      {% if hero_title_en != '' or hero_title_fr != '' %}
+        <h1>{% if hero_title_en != '' %}<span data-lang="en">{{ hero_title_en }}</span>{% endif %}{% if hero_title_fr != '' %}<span data-lang="fr">{{ hero_title_fr }}</span>{% endif %}</h1>
+      {% endif %}
+      {% if subtitle_en != '' or subtitle_fr != '' %}
+        {% if subtitle_en != '' %}<p class="project-lead" data-lang="en">{{ subtitle_en }}</p>{% endif %}
+        {% if subtitle_fr != '' %}<p class="project-lead" data-lang="fr">{{ subtitle_fr }}</p>{% endif %}
+      {% endif %}
+      {% if hero_caption_en != '' or hero_caption_fr != '' %}
+        {% if hero_caption_en != '' %}<p class="project-hero-caption" data-lang="en">{{ hero_caption_en }}</p>{% endif %}
+        {% if hero_caption_fr != '' %}<p class="project-hero-caption" data-lang="fr">{{ hero_caption_fr }}</p>{% endif %}
+      {% endif %}
     </div>
   </header>
 
   <main class="project-content">
     {% if show_summary %}
     <section class="project-section project-summary-section">
-      <div class="project-section-kicker">Overview</div>
-      {% if summary_title != '' %}<h2>{{ summary_title }}</h2>{% endif %}
-      {% if summary != '' %}<div class="project-richtext">{{ summary | markdownify }}</div>{% endif %}
-      {% if intro != '' %}<div class="project-richtext project-intro-text">{{ intro | markdownify }}</div>{% endif %}
+      <div class="project-section-kicker"><span data-lang="en">Overview</span><span data-lang="fr">Aperçu</span></div>
+      {% if summary_title_en != '' or summary_title_fr != '' %}<h2>{% if summary_title_en != '' %}<span data-lang="en">{{ summary_title_en }}</span>{% endif %}{% if summary_title_fr != '' %}<span data-lang="fr">{{ summary_title_fr }}</span>{% endif %}</h2>{% endif %}
+      {% if summary_en != '' %}<div class="project-richtext" data-lang="en">{{ summary_en | markdownify }}</div>{% endif %}
+      {% if summary_fr != '' %}<div class="project-richtext" data-lang="fr">{{ summary_fr | markdownify }}</div>{% endif %}
+      {% if intro_en != '' %}<div class="project-richtext project-intro-text" data-lang="en">{{ intro_en | markdownify }}</div>{% endif %}
+      {% if intro_fr != '' %}<div class="project-richtext project-intro-text" data-lang="fr">{{ intro_fr | markdownify }}</div>{% endif %}
     </section>
     {% endif %}
 
     {% if show_context %}
     <section class="project-section project-split-section">
-      {% if context_title != '' or context_body != '' %}
+      {% if context_title_en != '' or context_title_fr != '' or context_body_en != '' or context_body_fr != '' %}
       <div>
-        <div class="project-section-kicker">Context</div>
-        {% if context_title != '' %}<h2>{{ context_title }}</h2>{% endif %}
-        {% if context_body != '' %}<div class="project-richtext">{{ context_body | markdownify }}</div>{% endif %}
+        <div class="project-section-kicker"><span data-lang="en">Context</span><span data-lang="fr">Contexte</span></div>
+        {% if context_title_en != '' or context_title_fr != '' %}<h2>{% if context_title_en != '' %}<span data-lang="en">{{ context_title_en }}</span>{% endif %}{% if context_title_fr != '' %}<span data-lang="fr">{{ context_title_fr }}</span>{% endif %}</h2>{% endif %}
+        {% if context_body_en != '' %}<div class="project-richtext" data-lang="en">{{ context_body_en | markdownify }}</div>{% endif %}
+        {% if context_body_fr != '' %}<div class="project-richtext" data-lang="fr">{{ context_body_fr | markdownify }}</div>{% endif %}
       </div>
       {% endif %}
-      {% include project-image.html show=page.image_1_show image=page.image_1 alt=page.image_1_alt caption=page.image_1_caption class='project-side-image' %}
+      {% include project-image.html show=page.image_1_show image=page.image_1 alt=page.image_1_alt alt_en=page.image_1_alt_en alt_fr=page.image_1_alt_fr caption=page.image_1_caption caption_en=page.image_1_caption_en caption_fr=page.image_1_caption_fr class='project-side-image' %}
     </section>
     {% endif %}
 
     {% if show_key_concept %}
     <section class="project-section project-highlight-section">
-      <div class="project-section-kicker">Key concept</div>
-      {% if key_concept_title != '' %}<h2>{{ key_concept_title }}</h2>{% endif %}
-      {% if key_concept_body != '' %}<div class="project-richtext">{{ key_concept_body | markdownify }}</div>{% endif %}
+      <div class="project-section-kicker"><span data-lang="en">Key concept</span><span data-lang="fr">Concept clé</span></div>
+      {% if key_concept_title_en != '' or key_concept_title_fr != '' %}<h2>{% if key_concept_title_en != '' %}<span data-lang="en">{{ key_concept_title_en }}</span>{% endif %}{% if key_concept_title_fr != '' %}<span data-lang="fr">{{ key_concept_title_fr }}</span>{% endif %}</h2>{% endif %}
+      {% if key_concept_body_en != '' %}<div class="project-richtext" data-lang="en">{{ key_concept_body_en | markdownify }}</div>{% endif %}
+      {% if key_concept_body_fr != '' %}<div class="project-richtext" data-lang="fr">{{ key_concept_body_fr | markdownify }}</div>{% endif %}
     </section>
     {% endif %}
 
     {% if show_process %}
     <section class="project-section project-process-section">
-      <div class="project-section-kicker">Process</div>
-      {% if process_title != '' %}<h2>{{ process_title }}</h2>{% endif %}
-      {% if process_intro != '' %}<div class="project-richtext">{{ process_intro | markdownify }}</div>{% endif %}
+      <div class="project-section-kicker"><span data-lang="en">Process</span><span data-lang="fr">Processus</span></div>
+      {% if process_title_en != '' or process_title_fr != '' %}<h2>{% if process_title_en != '' %}<span data-lang="en">{{ process_title_en }}</span>{% endif %}{% if process_title_fr != '' %}<span data-lang="fr">{{ process_title_fr }}</span>{% endif %}</h2>{% endif %}
+      {% if process_intro_en != '' %}<div class="project-richtext" data-lang="en">{{ process_intro_en | markdownify }}</div>{% endif %}
+      {% if process_intro_fr != '' %}<div class="project-richtext" data-lang="fr">{{ process_intro_fr | markdownify }}</div>{% endif %}
       {% if has_steps %}
       <div class="project-steps">
         {% for step in page.steps %}
-          {% assign step_title = step.title | default: '' | strip %}
-          {% assign step_text = step.text | default: '' | strip %}
-          {% if step_title != '' or step_text != '' %}
+          {% assign step_title_en = step.title_en | default: step.title | default: '' | strip %}
+          {% assign step_title_fr = step.title_fr | default: step.title_en | default: step.title | default: '' | strip %}
+          {% assign step_text_en = step.text_en | default: step.text | default: '' | strip %}
+          {% assign step_text_fr = step.text_fr | default: step.text_en | default: step.text | default: '' | strip %}
+          {% if step_title_en != '' or step_title_fr != '' or step_text_en != '' or step_text_fr != '' %}
           <div class="project-step-card">
             <span>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
-            {% if step_title != '' %}<h3>{{ step_title }}</h3>{% endif %}
-            {% if step_text != '' %}<p>{{ step_text }}</p>{% endif %}
+            {% if step_title_en != '' or step_title_fr != '' %}<h3>{% if step_title_en != '' %}<span data-lang="en">{{ step_title_en }}</span>{% endif %}{% if step_title_fr != '' %}<span data-lang="fr">{{ step_title_fr }}</span>{% endif %}</h3>{% endif %}
+            {% if step_text_en != '' %}<p data-lang="en">{{ step_text_en }}</p>{% endif %}
+            {% if step_text_fr != '' %}<p data-lang="fr">{{ step_text_fr }}</p>{% endif %}
           </div>
           {% endif %}
         {% endfor %}
       </div>
       {% endif %}
-      {% include project-image.html show=page.image_2_show image=page.image_2 alt=page.image_2_alt caption=page.image_2_caption class='project-wide-image' %}
+      {% include project-image.html show=page.image_2_show image=page.image_2 alt=page.image_2_alt alt_en=page.image_2_alt_en alt_fr=page.image_2_alt_fr caption=page.image_2_caption caption_en=page.image_2_caption_en caption_fr=page.image_2_caption_fr class='project-wide-image' %}
     </section>
     {% endif %}
 
     {% if show_scope %}
     <section class="project-section project-scope-section">
-      <div class="project-section-kicker">Scope</div>
-      {% if scope_title != '' %}<h2>{{ scope_title }}</h2>{% endif %}
-      {% if scope_body != '' %}<div class="project-richtext">{{ scope_body | markdownify }}</div>{% endif %}
+      <div class="project-section-kicker"><span data-lang="en">Scope</span><span data-lang="fr">Portée</span></div>
+      {% if scope_title_en != '' or scope_title_fr != '' %}<h2>{% if scope_title_en != '' %}<span data-lang="en">{{ scope_title_en }}</span>{% endif %}{% if scope_title_fr != '' %}<span data-lang="fr">{{ scope_title_fr }}</span>{% endif %}</h2>{% endif %}
+      {% if scope_body_en != '' %}<div class="project-richtext" data-lang="en">{{ scope_body_en | markdownify }}</div>{% endif %}
+      {% if scope_body_fr != '' %}<div class="project-richtext" data-lang="fr">{{ scope_body_fr | markdownify }}</div>{% endif %}
       {% if has_stats %}
       <div class="project-stats-grid">
         {% for stat in page.stats %}
-          {% assign stat_value = stat.value | default: '' | strip %}
-          {% assign stat_label = stat.label | default: '' | strip %}
-          {% if stat_value != '' or stat_label != '' %}
+          {% assign stat_value_en = stat.value_en | default: stat.value | default: '' | strip %}
+          {% assign stat_value_fr = stat.value_fr | default: stat.value_en | default: stat.value | default: '' | strip %}
+          {% assign stat_label_en = stat.label_en | default: stat.label | default: '' | strip %}
+          {% assign stat_label_fr = stat.label_fr | default: stat.label_en | default: stat.label | default: '' | strip %}
+          {% if stat_value_en != '' or stat_value_fr != '' or stat_label_en != '' or stat_label_fr != '' %}
           <div class="project-stat-card">
-            {% if stat_value != '' %}<strong>{{ stat_value }}</strong>{% endif %}
-            {% if stat_label != '' %}<span>{{ stat_label }}</span>{% endif %}
+            {% if stat_value_en != '' %}<strong data-lang="en">{{ stat_value_en }}</strong>{% endif %}
+            {% if stat_value_fr != '' %}<strong data-lang="fr">{{ stat_value_fr }}</strong>{% endif %}
+            {% if stat_label_en != '' %}<span data-lang="en">{{ stat_label_en }}</span>{% endif %}
+            {% if stat_label_fr != '' %}<span data-lang="fr">{{ stat_label_fr }}</span>{% endif %}
           </div>
           {% endif %}
         {% endfor %}
@@ -195,24 +239,29 @@ layout: default
     </section>
     {% endif %}
 
-    {% include project-image.html show=page.image_3_show image=page.image_3 alt=page.image_3_alt caption=page.image_3_caption class='project-wide-image project-standalone-image' %}
+    {% include project-image.html show=page.image_3_show image=page.image_3 alt=page.image_3_alt alt_en=page.image_3_alt_en alt_fr=page.image_3_alt_fr caption=page.image_3_caption caption_en=page.image_3_caption_en caption_fr=page.image_3_caption_fr class='project-wide-image project-standalone-image' %}
 
     {% if show_related %}
     <section class="project-section project-related-section">
-      <div class="project-section-kicker">Related work</div>
-      {% if related_title != '' %}<h2>{{ related_title }}</h2>{% endif %}
+      <div class="project-section-kicker"><span data-lang="en">Related work</span><span data-lang="fr">Travaux liés</span></div>
+      {% if related_title_en != '' or related_title_fr != '' %}<h2>{% if related_title_en != '' %}<span data-lang="en">{{ related_title_en }}</span>{% endif %}{% if related_title_fr != '' %}<span data-lang="fr">{{ related_title_fr }}</span>{% endif %}</h2>{% endif %}
       {% if has_related_cards %}
       <div class="project-related-grid">
         {% for card in page.related_cards %}
-          {% assign card_label = card.label | default: '' | strip %}
-          {% assign card_title = card.title | default: '' | strip %}
-          {% assign card_text = card.text | default: '' | strip %}
+          {% assign card_label_en = card.label_en | default: card.label | default: '' | strip %}
+          {% assign card_label_fr = card.label_fr | default: card.label_en | default: card.label | default: '' | strip %}
+          {% assign card_title_en = card.title_en | default: card.title | default: '' | strip %}
+          {% assign card_title_fr = card.title_fr | default: card.title_en | default: card.title | default: '' | strip %}
+          {% assign card_text_en = card.text_en | default: card.text | default: '' | strip %}
+          {% assign card_text_fr = card.text_fr | default: card.text_en | default: card.text | default: '' | strip %}
           {% assign card_url = card.url | default: '' | strip %}
-          {% if card_label != '' or card_title != '' or card_text != '' or card_url != '' %}
+          {% if card_label_en != '' or card_label_fr != '' or card_title_en != '' or card_title_fr != '' or card_text_en != '' or card_text_fr != '' or card_url != '' %}
           <a class="project-related-card" href="{{ card_url | default: '#' | relative_url }}">
-            {% if card_label != '' %}<span>{{ card_label }}</span>{% endif %}
-            {% if card_title != '' %}<h3>{{ card_title }}</h3>{% endif %}
-            {% if card_text != '' %}<p>{{ card_text }}</p>{% endif %}
+            {% if card_label_en != '' %}<span data-lang="en">{{ card_label_en }}</span>{% endif %}
+            {% if card_label_fr != '' %}<span data-lang="fr">{{ card_label_fr }}</span>{% endif %}
+            {% if card_title_en != '' or card_title_fr != '' %}<h3>{% if card_title_en != '' %}<span data-lang="en">{{ card_title_en }}</span>{% endif %}{% if card_title_fr != '' %}<span data-lang="fr">{{ card_title_fr }}</span>{% endif %}</h3>{% endif %}
+            {% if card_text_en != '' %}<p data-lang="en">{{ card_text_en }}</p>{% endif %}
+            {% if card_text_fr != '' %}<p data-lang="fr">{{ card_text_fr }}</p>{% endif %}
           </a>
           {% endif %}
         {% endfor %}
@@ -223,25 +272,27 @@ layout: default
 
     {% if show_note %}
     <aside class="project-note-box">
-      {% if note_title != '' %}<h2>{{ note_title }}</h2>{% endif %}
-      {% if note_body != '' %}<div class="project-richtext">{{ note_body | markdownify }}</div>{% endif %}
+      {% if note_title_en != '' or note_title_fr != '' %}<h2>{% if note_title_en != '' %}<span data-lang="en">{{ note_title_en }}</span>{% endif %}{% if note_title_fr != '' %}<span data-lang="fr">{{ note_title_fr }}</span>{% endif %}</h2>{% endif %}
+      {% if note_body_en != '' %}<div class="project-richtext" data-lang="en">{{ note_body_en | markdownify }}</div>{% endif %}
+      {% if note_body_fr != '' %}<div class="project-richtext" data-lang="fr">{{ note_body_fr | markdownify }}</div>{% endif %}
     </aside>
     {% endif %}
 
     {% if show_closing %}
     <section class="project-section project-closing-section">
-      {% if closing_title != '' %}<h2>{{ closing_title }}</h2>{% endif %}
-      {% if closing_body != '' %}<div class="project-richtext">{{ closing_body | markdownify }}</div>{% endif %}
+      {% if closing_title_en != '' or closing_title_fr != '' %}<h2>{% if closing_title_en != '' %}<span data-lang="en">{{ closing_title_en }}</span>{% endif %}{% if closing_title_fr != '' %}<span data-lang="fr">{{ closing_title_fr }}</span>{% endif %}</h2>{% endif %}
+      {% if closing_body_en != '' %}<div class="project-richtext" data-lang="en">{{ closing_body_en | markdownify }}</div>{% endif %}
+      {% if closing_body_fr != '' %}<div class="project-richtext" data-lang="fr">{{ closing_body_fr | markdownify }}</div>{% endif %}
       {% if show_closing_link %}
-        <a class="project-button" href="{{ closing_link_url | relative_url }}">{{ closing_link_label }}</a>
+        <a class="project-button" href="{{ closing_link_url | relative_url }}">{% if closing_link_label_en != '' %}<span data-lang="en">{{ closing_link_label_en }}</span>{% endif %}{% if closing_link_label_fr != '' %}<span data-lang="fr">{{ closing_link_label_fr }}</span>{% endif %}</a>
       {% endif %}
     </section>
     {% endif %}
 
-    {% assign body_content = content | default: '' | strip %}
-    {% if body_content != '' %}
+    {% if show_body %}
     <section class="project-section project-body-section">
-      <div class="project-richtext">{{ content }}</div>
+      {% if extra_body_en != '' %}<div class="project-richtext" data-lang="en">{{ extra_body_en | markdownify }}</div>{% endif %}
+      {% if extra_body_fr != '' %}<div class="project-richtext" data-lang="fr">{{ extra_body_fr | markdownify }}</div>{% endif %}
     </section>
     {% endif %}
   </main>

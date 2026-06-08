@@ -8,24 +8,49 @@ function detectLang() {
   return browser === 'fr' ? 'fr' : 'en';
 }
 
-function applyLang(lang) {
-  document.querySelectorAll('[data-lang]').forEach(el => {
-    if (el.getAttribute('data-lang') !== lang) {
-      el.style.display = 'none';
-      return;
-    }
+function preferredDisplay(el) {
+  const forced = el.getAttribute('data-lang-display');
+  if (forced) return forced;
 
-    if (el.tagName === 'SPAN') {
-      el.style.display = 'inline';
-    } else {
-      el.style.display = 'block';
-    }
+  const tag = el.tagName;
+  if (tag === 'SPAN' || tag === 'EM' || tag === 'STRONG' || tag === 'SMALL' || tag === 'B' || tag === 'I') {
+    return 'inline';
+  }
+  if (tag === 'A' || tag === 'BUTTON') {
+    return 'inline-flex';
+  }
+  if (tag === 'LI') {
+    return 'list-item';
+  }
+  return 'block';
+}
+
+function applyLang(lang) {
+  const safeLang = lang === 'fr' ? 'fr' : 'en';
+
+  document.documentElement.lang = safeLang;
+  document.documentElement.setAttribute('data-current-lang', safeLang);
+  if (document.body) document.body.setAttribute('data-current-lang', safeLang);
+
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    const elementLang = el.getAttribute('data-lang');
+    el.style.display = elementLang === safeLang ? preferredDisplay(el) : 'none';
+  });
+
+  document.querySelectorAll('[data-i18n-alt]').forEach(img => {
+    const fallback = img.getAttribute('data-alt-en') || img.getAttribute('alt') || '';
+    const nextAlt = img.getAttribute(`data-alt-${safeLang}`) || fallback;
+    img.setAttribute('alt', nextAlt);
   });
 
   const btn = document.getElementById('lang-btn');
-  if (btn) btn.textContent = lang === 'en' ? 'FR' : 'EN';
+  if (btn) {
+    btn.textContent = safeLang === 'en' ? 'FR' : 'EN';
+    btn.setAttribute('aria-label', safeLang === 'en' ? 'Passer au français' : 'Switch to English');
+    btn.setAttribute('aria-pressed', safeLang === 'fr' ? 'true' : 'false');
+  }
 
-  localStorage.setItem('cgbvrr-lang', lang);
+  localStorage.setItem('cgbvrr-lang', safeLang);
 }
 
 function toggleLang() {

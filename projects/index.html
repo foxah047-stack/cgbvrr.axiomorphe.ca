@@ -7,8 +7,9 @@ permalink: /projects/
 <section class="page-hero projects-list-hero">
   <div class="page-hero-inner">
     <p class="section-label">Projects / Projets</p>
-    <h1>Watershed projects</h1>
-    <p class="page-lead">Public project pages for major CGBVRR work, field initiatives, and long-term watershed strategies.</p>
+    <h1><span data-lang="en">Watershed projects</span><span data-lang="fr">Projets du bassin versant</span></h1>
+    <p class="page-lead" data-lang="en">Public project pages for major CGBVRR work, field initiatives, and long-term watershed strategies.</p>
+    <p class="page-lead" data-lang="fr">Pages publiques pour les principaux projets du CGBVRR, les initiatives de terrain et les stratégies à long terme pour le bassin versant.</p>
   </div>
 </section>
 
@@ -18,25 +19,33 @@ permalink: /projects/
   {% if published_projects.size > 0 %}
     <section class="project-list-grid" aria-label="Published projects">
       {% for project in published_projects %}
+        {% assign project_title_en = project.title_en | default: project.title | default: '' | strip %}
+        {% assign project_title_fr = project.title_fr | default: project.title_en | default: project.title | default: '' | strip %}
+        {% assign project_subtitle_en = project.subtitle_en | default: project.subtitle | default: '' | strip %}
+        {% assign project_subtitle_fr = project.subtitle_fr | default: project.subtitle_en | default: project.subtitle | default: '' | strip %}
+        {% assign project_alt_en = project.hero_alt_en | default: project.hero_alt | default: project_title_en | strip %}
+        {% assign project_alt_fr = project.hero_alt_fr | default: project.hero_alt_en | default: project.hero_alt | default: project_title_fr | strip %}
         <article class="project-list-card">
           {% if project.hero_image %}
-            <a class="project-list-image" href="{{ project.url | relative_url }}" aria-label="Open {{ project.title | escape }}">
-              <img src="{{ project.hero_image | relative_url }}" alt="{{ project.hero_alt | default: project.title | escape }}" loading="lazy">
+            <a class="project-list-image" href="{{ project.url | relative_url }}" aria-label="Open {{ project_title_en | escape }}">
+              <img src="{{ project.hero_image | relative_url }}" alt="{{ project_alt_en | escape }}" data-i18n-alt data-alt-en="{{ project_alt_en | escape }}" data-alt-fr="{{ project_alt_fr | escape }}" loading="lazy">
             </a>
           {% endif %}
           <div class="project-list-card-body">
             <p class="project-list-status">{{ project.status | capitalize }}</p>
-            <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
-            {% if project.subtitle %}<p>{{ project.subtitle }}</p>{% endif %}
-            <a class="btn-text" href="{{ project.url | relative_url }}">Read project</a>
+            <h2><a href="{{ project.url | relative_url }}">{% if project_title_en != '' %}<span data-lang="en">{{ project_title_en }}</span>{% endif %}{% if project_title_fr != '' %}<span data-lang="fr">{{ project_title_fr }}</span>{% endif %}</a></h2>
+            {% if project_subtitle_en != '' %}<p data-lang="en">{{ project_subtitle_en }}</p>{% endif %}
+            {% if project_subtitle_fr != '' %}<p data-lang="fr">{{ project_subtitle_fr }}</p>{% endif %}
+            <a class="btn-text" href="{{ project.url | relative_url }}"><span data-lang="en">Read project</span><span data-lang="fr">Lire le projet</span></a>
           </div>
         </article>
       {% endfor %}
     </section>
   {% else %}
     <section class="project-empty-state">
-      <h2>No published projects yet</h2>
-      <p>Project pages with status set to <strong>published</strong> will appear here automatically.</p>
+      <h2><span data-lang="en">No published projects yet</span><span data-lang="fr">Aucun projet publié pour le moment</span></h2>
+      <p data-lang="en">Project pages with status set to <strong>published</strong> will appear here automatically.</p>
+      <p data-lang="fr">Les pages de projet dont le statut est réglé à <strong>published</strong> apparaîtront ici automatiquement.</p>
     </section>
   {% endif %}
 </main>
