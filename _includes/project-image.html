@@ -1,9 +1,12 @@
 {% assign image_show = include.show %}
-{% if image_show == true or image_show == 'true' %}
-  {% if include.image %}
+{% assign image_path = include.image | default: '' | strip %}
+{% assign image_alt = include.alt | default: '' | strip %}
+{% assign image_caption = include.caption | default: '' | strip %}
+{% if image_path != '' %}
+  {% if image_show == true or image_show == 'true' %}
     <figure class="project-image-frame {{ include.class }}">
-      <img src="{{ include.image | relative_url }}" alt="{{ include.alt | default: '' | escape }}" loading="lazy">
-      {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+      <img src="{{ image_path | relative_url }}" alt="{{ image_alt | escape }}" loading="lazy">
+      {% if image_caption != '' %}<figcaption>{{ image_caption }}</figcaption>{% endif %}
     </figure>
   {% endif %}
 {% endif %}

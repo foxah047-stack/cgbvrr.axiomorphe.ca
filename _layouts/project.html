@@ -3,119 +3,243 @@ layout: default
 ---
 
 {% assign project_status = page.status | default: 'draft' %}
+{% assign hero_image = page.hero_image | default: '' | strip %}
+{% assign hero_title = page.hero_title | default: page.title | default: '' | strip %}
+{% assign subtitle = page.subtitle | default: '' | strip %}
+{% assign hero_caption = page.hero_caption | default: '' | strip %}
+{% assign summary_title = page.summary_title | default: '' | strip %}
+{% assign summary = page.summary | default: '' | strip %}
+{% assign intro = page.intro | default: '' | strip %}
+{% assign context_title = page.context_title | default: '' | strip %}
+{% assign context_body = page.context_body | default: '' | strip %}
+{% assign key_concept_title = page.key_concept_title | default: '' | strip %}
+{% assign key_concept_body = page.key_concept_body | default: '' | strip %}
+{% assign process_title = page.process_title | default: '' | strip %}
+{% assign process_intro = page.process_intro | default: '' | strip %}
+{% assign scope_title = page.scope_title | default: '' | strip %}
+{% assign scope_body = page.scope_body | default: '' | strip %}
+{% assign related_title = page.related_title | default: '' | strip %}
+{% assign note_title = page.note_title | default: '' | strip %}
+{% assign note_body = page.note_body | default: '' | strip %}
+{% assign closing_title = page.closing_title | default: '' | strip %}
+{% assign closing_body = page.closing_body | default: '' | strip %}
+{% assign closing_link_url = page.closing_link_url | default: '' | strip %}
+{% assign closing_link_label = page.closing_link_label | default: '' | strip %}
+
+{% assign image_1 = page.image_1 | default: '' | strip %}
+{% assign image_2 = page.image_2 | default: '' | strip %}
+{% assign image_3 = page.image_3 | default: '' | strip %}
+
+{% assign has_steps = false %}
+{% if page.steps %}
+  {% for step in page.steps %}
+    {% assign step_title = step.title | default: '' | strip %}
+    {% assign step_text = step.text | default: '' | strip %}
+    {% if step_title != '' or step_text != '' %}
+      {% assign has_steps = true %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% assign has_stats = false %}
+{% if page.stats %}
+  {% for stat in page.stats %}
+    {% assign stat_value = stat.value | default: '' | strip %}
+    {% assign stat_label = stat.label | default: '' | strip %}
+    {% if stat_value != '' or stat_label != '' %}
+      {% assign has_stats = true %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% assign has_related_cards = false %}
+{% if page.related_cards %}
+  {% for card in page.related_cards %}
+    {% assign card_label = card.label | default: '' | strip %}
+    {% assign card_title = card.title | default: '' | strip %}
+    {% assign card_text = card.text | default: '' | strip %}
+    {% assign card_url = card.url | default: '' | strip %}
+    {% if card_label != '' or card_title != '' or card_text != '' or card_url != '' %}
+      {% assign has_related_cards = true %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% assign show_image_1 = false %}
+{% if page.image_1_show and image_1 != '' %}{% assign show_image_1 = true %}{% endif %}
+{% assign show_image_2 = false %}
+{% if page.image_2_show and image_2 != '' %}{% assign show_image_2 = true %}{% endif %}
+{% assign show_image_3 = false %}
+{% if page.image_3_show and image_3 != '' %}{% assign show_image_3 = true %}{% endif %}
+
+{% assign show_summary = false %}
+{% if summary_title != '' or summary != '' or intro != '' %}{% assign show_summary = true %}{% endif %}
+{% assign show_context = false %}
+{% if page.context_show %}
+  {% if context_title != '' or context_body != '' or show_image_1 %}{% assign show_context = true %}{% endif %}
+{% endif %}
+{% assign show_key_concept = false %}
+{% if page.key_concept_show %}
+  {% if key_concept_title != '' or key_concept_body != '' %}{% assign show_key_concept = true %}{% endif %}
+{% endif %}
+{% assign show_process = false %}
+{% if page.process_show %}
+  {% if process_title != '' or process_intro != '' or has_steps or show_image_2 %}{% assign show_process = true %}{% endif %}
+{% endif %}
+{% assign show_scope = false %}
+{% if page.scope_show %}
+  {% if scope_title != '' or scope_body != '' or has_stats %}{% assign show_scope = true %}{% endif %}
+{% endif %}
+{% assign show_related = false %}
+{% if page.related_show %}
+  {% if related_title != '' or has_related_cards %}{% assign show_related = true %}{% endif %}
+{% endif %}
+{% assign show_note = false %}
+{% if page.note_show %}
+  {% if note_title != '' or note_body != '' %}{% assign show_note = true %}{% endif %}
+{% endif %}
+{% assign show_closing_link = false %}
+{% if closing_link_url != '' and closing_link_label != '' %}{% assign show_closing_link = true %}{% endif %}
+{% assign show_closing = false %}
+{% if page.closing_show %}
+  {% if closing_title != '' or closing_body != '' or show_closing_link %}{% assign show_closing = true %}{% endif %}
+{% endif %}
 
 <article class="project-page">
-  <header class="project-hero{% unless page.hero_image %} project-hero-no-image{% endunless %}"{% if page.hero_image %} style="background-image: linear-gradient(rgba(17, 17, 17, 0.56), rgba(17, 17, 17, 0.72)), url('{{ page.hero_image | relative_url }}');"{% endif %}>
+  <header class="project-hero{% if hero_image == '' %} project-hero-no-image{% endif %}"{% if hero_image != '' %} style="background-image: linear-gradient(rgba(17, 17, 17, 0.56), rgba(17, 17, 17, 0.72)), url('{{ hero_image | relative_url }}');"{% endif %}>
     <div class="project-hero-inner">
       <p class="section-label">Project / Projet</p>
       {% if project_status and project_status != 'published' %}
         <p class="project-status-pill project-status-{{ project_status }}">{{ project_status | capitalize }}</p>
       {% endif %}
-      <h1>{{ page.hero_title | default: page.title }}</h1>
-      {% if page.subtitle %}<p class="project-lead">{{ page.subtitle }}</p>{% endif %}
-      {% if page.hero_caption %}<p class="project-hero-caption">{{ page.hero_caption }}</p>{% endif %}
+      {% if hero_title != '' %}<h1>{{ hero_title }}</h1>{% endif %}
+      {% if subtitle != '' %}<p class="project-lead">{{ subtitle }}</p>{% endif %}
+      {% if hero_caption != '' %}<p class="project-hero-caption">{{ hero_caption }}</p>{% endif %}
     </div>
   </header>
 
   <main class="project-content">
-    {% if page.summary or page.intro %}
+    {% if show_summary %}
     <section class="project-section project-summary-section">
       <div class="project-section-kicker">Overview</div>
-      {% if page.summary_title %}<h2>{{ page.summary_title }}</h2>{% endif %}
-      {% if page.summary %}<div class="project-richtext">{{ page.summary | markdownify }}</div>{% endif %}
-      {% if page.intro %}<div class="project-richtext project-intro-text">{{ page.intro | markdownify }}</div>{% endif %}
+      {% if summary_title != '' %}<h2>{{ summary_title }}</h2>{% endif %}
+      {% if summary != '' %}<div class="project-richtext">{{ summary | markdownify }}</div>{% endif %}
+      {% if intro != '' %}<div class="project-richtext project-intro-text">{{ intro | markdownify }}</div>{% endif %}
     </section>
     {% endif %}
 
-    {% if page.context_show and page.context_body %}
+    {% if show_context %}
     <section class="project-section project-split-section">
+      {% if context_title != '' or context_body != '' %}
       <div>
         <div class="project-section-kicker">Context</div>
-        {% if page.context_title %}<h2>{{ page.context_title }}</h2>{% endif %}
-        <div class="project-richtext">{{ page.context_body | markdownify }}</div>
+        {% if context_title != '' %}<h2>{{ context_title }}</h2>{% endif %}
+        {% if context_body != '' %}<div class="project-richtext">{{ context_body | markdownify }}</div>{% endif %}
       </div>
+      {% endif %}
       {% include project-image.html show=page.image_1_show image=page.image_1 alt=page.image_1_alt caption=page.image_1_caption class='project-side-image' %}
     </section>
     {% endif %}
 
-    {% if page.key_concept_show and page.key_concept_body %}
+    {% if show_key_concept %}
     <section class="project-section project-highlight-section">
       <div class="project-section-kicker">Key concept</div>
-      {% if page.key_concept_title %}<h2>{{ page.key_concept_title }}</h2>{% endif %}
-      <div class="project-richtext">{{ page.key_concept_body | markdownify }}</div>
+      {% if key_concept_title != '' %}<h2>{{ key_concept_title }}</h2>{% endif %}
+      {% if key_concept_body != '' %}<div class="project-richtext">{{ key_concept_body | markdownify }}</div>{% endif %}
     </section>
     {% endif %}
 
-    {% if page.process_show and page.steps %}
+    {% if show_process %}
     <section class="project-section project-process-section">
       <div class="project-section-kicker">Process</div>
-      {% if page.process_title %}<h2>{{ page.process_title }}</h2>{% endif %}
-      {% if page.process_intro %}<div class="project-richtext">{{ page.process_intro | markdownify }}</div>{% endif %}
+      {% if process_title != '' %}<h2>{{ process_title }}</h2>{% endif %}
+      {% if process_intro != '' %}<div class="project-richtext">{{ process_intro | markdownify }}</div>{% endif %}
+      {% if has_steps %}
       <div class="project-steps">
         {% for step in page.steps %}
+          {% assign step_title = step.title | default: '' | strip %}
+          {% assign step_text = step.text | default: '' | strip %}
+          {% if step_title != '' or step_text != '' %}
           <div class="project-step-card">
             <span>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
-            {% if step.title %}<h3>{{ step.title }}</h3>{% endif %}
-            {% if step.text %}<p>{{ step.text }}</p>{% endif %}
+            {% if step_title != '' %}<h3>{{ step_title }}</h3>{% endif %}
+            {% if step_text != '' %}<p>{{ step_text }}</p>{% endif %}
           </div>
+          {% endif %}
         {% endfor %}
       </div>
+      {% endif %}
       {% include project-image.html show=page.image_2_show image=page.image_2 alt=page.image_2_alt caption=page.image_2_caption class='project-wide-image' %}
     </section>
     {% endif %}
 
-    {% if page.scope_show and page.stats %}
+    {% if show_scope %}
     <section class="project-section project-scope-section">
       <div class="project-section-kicker">Scope</div>
-      {% if page.scope_title %}<h2>{{ page.scope_title }}</h2>{% endif %}
-      {% if page.scope_body %}<div class="project-richtext">{{ page.scope_body | markdownify }}</div>{% endif %}
+      {% if scope_title != '' %}<h2>{{ scope_title }}</h2>{% endif %}
+      {% if scope_body != '' %}<div class="project-richtext">{{ scope_body | markdownify }}</div>{% endif %}
+      {% if has_stats %}
       <div class="project-stats-grid">
         {% for stat in page.stats %}
+          {% assign stat_value = stat.value | default: '' | strip %}
+          {% assign stat_label = stat.label | default: '' | strip %}
+          {% if stat_value != '' or stat_label != '' %}
           <div class="project-stat-card">
-            {% if stat.value %}<strong>{{ stat.value }}</strong>{% endif %}
-            {% if stat.label %}<span>{{ stat.label }}</span>{% endif %}
+            {% if stat_value != '' %}<strong>{{ stat_value }}</strong>{% endif %}
+            {% if stat_label != '' %}<span>{{ stat_label }}</span>{% endif %}
           </div>
+          {% endif %}
         {% endfor %}
       </div>
+      {% endif %}
     </section>
     {% endif %}
 
     {% include project-image.html show=page.image_3_show image=page.image_3 alt=page.image_3_alt caption=page.image_3_caption class='project-wide-image project-standalone-image' %}
 
-    {% if page.related_show and page.related_cards %}
+    {% if show_related %}
     <section class="project-section project-related-section">
       <div class="project-section-kicker">Related work</div>
-      {% if page.related_title %}<h2>{{ page.related_title }}</h2>{% endif %}
+      {% if related_title != '' %}<h2>{{ related_title }}</h2>{% endif %}
+      {% if has_related_cards %}
       <div class="project-related-grid">
         {% for card in page.related_cards %}
-          <a class="project-related-card" href="{{ card.url | default: '#' | relative_url }}">
-            {% if card.label %}<span>{{ card.label }}</span>{% endif %}
-            {% if card.title %}<h3>{{ card.title }}</h3>{% endif %}
-            {% if card.text %}<p>{{ card.text }}</p>{% endif %}
+          {% assign card_label = card.label | default: '' | strip %}
+          {% assign card_title = card.title | default: '' | strip %}
+          {% assign card_text = card.text | default: '' | strip %}
+          {% assign card_url = card.url | default: '' | strip %}
+          {% if card_label != '' or card_title != '' or card_text != '' or card_url != '' %}
+          <a class="project-related-card" href="{{ card_url | default: '#' | relative_url }}">
+            {% if card_label != '' %}<span>{{ card_label }}</span>{% endif %}
+            {% if card_title != '' %}<h3>{{ card_title }}</h3>{% endif %}
+            {% if card_text != '' %}<p>{{ card_text }}</p>{% endif %}
           </a>
+          {% endif %}
         {% endfor %}
       </div>
-    </section>
-    {% endif %}
-
-    {% if page.note_show and page.note_body %}
-    <aside class="project-note-box">
-      {% if page.note_title %}<h2>{{ page.note_title }}</h2>{% endif %}
-      <div class="project-richtext">{{ page.note_body | markdownify }}</div>
-    </aside>
-    {% endif %}
-
-    {% if page.closing_show and page.closing_body %}
-    <section class="project-section project-closing-section">
-      {% if page.closing_title %}<h2>{{ page.closing_title }}</h2>{% endif %}
-      <div class="project-richtext">{{ page.closing_body | markdownify }}</div>
-      {% if page.closing_link_url and page.closing_link_label %}
-        <a class="project-button" href="{{ page.closing_link_url | relative_url }}">{{ page.closing_link_label }}</a>
       {% endif %}
     </section>
     {% endif %}
 
-    {% if content and content != '' %}
+    {% if show_note %}
+    <aside class="project-note-box">
+      {% if note_title != '' %}<h2>{{ note_title }}</h2>{% endif %}
+      {% if note_body != '' %}<div class="project-richtext">{{ note_body | markdownify }}</div>{% endif %}
+    </aside>
+    {% endif %}
+
+    {% if show_closing %}
+    <section class="project-section project-closing-section">
+      {% if closing_title != '' %}<h2>{{ closing_title }}</h2>{% endif %}
+      {% if closing_body != '' %}<div class="project-richtext">{{ closing_body | markdownify }}</div>{% endif %}
+      {% if show_closing_link %}
+        <a class="project-button" href="{{ closing_link_url | relative_url }}">{{ closing_link_label }}</a>
+      {% endif %}
+    </section>
+    {% endif %}
+
+    {% assign body_content = content | default: '' | strip %}
+    {% if body_content != '' %}
     <section class="project-section project-body-section">
       <div class="project-richtext">{{ content }}</div>
     </section>
