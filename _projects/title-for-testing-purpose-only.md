@@ -2,7 +2,7 @@
 layout: project
 title: 'Title : For testing purpose only'
 hero_title: 'Hero Title : For testing purpose only'
-status: draft
+status: review
 featured: false
 order: 50
 subtitle: ''
