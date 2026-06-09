@@ -15,6 +15,8 @@ hero_alt_en: English hero image alt text
 hero_alt_fr: Texte alternatif français
 hero_caption_en: English hero image caption
 hero_caption_fr: Légende française
+summary_kicker_en: English overview label
+summary_kicker_fr: Petit libellé français de l'aperçu
 summary_title_en: English summary title
 summary_title_fr: Titre de résumé français
 summary_en: English Summary
@@ -22,6 +24,8 @@ summary_fr: Résumé français
 intro_en: English Intro
 intro_fr: Introduction française
 context_show: true
+context_kicker_en: English context label
+context_kicker_fr: Petit libellé français du contexte
 context_title_en: English context title
 context_title_fr: Titre de contexte français
 context_body_en: English context body
@@ -33,11 +37,15 @@ image_1_alt_fr: Texte alternatif français image 1
 image_1_caption_en: English image 1 caption
 image_1_caption_fr: Légende francçaise image 1
 key_concept_show: true
+key_concept_kicker_en: English key concept label
+key_concept_kicker_fr: Petit libellé français du concept clé
 key_concept_title_en: English key concept title
 key_concept_title_fr: Titre français de concept clé
 key_concept_body_en: English key concept body
 key_concept_body_fr: Texte français du concept clé
 process_show: true
+process_kicker_en: English process label
+process_kicker_fr: Petit libellé français du processus
 process_title_en: English process title
 process_title_fr: Titre français du processus
 process_intro_en: English process intro
@@ -50,12 +58,16 @@ image_2_alt_fr: Texte alternatif français image 1
 image_2_caption_en: English image 2 caption
 image_2_caption_fr: Légende française image 2
 scope_show: true
+scope_kicker_en: English scope label
+scope_kicker_fr: Petit libellé français de la portée
 scope_title_en: English scope title
 scope_title_fr: Titre français de portée
 scope_body_en: English scope body
 scope_body_fr: Texte français de portée
 stats: []
 related_show: true
+related_kicker_en: English related label
+related_kicker_fr: Petit libellé français des liens
 related_title_en: English related section title
 related_title_fr: Titre français des cartes liées
 related_cards: []
