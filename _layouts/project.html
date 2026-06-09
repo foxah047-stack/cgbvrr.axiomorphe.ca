@@ -21,6 +21,19 @@ layout: default
 {% assign intro_en = page.intro_en | default: page.intro | default: '' | strip %}
 {% assign intro_fr = page.intro_fr | default: page.intro_en | default: page.intro | default: '' | strip %}
 
+{% assign summary_kicker_en = page.summary_kicker_en | default: page.summary_kicker | default: 'Overview' | strip %}
+{% assign summary_kicker_fr = page.summary_kicker_fr | default: page.summary_kicker_en | default: page.summary_kicker | default: 'Aperçu' | strip %}
+{% assign context_kicker_en = page.context_kicker_en | default: page.context_kicker | default: 'Context' | strip %}
+{% assign context_kicker_fr = page.context_kicker_fr | default: page.context_kicker_en | default: page.context_kicker | default: 'Contexte' | strip %}
+{% assign key_concept_kicker_en = page.key_concept_kicker_en | default: page.key_concept_kicker | default: 'Key concept' | strip %}
+{% assign key_concept_kicker_fr = page.key_concept_kicker_fr | default: page.key_concept_kicker_en | default: page.key_concept_kicker | default: 'Concept clé' | strip %}
+{% assign process_kicker_en = page.process_kicker_en | default: page.process_kicker | default: 'Process' | strip %}
+{% assign process_kicker_fr = page.process_kicker_fr | default: page.process_kicker_en | default: page.process_kicker | default: 'Processus' | strip %}
+{% assign scope_kicker_en = page.scope_kicker_en | default: page.scope_kicker | default: 'Scope' | strip %}
+{% assign scope_kicker_fr = page.scope_kicker_fr | default: page.scope_kicker_en | default: page.scope_kicker | default: 'Portée' | strip %}
+{% assign related_kicker_en = page.related_kicker_en | default: page.related_kicker | default: 'Related work' | strip %}
+{% assign related_kicker_fr = page.related_kicker_fr | default: page.related_kicker_en | default: page.related_kicker | default: 'Travaux liés' | strip %}
+
 {% assign context_title_en = page.context_title_en | default: page.context_title | default: '' | strip %}
 {% assign context_title_fr = page.context_title_fr | default: page.context_title_en | default: page.context_title | default: '' | strip %}
 {% assign context_body_en = page.context_body_en | default: page.context_body | default: '' | strip %}
@@ -152,7 +165,7 @@ layout: default
   <main class="project-content">
     {% if show_summary %}
     <section class="project-section project-summary-section">
-      <div class="project-section-kicker"><span data-lang="en">Overview</span><span data-lang="fr">Aperçu</span></div>
+      <div class="project-section-kicker"><span data-lang="en">{{ summary_kicker_en }}</span><span data-lang="fr">{{ summary_kicker_fr }}</span></div>
       {% if summary_title_en != '' or summary_title_fr != '' %}<h2>{% if summary_title_en != '' %}<span data-lang="en">{{ summary_title_en }}</span>{% endif %}{% if summary_title_fr != '' %}<span data-lang="fr">{{ summary_title_fr }}</span>{% endif %}</h2>{% endif %}
       {% if summary_en != '' %}<div class="project-richtext" data-lang="en">{{ summary_en | markdownify }}</div>{% endif %}
       {% if summary_fr != '' %}<div class="project-richtext" data-lang="fr">{{ summary_fr | markdownify }}</div>{% endif %}
@@ -165,7 +178,7 @@ layout: default
     <section class="project-section project-split-section">
       {% if context_title_en != '' or context_title_fr != '' or context_body_en != '' or context_body_fr != '' %}
       <div>
-        <div class="project-section-kicker"><span data-lang="en">Context</span><span data-lang="fr">Contexte</span></div>
+        <div class="project-section-kicker"><span data-lang="en">{{ context_kicker_en }}</span><span data-lang="fr">{{ context_kicker_fr }}</span></div>
         {% if context_title_en != '' or context_title_fr != '' %}<h2>{% if context_title_en != '' %}<span data-lang="en">{{ context_title_en }}</span>{% endif %}{% if context_title_fr != '' %}<span data-lang="fr">{{ context_title_fr }}</span>{% endif %}</h2>{% endif %}
         {% if context_body_en != '' %}<div class="project-richtext" data-lang="en">{{ context_body_en | markdownify }}</div>{% endif %}
         {% if context_body_fr != '' %}<div class="project-richtext" data-lang="fr">{{ context_body_fr | markdownify }}</div>{% endif %}
@@ -177,7 +190,7 @@ layout: default
 
     {% if show_key_concept %}
     <section class="project-section project-highlight-section">
-      <div class="project-section-kicker"><span data-lang="en">Key concept</span><span data-lang="fr">Concept clé</span></div>
+      <div class="project-section-kicker"><span data-lang="en">{{ key_concept_kicker_en }}</span><span data-lang="fr">{{ key_concept_kicker_fr }}</span></div>
       {% if key_concept_title_en != '' or key_concept_title_fr != '' %}<h2>{% if key_concept_title_en != '' %}<span data-lang="en">{{ key_concept_title_en }}</span>{% endif %}{% if key_concept_title_fr != '' %}<span data-lang="fr">{{ key_concept_title_fr }}</span>{% endif %}</h2>{% endif %}
       {% if key_concept_body_en != '' %}<div class="project-richtext" data-lang="en">{{ key_concept_body_en | markdownify }}</div>{% endif %}
       {% if key_concept_body_fr != '' %}<div class="project-richtext" data-lang="fr">{{ key_concept_body_fr | markdownify }}</div>{% endif %}
@@ -186,7 +199,7 @@ layout: default
 
     {% if show_process %}
     <section class="project-section project-process-section">
-      <div class="project-section-kicker"><span data-lang="en">Process</span><span data-lang="fr">Processus</span></div>
+      <div class="project-section-kicker"><span data-lang="en">{{ process_kicker_en }}</span><span data-lang="fr">{{ process_kicker_fr }}</span></div>
       {% if process_title_en != '' or process_title_fr != '' %}<h2>{% if process_title_en != '' %}<span data-lang="en">{{ process_title_en }}</span>{% endif %}{% if process_title_fr != '' %}<span data-lang="fr">{{ process_title_fr }}</span>{% endif %}</h2>{% endif %}
       {% if process_intro_en != '' %}<div class="project-richtext" data-lang="en">{{ process_intro_en | markdownify }}</div>{% endif %}
       {% if process_intro_fr != '' %}<div class="project-richtext" data-lang="fr">{{ process_intro_fr | markdownify }}</div>{% endif %}
@@ -214,7 +227,7 @@ layout: default
 
     {% if show_scope %}
     <section class="project-section project-scope-section">
-      <div class="project-section-kicker"><span data-lang="en">Scope</span><span data-lang="fr">Portée</span></div>
+      <div class="project-section-kicker"><span data-lang="en">{{ scope_kicker_en }}</span><span data-lang="fr">{{ scope_kicker_fr }}</span></div>
       {% if scope_title_en != '' or scope_title_fr != '' %}<h2>{% if scope_title_en != '' %}<span data-lang="en">{{ scope_title_en }}</span>{% endif %}{% if scope_title_fr != '' %}<span data-lang="fr">{{ scope_title_fr }}</span>{% endif %}</h2>{% endif %}
       {% if scope_body_en != '' %}<div class="project-richtext" data-lang="en">{{ scope_body_en | markdownify }}</div>{% endif %}
       {% if scope_body_fr != '' %}<div class="project-richtext" data-lang="fr">{{ scope_body_fr | markdownify }}</div>{% endif %}
@@ -243,7 +256,7 @@ layout: default
 
     {% if show_related %}
     <section class="project-section project-related-section">
-      <div class="project-section-kicker"><span data-lang="en">Related work</span><span data-lang="fr">Travaux liés</span></div>
+      <div class="project-section-kicker"><span data-lang="en">{{ related_kicker_en }}</span><span data-lang="fr">{{ related_kicker_fr }}</span></div>
       {% if related_title_en != '' or related_title_fr != '' %}<h2>{% if related_title_en != '' %}<span data-lang="en">{{ related_title_en }}</span>{% endif %}{% if related_title_fr != '' %}<span data-lang="fr">{{ related_title_fr }}</span>{% endif %}</h2>{% endif %}
       {% if has_related_cards %}
       <div class="project-related-grid">
