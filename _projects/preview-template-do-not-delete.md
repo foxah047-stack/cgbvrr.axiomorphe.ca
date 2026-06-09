@@ -7,7 +7,7 @@ order: 50
 title_en: English Title
 title_fr: Titre français
 hero_title_en: English hero title
-hero_title_fr: French hero title
+hero_title_fr: Titre principal français
 subtitle_en: English subtitle / Sous-titre anglais
 subtitle_fr: French subtitle / Sous-titre français
 hero_image: /assets/img/hero-2560.webp
