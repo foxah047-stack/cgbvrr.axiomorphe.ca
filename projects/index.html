@@ -6,7 +6,7 @@ permalink: /projects/
 
 <section class="page-hero projects-list-hero">
   <div class="page-hero-inner">
-    <p class="section-label">Projects / Projets</p>
+    <p class="section-label"><span data-lang="en">Projects</span><span data-lang="fr">Projets</span></p>
     <h1><span data-lang="en">Watershed projects</span><span data-lang="fr">Projets du bassin versant</span></h1>
     <p class="page-lead" data-lang="en">Public project pages for major CGBVRR work, field initiatives, and long-term watershed strategies.</p>
     <p class="page-lead" data-lang="fr">Pages publiques pour les principaux projets du CGBVRR, les initiatives de terrain et les stratégies à long terme pour le bassin versant.</p>
@@ -32,7 +32,7 @@ permalink: /projects/
             </a>
           {% endif %}
           <div class="project-list-card-body">
-            <p class="project-list-status">{{ project.status | capitalize }}</p>
+            <p class="project-list-status"><span data-lang="en">{{ project.status | capitalize }}</span><span data-lang="fr">{% if project.status == 'published' %}Publié{% else %}{{ project.status | capitalize }}{% endif %}</span></p>
             <h2><a href="{{ project.url | relative_url }}">{% if project_title_en != '' %}<span data-lang="en">{{ project_title_en }}</span>{% endif %}{% if project_title_fr != '' %}<span data-lang="fr">{{ project_title_fr }}</span>{% endif %}</a></h2>
             {% if project_subtitle_en != '' %}<p data-lang="en">{{ project_subtitle_en }}</p>{% endif %}
             {% if project_subtitle_fr != '' %}<p data-lang="fr">{{ project_subtitle_fr }}</p>{% endif %}

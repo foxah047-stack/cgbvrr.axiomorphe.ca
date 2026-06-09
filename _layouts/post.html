@@ -5,7 +5,7 @@ layout: default
   <header class="post-header">
     <div class="post-header-inner">
       <div class="section-label">
-        {% if page.categorie %}{{ page.categorie }}{% else %}Nouvelles{% endif %}
+        {% if page.categorie %}{{ page.categorie }}{% else %}<span data-lang="en">News</span><span data-lang="fr">Nouvelles</span>{% endif %}
       </div>
       <h1>{{ page.title }}</h1>
       {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
@@ -23,7 +23,7 @@ layout: default
 
     <aside class="post-sidebar">
       <div class="sidebar-card">
-        <h4>Projet lié</h4>
+        <h4><span data-lang="en">Related project</span><span data-lang="fr">Projet lié</span></h4>
         {% if page.projet %}
           <p>{{ page.projet }}</p>
         {% else %}
@@ -32,16 +32,16 @@ layout: default
       </div>
 
       <div class="sidebar-card">
-        <h4>Partager</h4>
+        <h4><span data-lang="en">Share</span><span data-lang="fr">Partager</span></h4>
         <div class="share-links">
           <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank" rel="noopener">Facebook</a>
-          <a href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url }}">Courriel</a>
+          <a href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url }}"><span data-lang="en">Email</span><span data-lang="fr">Courriel</span></a>
         </div>
       </div>
 
       <div class="sidebar-card">
-        <h4>Flux RSS</h4>
-        <p><a href="/feed.xml">S'abonner aux nouvelles</a></p>
+        <h4><span data-lang="en">RSS feed</span><span data-lang="fr">Flux RSS</span></h4>
+        <p><a href="/feed.xml"><span data-lang="en">Subscribe to news</span><span data-lang="fr">S'abonner aux nouvelles</span></a></p>
       </div>
     </aside>
   </div>
@@ -50,13 +50,13 @@ layout: default
     <div class="post-nav-inner">
       {% if page.previous.url %}
       <a href="{{ page.previous.url | relative_url }}" class="post-nav-link prev">
-        <span class="nav-label">← Article précédent</span>
+        <span class="nav-label"><span data-lang="en">← Previous article</span><span data-lang="fr">← Article précédent</span></span>
         <span class="nav-title">{{ page.previous.title }}</span>
       </a>
       {% endif %}
       {% if page.next.url %}
       <a href="{{ page.next.url | relative_url }}" class="post-nav-link next">
-        <span class="nav-label">Article suivant →</span>
+        <span class="nav-label"><span data-lang="en">Next article →</span><span data-lang="fr">Article suivant →</span></span>
         <span class="nav-title">{{ page.next.title }}</span>
       </a>
       {% endif %}

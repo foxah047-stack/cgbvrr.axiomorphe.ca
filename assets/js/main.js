@@ -43,6 +43,17 @@ function applyLang(lang) {
     img.setAttribute('alt', nextAlt);
   });
 
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(input => {
+    const fallback = input.getAttribute('data-placeholder-en') || input.getAttribute('placeholder') || '';
+    const nextPlaceholder = input.getAttribute(`data-placeholder-${safeLang}`) || fallback;
+    input.setAttribute('placeholder', nextPlaceholder);
+  });
+
+  document.querySelectorAll('[data-i18n-text]').forEach(el => {
+    const fallback = el.getAttribute('data-text-en') || el.textContent || '';
+    el.textContent = el.getAttribute(`data-text-${safeLang}`) || fallback;
+  });
+
   const btn = document.getElementById('lang-btn');
   if (btn) {
     btn.textContent = safeLang === 'en' ? 'FR' : 'EN';
