@@ -2131,6 +2131,10 @@ textarea:focus-visible {
   width: min(var(--page-narrow), 100%);
 }
 
+.about-intro-section {
+  width: min(1120px, 100%);
+}
+
 .about-intro-box {
   background: #fff;
   border: 1px solid rgba(58,90,46,0.12);
@@ -2142,15 +2146,15 @@ textarea:focus-visible {
 .about-intro-box h2 {
   color: var(--moss);
   font-family: 'Playfair Display', serif;
-  font-size: clamp(44px, 7vw, 84px);
-  line-height: 1.05;
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.03;
   margin: 0 0 clamp(26px, 4vw, 36px);
 }
 
 .about-intro-box p {
   color: rgba(58, 58, 50, 0.82);
-  font-size: clamp(22px, 3vw, 32px);
-  line-height: 1.62;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.55;
   margin: 0 0 1.5em;
 }
 
