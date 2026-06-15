@@ -2448,3 +2448,71 @@ a.link-card p {
     padding: 20px;
   }
 }
+
+/* ── PASS 6A HOTFIX: RESTORE LEFT HERO + FULL-WIDTH NAV PANELS ── */
+/* Keep the calmer interior hero, but return the text block to the original left position. */
+.page-hero-inner {
+  width: min(880px, 100%);
+  max-width: 880px;
+  margin: 0;
+}
+
+/* Desktop mega-panels should span the nav/site width so the cursor has a safe path. */
+@media (min-width: 901px) {
+  .site-nav .nav-item {
+    position: static;
+  }
+
+  .site-nav .nav-panel,
+  .site-nav .nav-panel-wide {
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: none;
+    display: grid;
+    grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+    gap: 28px;
+    padding: 28px clamp(32px, 5vw, 60px) 30px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid rgba(216, 230, 204, 0.82);
+    border-bottom: 1px solid rgba(58, 90, 46, 0.18);
+    border-radius: 0;
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.24);
+    transform: translateY(-6px);
+  }
+
+  .site-nav .nav-panel::before {
+    display: none;
+  }
+
+  .site-nav .nav-has-panel:hover .nav-panel,
+  .site-nav .nav-has-panel:focus-within .nav-panel,
+  .site-nav .nav-has-panel.open .nav-panel {
+    transform: translateY(0);
+  }
+
+  .site-nav .nav-panel-intro {
+    max-width: 340px;
+  }
+
+  .site-nav .nav-panel-links,
+  .site-nav .nav-panel-links-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    align-content: start;
+  }
+
+  .site-nav .nav-panel-links a {
+    min-height: 78px;
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-hero-inner {
+    width: 100%;
+    max-width: 880px;
+  }
+}
