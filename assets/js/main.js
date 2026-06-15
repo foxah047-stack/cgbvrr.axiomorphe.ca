@@ -1,4 +1,4 @@
-﻿// ── LANGUAGE SYSTEM ──
+// ── LANGUAGE SYSTEM ──
 // Global functions so onclick in HTML can call them directly
 
 function detectLang() {
@@ -43,17 +43,6 @@ function applyLang(lang) {
     img.setAttribute('alt', nextAlt);
   });
 
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(input => {
-    const fallback = input.getAttribute('data-placeholder-en') || input.getAttribute('placeholder') || '';
-    const nextPlaceholder = input.getAttribute(`data-placeholder-${safeLang}`) || fallback;
-    input.setAttribute('placeholder', nextPlaceholder);
-  });
-
-  document.querySelectorAll('[data-i18n-text]').forEach(el => {
-    const fallback = el.getAttribute('data-text-en') || el.textContent || '';
-    el.textContent = el.getAttribute(`data-text-${safeLang}`) || fallback;
-  });
-
   const btn = document.getElementById('lang-btn');
   if (btn) {
     btn.textContent = safeLang === 'en' ? 'FR' : 'EN';
@@ -93,6 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!trigger) return;
 
     trigger.addEventListener('click', event => {
+      // Top-level panel labels are real links. On desktop, hover/focus exposes panels; clicking navigates.
+      // Button triggers, if reintroduced later, still toggle the panel without navigation.
+      if (trigger.tagName === 'A') return;
+
       event.preventDefault();
       const willOpen = !item.classList.contains('open');
       panelItems.forEach(other => {

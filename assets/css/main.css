@@ -1966,3 +1966,16 @@ a.btn-primary {
   .project-list-card-body { padding: 18px; }
   .project-hero h1 { overflow-wrap: anywhere; }
 }
+
+/* ── PASS 5: NAV PARENTS ARE REAL LINKS ── */
+@media (max-width: 900px) {
+  .nav-links.open .nav-has-panel .nav-panel {
+    display: grid;
+    transform: none;
+    margin-top: 6px;
+  }
+
+  .nav-links.open .nav-panel-trigger::after {
+    display: none;
+  }
+}
