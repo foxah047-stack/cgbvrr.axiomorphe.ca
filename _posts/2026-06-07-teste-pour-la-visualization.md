@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Teste pour la visualization
-image: /assets/img/Barrage castor.jpg
+image: /assets/img/map1.png
 categorie: La catégorie
 projet: Le nom de projet
 auteur: L'auteur
