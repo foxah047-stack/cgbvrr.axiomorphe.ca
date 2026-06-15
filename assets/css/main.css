@@ -1979,3 +1979,472 @@ a.btn-primary {
     display: none;
   }
 }
+
+/* ── PASS 6A: PUBLIC PAGE EDITORIAL SYSTEM ── */
+:root {
+  --page-max: 1120px;
+  --page-wide: 1240px;
+  --page-narrow: 760px;
+  --hairline: rgba(58, 90, 46, 0.14);
+  --hairline-strong: rgba(46, 107, 122, 0.26);
+  --quiet-surface: rgba(244, 240, 230, 0.72);
+  --quiet-surface-light: rgba(255, 255, 255, 0.58);
+  --editorial-shadow: 0 14px 36px rgba(42, 42, 36, 0.055);
+}
+
+body {
+  background:
+    linear-gradient(180deg, rgba(250, 248, 242, 1) 0%, rgba(246, 243, 235, 1) 100%);
+}
+
+/* Accessible keyboard states for public UI controls. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--river-light);
+  outline-offset: 3px;
+}
+
+/* Interior page headers: quieter and smaller than the homepage hero. */
+.page-hero {
+  background:
+    linear-gradient(145deg, rgba(42, 42, 36, 0.98), rgba(26, 48, 47, 0.96));
+  color: var(--cream);
+  padding: clamp(54px, 7vw, 76px) clamp(24px, 5vw, 60px) clamp(44px, 6vw, 64px);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  background:
+    radial-gradient(ellipse at 16% 80%, rgba(46, 107, 122, 0.18), transparent 46%),
+    radial-gradient(ellipse at 84% 12%, rgba(58, 90, 46, 0.24), transparent 42%);
+  opacity: 0.9;
+}
+
+.page-hero-inner {
+  width: min(var(--page-max), 100%);
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.03;
+  margin: 12px 0 14px;
+  max-width: 860px;
+}
+
+.page-lead {
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.55;
+  max-width: 760px;
+}
+
+/* Hide old internal-preview badges without deleting the source text. */
+.structure-preview-hero .preview-note {
+  display: none !important;
+}
+
+/* Editorial page foundation for current static pages and later rewrites. */
+.detail-page,
+.editorial-page {
+  background: var(--paper);
+}
+
+.detail-grid,
+.editorial-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  gap: clamp(28px, 4vw, 52px);
+  width: min(var(--page-max), 100%);
+  margin: 0 auto;
+  padding: clamp(52px, 7vw, 78px) clamp(24px, 5vw, 60px) clamp(22px, 4vw, 42px);
+}
+
+.detail-main-card,
+.editorial-main {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.detail-side-card,
+.editorial-aside,
+.quiet-card {
+  background: var(--quiet-surface);
+  border: 1px solid var(--hairline);
+  border-left: 3px solid rgba(46, 107, 122, 0.38);
+  box-shadow: none;
+  padding: clamp(20px, 3vw, 28px);
+  align-self: start;
+}
+
+.detail-main-card h2,
+.editorial-main h2,
+.editorial-section h2,
+.content-block h2,
+.timeline-preview h2,
+.decision-prompt h2,
+.team-intro-card h2,
+.team-section-preview h2,
+.site-example-card h2,
+.detail-side-card h2,
+.quiet-card h2,
+.cta-band h2 {
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.12;
+  margin-bottom: 14px;
+}
+
+.detail-side-card h2,
+.quiet-card h2 {
+  font-size: clamp(23px, 2.6vw, 30px);
+}
+
+.detail-main-card p,
+.content-block p,
+.site-example-card p,
+.decision-prompt p,
+.team-intro-card p,
+.team-section-preview p,
+.detail-side-card p,
+.editorial-main p,
+.editorial-section p,
+.quiet-card p,
+.cta-band p {
+  font-size: 16px;
+  line-height: 1.72;
+  color: rgba(58, 58, 50, 0.8);
+}
+
+.editorial-section,
+.editorial-narrow {
+  width: min(var(--page-max), 100%);
+  margin: 0 auto;
+  padding: clamp(42px, 6vw, 68px) clamp(24px, 5vw, 60px);
+}
+
+.editorial-narrow {
+  width: min(var(--page-narrow), 100%);
+}
+
+.editorial-lead {
+  color: rgba(58, 58, 50, 0.82);
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.62;
+  max-width: var(--page-narrow);
+}
+
+.section-divider {
+  width: min(var(--page-max), calc(100% - 48px));
+  height: 1px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, transparent, var(--hairline), transparent);
+}
+
+/* Current block-heavy pages: make normal content feel open instead of boxed. */
+.content-blocks,
+.site-examples {
+  width: min(var(--page-max), 100%);
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 60px) clamp(34px, 6vw, 72px);
+  gap: clamp(22px, 3vw, 34px);
+}
+
+.content-block,
+.site-example-card {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--hairline);
+  box-shadow: none;
+  padding: clamp(20px, 3vw, 30px) 0 0;
+}
+
+.placeholder-block,
+.content-block.placeholder-block,
+.site-example-card.placeholder-block {
+  background: var(--quiet-surface);
+  border: 1px solid var(--hairline);
+  border-left: 3px solid rgba(58, 90, 46, 0.34);
+  padding: clamp(22px, 3vw, 30px);
+}
+
+/* Reusable link-card system for upcoming Pass 6 page rewrites. */
+.link-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2.4vw, 24px);
+  width: min(var(--page-max), 100%);
+  margin: 0 auto;
+}
+
+.link-card,
+a.link-card {
+  display: block;
+  background: var(--quiet-surface-light);
+  border: 1px solid var(--hairline);
+  border-top: 3px solid rgba(46, 107, 122, 0.38);
+  color: var(--ink);
+  padding: clamp(22px, 3vw, 30px);
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.link-card:hover,
+a.link-card:hover,
+.link-card:focus-visible,
+a.link-card:focus-visible {
+  background: #fff;
+  border-color: var(--hairline-strong);
+  transform: translateY(-2px);
+}
+
+.link-card h3,
+a.link-card h3 {
+  color: var(--moss);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 2.4vw, 28px);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.link-card p,
+a.link-card p {
+  color: rgba(58, 58, 50, 0.74);
+  font-size: 15px;
+  line-height: 1.62;
+}
+
+/* CTA bands: restrained institutional calls to action. */
+.decision-prompt,
+.timeline-preview,
+.team-intro-card,
+.team-section-preview,
+.cta-band {
+  width: min(var(--page-max), calc(100% - 48px));
+  margin: clamp(24px, 5vw, 52px) auto;
+  box-shadow: none;
+}
+
+.decision-prompt,
+.cta-band {
+  background: var(--cream);
+  border: 1px solid var(--hairline);
+  border-left: 4px solid var(--river);
+  padding: clamp(24px, 4vw, 38px);
+}
+
+.soft-prompt {
+  background:
+    linear-gradient(135deg, rgba(46, 107, 122, 0.08), rgba(58, 90, 46, 0.08)),
+    var(--cream);
+}
+
+.timeline-preview,
+.team-intro-card,
+.team-section-preview {
+  background: transparent;
+  border: 0;
+  padding: clamp(28px, 4vw, 42px) 0;
+}
+
+.muted-section {
+  background: var(--quiet-surface);
+  border: 1px solid var(--hairline);
+  padding: clamp(28px, 4vw, 42px);
+}
+
+/* Small structural components. */
+.snapshot-list {
+  gap: 0;
+}
+
+.snapshot-list div {
+  border-top: 1px solid var(--hairline);
+  padding: 14px 0;
+}
+
+.snapshot-list div:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.snapshot-list div:last-child {
+  padding-bottom: 0;
+}
+
+.snapshot-list dd a {
+  color: var(--river);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.clean-list {
+  margin-top: 14px;
+}
+
+.clean-list li {
+  padding-left: 22px;
+}
+
+.clean-list li::before {
+  top: 0.7em;
+  width: 7px;
+  height: 7px;
+  border-width: 1px;
+  background: rgba(46, 107, 122, 0.12);
+}
+
+.map-placeholder {
+  min-height: 140px;
+  border-color: rgba(46, 107, 122, 0.28);
+  background: rgba(216, 230, 204, 0.26);
+}
+
+/* News/project listing pages should align with the same public-page width. */
+.news-listing {
+  padding: clamp(54px, 7vw, 78px) clamp(24px, 5vw, 60px);
+}
+
+.news-listing-header,
+.news-listing-grid {
+  width: min(var(--page-max), 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news-listing-header h1 {
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.05;
+}
+
+.project-list-page {
+  padding-top: clamp(42px, 6vw, 70px);
+}
+
+/* Navigation panels: keep the hub system, but reduce the full-width mega-menu feeling. */
+@media (min-width: 901px) {
+  .site-nav .nav-panel {
+    left: 50%;
+    right: auto;
+    width: min(920px, calc(100vw - 48px));
+    max-width: 920px;
+    grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+    gap: 22px;
+    padding: 24px;
+    border: 1px solid rgba(216, 230, 204, 0.86);
+    border-top: 3px solid var(--river);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 24px 58px rgba(0, 0, 0, 0.22);
+    transform: translate(-50%, 8px);
+  }
+
+  .site-nav .nav-panel-wide {
+    width: min(1040px, calc(100vw - 48px));
+    max-width: 1040px;
+  }
+
+  .site-nav .nav-has-panel:hover .nav-panel,
+  .site-nav .nav-has-panel:focus-within .nav-panel,
+  .site-nav .nav-has-panel.open .nav-panel {
+    transform: translate(-50%, 0);
+  }
+
+  .site-nav .nav-panel-links-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-nav .nav-panel-links a {
+    min-height: auto;
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-hero {
+    padding: 52px 24px 42px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(32px, 11vw, 48px);
+    line-height: 1.06;
+  }
+
+  .page-lead {
+    font-size: 17px;
+  }
+
+  .detail-grid,
+  .editorial-grid,
+  .content-blocks,
+  .site-examples {
+    grid-template-columns: 1fr;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .detail-grid,
+  .editorial-grid {
+    padding-top: 42px;
+  }
+
+  .detail-side-card,
+  .quiet-card {
+    padding: 22px;
+  }
+
+  .link-card-grid,
+  .news-listing-grid,
+  .project-list-grid,
+  .people-grid,
+  .timeline-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .decision-prompt,
+  .timeline-preview,
+  .team-intro-card,
+  .team-section-preview,
+  .cta-band {
+    width: calc(100% - 48px);
+  }
+
+  .muted-section {
+    padding: 24px;
+  }
+
+  .news-listing {
+    padding: 42px 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .detail-grid,
+  .editorial-grid,
+  .content-blocks,
+  .site-examples,
+  .news-listing {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .decision-prompt,
+  .timeline-preview,
+  .team-intro-card,
+  .team-section-preview,
+  .cta-band {
+    width: calc(100% - 36px);
+  }
+
+  .detail-side-card,
+  .quiet-card,
+  .placeholder-block,
+  .content-block.placeholder-block,
+  .decision-prompt,
+  .cta-band {
+    padding: 20px;
+  }
+}
