@@ -1,7 +1,7 @@
 ---
 layout: project
 title: preview-template-do-not-delete
-status: review
+status: published
 featured: true
 order: 50
 title_en: English Title
