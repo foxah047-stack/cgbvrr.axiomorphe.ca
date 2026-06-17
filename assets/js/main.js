@@ -51,6 +51,11 @@ function applyLang(lang) {
   }
 
   localStorage.setItem('cgbvrr-lang', safeLang);
+
+  const siteNav = document.getElementById('site-nav');
+  if (siteNav) {
+    document.documentElement.style.setProperty('--mobile-nav-height', `${siteNav.getBoundingClientRect().height}px`);
+  }
 }
 
 function toggleLang() {
@@ -67,10 +72,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Mobile drawer navigation
   const hamburger = document.getElementById('nav-hamburger');
+  const siteNav = document.getElementById('site-nav');
   const navLinks  = document.getElementById('primary-navigation');
   const navOverlay = document.getElementById('nav-overlay');
   const mobileQuery = window.matchMedia('(max-width: 900px)');
   if (navLinks && !navLinks.hasAttribute('tabindex')) navLinks.setAttribute('tabindex', '-1');
+
+  function updateMobileNavHeight() {
+    if (!siteNav) return;
+    document.documentElement.style.setProperty('--mobile-nav-height', `${siteNav.getBoundingClientRect().height}px`);
+  }
 
   function isMobileNav() {
     return mobileQuery.matches;
@@ -88,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function openMobileMenu() {
     if (!hamburger || !navLinks) return;
+    updateMobileNavHeight();
     navLinks.classList.add('open');
     hamburger.setAttribute('aria-expanded', 'true');
     hamburger.setAttribute('aria-label', 'Close menu');
@@ -148,8 +160,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   mobileQuery.addEventListener('change', event => {
+    updateMobileNavHeight();
     if (!event.matches) closeMobileMenu();
   });
+  window.addEventListener('resize', updateMobileNavHeight);
+  updateMobileNavHeight();
 
   // Director preview dropdown panels
   const panelItems = document.querySelectorAll('.nav-has-panel');
