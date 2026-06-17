@@ -2532,7 +2532,7 @@ a.link-card p {
     right: 0;
     bottom: 0;
     left: auto;
-    width: min(88vw, 420px);
+    width: min(72vw, 300px);
     height: 100vh;
     height: 100dvh;
     padding: 0;
@@ -2734,12 +2734,11 @@ a.link-card p {
 
   .site-nav .nav-panel-links span {
     font-size: 12px;
-    margin-bottom: 3px;
+    margin-bottom: 0;
   }
 
   .site-nav .nav-panel-links small {
-    font-size: 12px;
-    line-height: 1.32;
+    display: none;
   }
 
   .site-nav .nav-item {
@@ -2749,7 +2748,7 @@ a.link-card p {
 
 @media (max-width: 420px) {
   .site-nav .nav-links {
-    width: min(90vw, 380px);
+    width: min(74vw, 300px);
   }
 
   .site-nav .nav-links > li > a,
