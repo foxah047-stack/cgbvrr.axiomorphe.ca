@@ -2376,6 +2376,21 @@ a.link-card p {
 
 /* Desktop mega-panels should span the nav/site width so the cursor has a safe path. */
 @media (min-width: 901px) {
+  .site-nav .nav-links {
+    align-self: stretch;
+  }
+
+  .site-nav .nav-links > li {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .site-nav .nav-links > li > a,
+  .site-nav .nav-links > li > .nav-panel-trigger {
+    display: flex;
+    align-items: center;
+  }
+
   .site-nav .nav-item {
     position: static;
   }
