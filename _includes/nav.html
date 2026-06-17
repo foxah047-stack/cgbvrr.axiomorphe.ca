@@ -9,6 +9,10 @@
   </div>
 
   <ul class="nav-links" id="primary-navigation">
+    <li class="mobile-nav-header">
+      <span class="mobile-nav-title">Menu</span>
+      <button class="mobile-nav-close" id="nav-close" type="button" aria-label="Close menu">×</button>
+    </li>
     <li><a href="/" data-lang="en">Home</a><a href="/" data-lang="fr">Accueil</a></li>
 
     <li class="nav-item nav-has-panel">
@@ -16,6 +20,10 @@
         <span data-lang="en">About</span><span data-lang="fr">À propos</span>
       </a>
       <div class="nav-panel" id="about-panel">
+        <div class="mobile-submenu-header">
+          <button class="mobile-submenu-back" type="button" aria-label="Back to main menu">←</button>
+          <strong><span data-lang="fr">À propos</span><span data-lang="en">About</span></strong>
+        </div>
         <div class="nav-panel-intro">
           <p class="nav-panel-kicker" data-lang="en">Institution</p>
           <p class="nav-panel-kicker" data-lang="fr">Institution</p>
@@ -39,6 +47,10 @@
         <span data-lang="en">Projects</span><span data-lang="fr">Projets</span>
       </a>
       <div class="nav-panel nav-panel-wide" id="projects-panel">
+        <div class="mobile-submenu-header">
+          <button class="mobile-submenu-back" type="button" aria-label="Back to main menu">←</button>
+          <strong><span data-lang="fr">Projets</span><span data-lang="en">Projects</span></strong>
+        </div>
         <div class="nav-panel-intro">
           <p class="nav-panel-kicker" data-lang="en">Current work</p>
           <p class="nav-panel-kicker" data-lang="fr">Travaux en cours</p>
@@ -63,6 +75,10 @@
         <span data-lang="en">News</span><span data-lang="fr">Nouvelles</span>
       </a>
       <div class="nav-panel" id="news-panel">
+        <div class="mobile-submenu-header">
+          <button class="mobile-submenu-back" type="button" aria-label="Back to main menu">←</button>
+          <strong><span data-lang="fr">Nouvelles</span><span data-lang="en">News</span></strong>
+        </div>
         <div class="nav-panel-intro">
           <p class="nav-panel-kicker" data-lang="en">Updates</p>
           <p class="nav-panel-kicker" data-lang="fr">Mises à jour</p>
@@ -84,6 +100,10 @@
         <span data-lang="en">Resources</span><span data-lang="fr">Ressources</span>
       </a>
       <div class="nav-panel" id="resources-panel">
+        <div class="mobile-submenu-header">
+          <button class="mobile-submenu-back" type="button" aria-label="Back to main menu">←</button>
+          <strong><span data-lang="fr">Ressources</span><span data-lang="en">Resources</span></strong>
+        </div>
         <div class="nav-panel-intro">
           <p class="nav-panel-kicker" data-lang="en">Library &amp; tools</p>
           <p class="nav-panel-kicker" data-lang="fr">Bibliothèque et outils</p>
@@ -107,6 +127,10 @@
         <span data-lang="en">Team</span><span data-lang="fr">Équipe</span>
       </a>
       <div class="nav-panel" id="team-panel">
+        <div class="mobile-submenu-header">
+          <button class="mobile-submenu-back" type="button" aria-label="Back to main menu">←</button>
+          <strong><span data-lang="fr">Équipe</span><span data-lang="en">Team</span></strong>
+        </div>
         <div class="nav-panel-intro">
           <p class="nav-panel-kicker" data-lang="en">People</p>
           <p class="nav-panel-kicker" data-lang="fr">Personnes</p>
@@ -130,6 +154,10 @@
         <span data-lang="en">Contact</span><span data-lang="fr">Contact</span>
       </a>
       <div class="nav-panel" id="contact-panel">
+        <div class="mobile-submenu-header">
+          <button class="mobile-submenu-back" type="button" aria-label="Back to main menu">←</button>
+          <strong><span data-lang="fr">Contact</span><span data-lang="en">Contact</span></strong>
+        </div>
         <div class="nav-panel-intro">
           <p class="nav-panel-kicker" data-lang="en">Connect</p>
           <p class="nav-panel-kicker" data-lang="fr">Nous joindre</p>
@@ -154,4 +182,6 @@
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-controls="primary-navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
+
+  <div class="nav-overlay" id="nav-overlay" hidden></div>
 </nav>
