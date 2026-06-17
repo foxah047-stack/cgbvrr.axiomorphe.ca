@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const navLinks  = document.getElementById('primary-navigation');
   const navOverlay = document.getElementById('nav-overlay');
   const mobileQuery = window.matchMedia('(max-width: 900px)');
+  let mobileMenuScrollY = 0;
   if (navLinks && !navLinks.hasAttribute('tabindex')) navLinks.setAttribute('tabindex', '-1');
 
   function updateMobileNavHeight() {
@@ -100,6 +101,12 @@ document.addEventListener('DOMContentLoaded', function() {
   function openMobileMenu() {
     if (!hamburger || !navLinks) return;
     updateMobileNavHeight();
+    mobileMenuScrollY = window.scrollY || window.pageYOffset || 0;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${mobileMenuScrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
     navLinks.classList.add('open');
     hamburger.setAttribute('aria-expanded', 'true');
     hamburger.setAttribute('aria-label', 'Close menu');
@@ -109,12 +116,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function closeMobileMenu() {
     if (!hamburger || !navLinks) return;
+    const wasOpen = navLinks.classList.contains('open');
     navLinks.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
     hamburger.setAttribute('aria-label', 'Menu');
     if (navOverlay) navOverlay.hidden = true;
     document.body.classList.remove('mobile-menu-open');
     closeMobileSubmenus();
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    if (wasOpen) window.scrollTo(0, mobileMenuScrollY);
   }
 
   if (hamburger && navLinks) {
