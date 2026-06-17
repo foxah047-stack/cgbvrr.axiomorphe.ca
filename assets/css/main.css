@@ -2436,7 +2436,6 @@ a.link-card p {
 
 
 /* ── UI PASS 7A: DESKTOP BRAND SCALE + MOBILE DRAWER NAV ── */
-.mobile-nav-header,
 .mobile-submenu-header,
 .nav-overlay {
   display: none;
@@ -2467,6 +2466,7 @@ a.link-card p {
   .site-nav {
     min-height: 64px;
     padding: 0 18px;
+    z-index: 2300;
   }
 
   .nav-logo {
@@ -2517,9 +2517,9 @@ a.link-card p {
   .nav-overlay:not([hidden]) {
     display: block;
     position: fixed;
-    inset: 0;
+    inset: 64px 0 0 0;
     background: rgba(18, 24, 16, 0.52);
-    z-index: 2190;
+    z-index: 2180;
   }
 
   .site-nav .nav-links {
@@ -2528,13 +2528,13 @@ a.link-card p {
     align-items: stretch;
     gap: 0;
     position: fixed;
-    top: 0;
+    top: 64px;
     right: 0;
     bottom: 0;
     left: auto;
     width: min(72vw, 300px);
-    height: 100vh;
-    height: 100dvh;
+    height: calc(100vh - 64px);
+    height: calc(100dvh - 64px);
     padding: 0;
     margin: 0;
     background: linear-gradient(180deg, var(--moss) 0%, #2f4b26 100%);
@@ -2551,25 +2551,6 @@ a.link-card p {
     transform: translateX(0);
   }
 
-  .mobile-nav-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 68px;
-    padding: 0 18px;
-    border-bottom: 1px solid rgba(216, 230, 204, 0.22);
-  }
-
-  .mobile-nav-title {
-    color: #fff;
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-  }
-
-  .mobile-nav-close,
-  .mobile-submenu-close,
   .mobile-submenu-back {
     appearance: none;
     border: 1px solid rgba(58, 90, 46, 0.18);
@@ -2585,13 +2566,7 @@ a.link-card p {
     cursor: pointer;
   }
 
-  .mobile-nav-close {
-    border-color: rgba(216, 230, 204, 0.24);
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-  }
-
-  .site-nav .nav-links > li:not(.mobile-nav-header) {
+  .site-nav .nav-links > li {
     border-bottom: 1px solid rgba(216, 230, 204, 0.18);
   }
 
