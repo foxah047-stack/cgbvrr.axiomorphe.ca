@@ -2469,6 +2469,14 @@ a.link-card p {
     z-index: 2300;
   }
 
+  body.mobile-menu-open .site-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+
   .nav-logo {
     min-width: 0;
     max-width: calc(100vw - 90px);
