@@ -67,8 +67,10 @@ Paragraphe normal.
 
 ### Publier :
 ```bash
-git add .
+git status
+git add _posts/AAAA-MM-JJ-titre-court.md
 git commit -m "Nouvelle : titre de l'article"
+git pull --rebase
 git push
 ```
 GitHub Pages reconstruit le site automatiquement en ~1 minute.
@@ -108,7 +110,7 @@ Le site utilise **Formspree** (gratuit jusqu'à 50 soumissions/mois) :
 ```bash
 git init
 git remote add origin https://github.com/VOTRE_NOM/cgbvrr.git
-git add .
+git add _config.yml index.html assets/css/main.css assets/js/main.js
 git commit -m "Lancement initial"
 git push -u origin main
 ```
@@ -140,3 +142,5 @@ cgbvrr/
 ├── Gemfile              ← Dépendances Ruby
 └── index.html           ← Page d'accueil
 ```
+
+Note de publication : ne pas committer `_site/`, `.jekyll-cache/`, les sauvegardes, les fichiers générés ou les fichiers locaux non liés au site. Toujours vérifier `git status` et ajouter seulement les fichiers sources voulus.
