@@ -2682,6 +2682,7 @@ a.link-card p {
   }
 
   .mobile-nav-close,
+  .mobile-submenu-close,
   .mobile-submenu-back {
     appearance: none;
     border: 1px solid rgba(58, 90, 46, 0.18);
@@ -2800,10 +2801,21 @@ a.link-card p {
   }
 
   .mobile-submenu-header strong {
+    flex: 1;
     color: var(--moss);
     font-family: 'Playfair Display', serif;
     font-size: 22px;
     line-height: 1.1;
+  }
+
+  .site-nav .nav-links.open .nav-has-panel:not(.open) .nav-panel,
+  .site-nav .nav-links.open .nav-has-panel:not(.open):hover .nav-panel,
+  .site-nav .nav-links.open .nav-has-panel:not(.open):focus-within .nav-panel {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(18px);
   }
 
   .site-nav .nav-panel-links,

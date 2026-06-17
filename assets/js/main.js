@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const navClose  = document.getElementById('nav-close');
   const navOverlay = document.getElementById('nav-overlay');
   const mobileQuery = window.matchMedia('(max-width: 900px)');
+  if (navLinks && !navLinks.hasAttribute('tabindex')) navLinks.setAttribute('tabindex', '-1');
 
   function isMobileNav() {
     return mobileQuery.matches;
@@ -119,7 +120,17 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.mobile-submenu-back').forEach(button => {
     button.addEventListener('click', event => {
       event.preventDefault();
+      event.stopPropagation();
       closeMobileSubmenus();
+      if (navLinks) navLinks.focus({ preventScroll: true });
+    });
+  });
+
+  document.querySelectorAll('.mobile-submenu-close').forEach(button => {
+    button.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      closeMobileMenu();
     });
   });
 
