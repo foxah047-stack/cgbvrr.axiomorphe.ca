@@ -133,7 +133,7 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.18) 46%, rgba(0,0,0,0.08) 100%),
+    linear-gradient(90deg, rgba(0,0,0,0.58) 0%, rgba(0,0,0,0.34) 46%, rgba(0,0,0,0.08) 100%),
     url('../img/hero-2560.webp');
   background-size: cover;
   background-position: center;
@@ -164,11 +164,12 @@ body {
     font-size: 11px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--river-light);
+    color: #f2ead8;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 12px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
   }
 
   .hero-eyebrow::before {
@@ -176,7 +177,7 @@ body {
     display: block;
     width: 40px;
     height: 1px;
-    background: var(--river-light);
+    background: rgba(242,234,216,0.72);
   }
 
   .hero h1 {
@@ -186,20 +187,23 @@ body {
     line-height: 1.05;
     color: var(--cream);
     margin-bottom: 12px;
+    text-shadow: 0 3px 18px rgba(0,0,0,0.42);
   }
 
   .hero h1 em {
     font-style: italic;
-    color: var(--sage);
+    color: #d6e5b7;
+    text-shadow: 0 3px 18px rgba(0,0,0,0.5);
   }
 
   .hero-sub {
     font-size: 16px;
-    color: var(--mist);
+    color: #f2ead8;
     line-height: 1.65;
     margin: 24px 0 40px;
     max-width: 560px;
     font-weight: 300;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.52);
   }
 
   .hero-stats {
@@ -209,25 +213,27 @@ body {
   }
 
   .hero-stat {
-    border-left: 2px solid var(--fern);
+    border-left: 2px solid rgba(242,234,216,0.64);
     padding-left: 16px;
   }
 
   .hero-stat .num {
     font-family: 'Playfair Display', serif;
     font-size: 32px;
-    color: var(--sage);
+    color: #d6e5b7;
     line-height: 1;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.52);
   }
 
   .hero-stat .label {
     font-size: 11px;
-    color: var(--mist);
+    color: #f2ead8;
     font-family: 'DM Mono', monospace;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-top: 4px;
-    opacity: 0.8;
+    opacity: 0.95;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.55);
   }
 
   .hero-scroll {
