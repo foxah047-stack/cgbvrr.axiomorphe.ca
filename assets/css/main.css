@@ -978,13 +978,10 @@ body {
     text-decoration: none;
   }
 
-    body.fr .lang-toggle::text { content: "EN"; }
-
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     section { padding: 60px 24px; }
     nav { padding: 0 20px; }
-    .nav-links { display: none; }
     .hero {
   padding: 120px 24px 60px;
   align-items: flex-start;
@@ -1096,9 +1093,6 @@ body {
   .post-body { grid-template-columns: 1fr; padding: 32px 24px; }
   .post-header { padding: 48px 24px; }
   .post-nav-inner { padding: 24px; flex-direction: column; gap: 16px; }
-  .nav-hamburger { display: flex; }
-  .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--moss); padding: 16px; gap: 4px; }
-  .nav-links.open { display: flex; }
   .contact-section { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px; }
 }
 
@@ -1475,25 +1469,6 @@ button.lang-toggle:hover { background: var(--river-light); }
 }
 
 @media (max-width: 900px) {
-  .nav-panel,
-  .nav-panel-wide {
-    position: static;
-    width: 100%;
-    display: none;
-    grid-template-columns: 1fr;
-    box-shadow: none;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    margin: 8px 0;
-    padding: 18px;
-  }
-  .nav-panel::before { display: none; }
-  .nav-has-panel.open .nav-panel { display: grid; transform: none; }
-  .nav-panel-intro { border-right: 0; border-bottom: 1px solid rgba(58,90,46,0.15); padding: 0 0 14px; }
-  .nav-panel-links-two { grid-template-columns: 1fr; }
-  .nav-panel-trigger { width: 100%; justify-content: space-between; }
-  .page-hero { padding: 64px 24px 48px; }
   .detail-grid,
   .content-blocks,
   .site-examples { grid-template-columns: 1fr; padding: 32px 24px; }
@@ -1587,44 +1562,6 @@ button.lang-toggle:hover { background: var(--river-light); }
   }
   .site-nav .nav-panel-links-two {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 900px) {
-  .prototype-banner + .site-nav,
-  .site-nav {
-    top: 0;
-  }
-
-  .site-nav .nav-item {
-    position: relative;
-  }
-
-  .site-nav .nav-panel,
-  .site-nav .nav-panel-wide {
-    position: static;
-    width: 100%;
-    max-width: none;
-    display: none;
-    grid-template-columns: 1fr;
-    padding: 18px;
-    border: 1px solid rgba(216,230,204,0.35);
-    border-radius: 0;
-    box-shadow: none;
-    transform: none;
-  }
-
-  .site-nav .nav-has-panel.open .nav-panel {
-    display: grid;
-    transform: none;
-  }
-
-  .site-nav .nav-panel-links-two {
-    grid-template-columns: 1fr;
-  }
-
-  .site-nav .nav-panel-links a {
-    min-height: auto;
   }
 }
 
@@ -1965,19 +1902,6 @@ a.btn-primary {
   .project-related-card,
   .project-list-card-body { padding: 18px; }
   .project-hero h1 { overflow-wrap: anywhere; }
-}
-
-/* ── PASS 5: NAV PARENTS ARE REAL LINKS ── */
-@media (max-width: 900px) {
-  .nav-links.open .nav-has-panel .nav-panel {
-    display: grid;
-    transform: none;
-    margin-top: 6px;
-  }
-
-  .nav-links.open .nav-panel-trigger::after {
-    display: none;
-  }
 }
 
 /* ── PASS 6A: PUBLIC PAGE EDITORIAL SYSTEM ── */
@@ -2356,44 +2280,6 @@ a.link-card p {
   padding-top: clamp(42px, 6vw, 70px);
 }
 
-/* Navigation panels: keep the hub system, but reduce the full-width mega-menu feeling. */
-@media (min-width: 901px) {
-  .site-nav .nav-panel {
-    left: 50%;
-    right: auto;
-    width: min(920px, calc(100vw - 48px));
-    max-width: 920px;
-    grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
-    gap: 22px;
-    padding: 24px;
-    border: 1px solid rgba(216, 230, 204, 0.86);
-    border-top: 3px solid var(--river);
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 24px 58px rgba(0, 0, 0, 0.22);
-    transform: translate(-50%, 8px);
-  }
-
-  .site-nav .nav-panel-wide {
-    width: min(1040px, calc(100vw - 48px));
-    max-width: 1040px;
-  }
-
-  .site-nav .nav-has-panel:hover .nav-panel,
-  .site-nav .nav-has-panel:focus-within .nav-panel,
-  .site-nav .nav-has-panel.open .nav-panel {
-    transform: translate(-50%, 0);
-  }
-
-  .site-nav .nav-panel-links-two {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .site-nav .nav-panel-links a {
-    min-height: auto;
-    padding: 12px 14px;
-  }
-}
-
 @media (max-width: 900px) {
   .page-hero {
     padding: 52px 24px 42px;
@@ -2607,7 +2493,7 @@ a.link-card p {
   .nav-hamburger {
     display: flex;
     position: relative;
-    z-index: 2202;
+    z-index: 1501;
     min-width: 44px;
     min-height: 44px;
     align-items: center;
@@ -2647,6 +2533,7 @@ a.link-card p {
     bottom: 0;
     left: auto;
     width: min(88vw, 420px);
+    height: 100vh;
     height: 100dvh;
     padding: 0;
     margin: 0;
@@ -2745,6 +2632,8 @@ a.link-card p {
   }
 
   .site-nav .lang-toggle {
+    display: inline-flex;
+    align-items: center;
     width: calc(100% - 44px);
     margin: 18px 22px 24px;
     justify-content: center;
@@ -2852,6 +2741,10 @@ a.link-card p {
     font-size: 12px;
     line-height: 1.32;
   }
+
+  .site-nav .nav-item {
+    position: static;
+  }
 }
 
 @media (max-width: 420px) {
@@ -2864,27 +2757,5 @@ a.link-card p {
     min-height: 56px;
     padding-left: 18px;
     padding-right: 18px;
-  }
-}
-
-@media (max-width: 900px) {
-  .site-nav .nav-hamburger {
-    z-index: 1501;
-  }
-
-  .site-nav .nav-links {
-    height: 100vh;
-    height: 100dvh;
-  }
-
-  .site-nav .lang-toggle {
-    display: inline-flex;
-    align-items: center;
-  }
-}
-
-@media (max-width: 900px) {
-  .site-nav .nav-item {
-    position: static;
   }
 }
