@@ -16,7 +16,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
 
-<article class="ws project-page-watershade">
+<article class="ws">
   <style>
     .ws{
       /* ---- Reglages rapides : couleurs et polices ---- */
@@ -38,23 +38,18 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
       font-size:1.075rem;
       line-height:1.72;
       letter-spacing:.002em;
-      padding:0 0 clamp(3rem,7vw,6rem);
+      padding:clamp(2.5rem,6vw,5.5rem) 0 clamp(3rem,7vw,6rem);
       -webkit-font-smoothing:antialiased;
     }
     .ws *{box-sizing:border-box;}
     .ws-in{max-width:680px;margin:0 auto;padding:0 24px;}
 
     /* ---- Hero ---- */
-    .ws-hero{
-      margin:0 0 clamp(2.5rem,5vw,4rem);
-      padding:clamp(4rem,8vw,5rem) 60px clamp(3rem,6vw,4rem);
-      background:var(--charcoal);
-    }
-    .ws-hero > *{max-width:740px;margin-left:auto;margin-right:auto;}
-    .ws-mark{width:54px;height:auto;color:#e27861;opacity:.9;margin-bottom:1.4rem;display:block;}
+    .ws-hero{max-width:760px;margin:0 auto clamp(2.5rem,5vw,4rem);padding:0 24px;}
+    .ws-mark{width:54px;height:auto;color:var(--river);opacity:.85;margin-bottom:1.4rem;}
     .ws-eyebrow{
       font-family:var(--body);font-weight:500;font-size:.78rem;
-      letter-spacing:.18em;text-transform:uppercase;color:#e27861;
+      letter-spacing:.18em;text-transform:uppercase;color:var(--teal);
       margin:0 0 1.1rem;
     }
     .ws h1{
@@ -62,15 +57,12 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
       font-size:clamp(2.9rem,8vw,4.6rem);line-height:.98;letter-spacing:-.015em;
       margin:0 0 1.1rem;color:var(--ink);
     }
-    .ws-hero h1{color:#f3b5a7;}
     .ws-lead{
       font-family:var(--display);font-weight:400;
       font-size:clamp(1.3rem,3.2vw,1.65rem);line-height:1.32;
       color:var(--teal);margin:0 0 1.6rem;max-width:34ch;
     }
-    .ws-hero .ws-lead{color:#ffd8cf;}
     .ws-hero p.intro{font-size:1.15rem;color:var(--ink);margin:0;max-width:60ch;}
-    .ws-hero p.intro{color:#fae5df;}
 
     /* ---- Rythme general ---- */
     .ws section{margin:clamp(2.8rem,6vw,4.5rem) 0;}
@@ -84,14 +76,6 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
     .ws strong{font-weight:500;color:var(--ink);}
     .ws .num{font-weight:500;color:var(--teal);white-space:nowrap;}
     .ws .heat{color:var(--ember);font-weight:500;}
-    .ws-after-70{margin-bottom:clamp(1.95rem,4.2vw,3.15rem)!important;}
-    .ws-before-70{margin-top:clamp(1.95rem,4.2vw,3.15rem)!important;}
-    .ws-after-50{margin-bottom:clamp(1.4rem,3vw,2.25rem)!important;}
-    .ws-before-50{margin-top:clamp(1.4rem,3vw,2.25rem)!important;}
-    .ws-after-40{margin-bottom:clamp(1.1rem,2.4vw,1.8rem)!important;}
-    .ws-before-40{margin-top:clamp(1.1rem,2.4vw,1.8rem)!important;}
-    .ws-after-25{margin-bottom:clamp(.7rem,1.5vw,1.15rem)!important;}
-    .ws-before-25{margin-top:clamp(.7rem,1.5vw,1.15rem)!important;}
 
     /* ---- Demarche en 4 temps (sans boites) ---- */
     .ws-steps{list-style:none;margin:1.6rem 0 0;padding:0;}
@@ -156,7 +140,6 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
     .ws-close{border-top:1px solid var(--rule);padding-top:clamp(2rem,4vw,3rem);}
 
     @media (max-width:620px){
-      .ws-hero{padding:clamp(3rem,14vw,4rem) 24px clamp(2.5rem,10vw,3rem);}
       .ws-sites{grid-template-columns:1fr;}
       .ws-steps li{grid-template-columns:1fr;gap:.3rem;}
       .ws-steps .n{font-size:1.6rem;}
@@ -186,7 +169,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
   </header>
 
   <!-- ===================== LE PROBLEME ===================== -->
-  <section class="ws-reveal ws-after-40">
+  <section class="ws-reveal">
     <div class="ws-in">
       <h2>Des étés plus chauds, une rivière sous pression</h2>
       <p>Les températures estivales de la Restigouche augmentent, surtout depuis une dizaine d’années. Pendant les périodes de chaleur et de faible débit, certaines sections de la rivière deviennent difficiles à supporter pour le saumon atlantique, un poisson d’eau froide.</p>
@@ -195,7 +178,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
   </section>
 
   <!-- ===================== IMAGE 1 ===================== -->
-  <figure class="ws-fig ws-reveal ws-before-40 ws-after-40">
+  <figure class="ws-fig ws-reveal">
     <!-- Pour publier : décommentez l'image, ajustez le chemin, puis supprimez le bloc .ws-ph ci-dessous.
     <img src="/assets/img/watershade/riviere.jpg" alt="Section ombragée de la rivière Restigouche">
     -->
@@ -211,7 +194,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
   </figure>
 
   <!-- ===================== NOTION CLE ===================== -->
-  <section class="ws-reveal ws-before-40 ws-after-25">
+  <section class="ws-reveal">
     <div class="ws-in">
       <h2>Qu’est-ce qu’un refuge d’eau froide?</h2>
       <p>Un refuge d’eau froide est une zone d’une rivière où l’eau reste naturellement plus fraîche que le courant principal. Il peut être alimenté par une source souterraine, un petit tributaire froid, un chenal latéral ombragé ou une résurgence.</p>
@@ -220,7 +203,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
   </section>
 
   <!-- ===================== LA DEMARCHE ===================== -->
-  <section class="ws-reveal ws-before-25 ws-after-70">
+  <section class="ws-reveal">
     <div class="ws-in">
       <h2>De la donnée terrain à l’action</h2>
       <p>WaterShade suit une même démarche, du repérage jusqu’à la protection sur le terrain.</p>
@@ -258,7 +241,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
   </section>
 
   <!-- ===================== IMAGE 2 ===================== -->
-  <figure class="ws-fig ws-reveal ws-before-70 ws-after-50">
+  <figure class="ws-fig ws-reveal">
     <!-- Pour publier : décommentez l'image, ajustez le chemin, puis supprimez le bloc .ws-ph ci-dessous.
     <img src="/assets/img/watershade/bassin.jpg" alt="Vue d'ensemble du bassin versant de la Restigouche">
     -->
@@ -274,7 +257,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
   </figure>
 
   <!-- ===================== L'ECHELLE ===================== -->
-  <section class="ws-reveal ws-before-50 ws-after-25">
+  <section class="ws-reveal">
     <div class="ws-in">
       <h2>Une stratégie à l’échelle du bassin versant</h2>
       <p>Le bassin versant de la Restigouche couvre environ <span class="num">12 800 km²</span>, partagés entre le Nouveau-Brunswick et le Québec. WaterShade se concentre sur la portion néo-brunswickoise, en grande partie forestière.</p>
@@ -283,7 +266,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
   </section>
 
   <!-- ===================== SITES ===================== -->
-  <section class="ws-reveal ws-before-25 ws-after-70">
+  <section class="ws-reveal">
     <div class="ws-in">
       <h2>Des secteurs au cœur du projet</h2>
       <div class="ws-sites">
@@ -302,7 +285,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
   </section>
 
   <!-- ===================== IMAGE 3 ===================== -->
-  <figure class="ws-fig ws-reveal ws-before-70 ws-after-50">
+  <figure class="ws-fig ws-reveal">
     <!-- Pour publier : décommentez l'image, ajustez le chemin, puis supprimez le bloc .ws-ph ci-dessous.
     <img src="/assets/img/watershade/terrain.jpg" alt="Travaux de terrain le long d'un cours d'eau">
     -->
@@ -318,7 +301,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
   </figure>
 
   <!-- ===================== NOTE SENSIBILITE ===================== -->
-  <section class="ws-reveal ws-before-50 ws-after-25">
+  <section class="ws-reveal">
     <div class="ws-in">
       <div class="ws-note">
         <p>Par souci de conservation, l’emplacement précis de certains refuges n’est pas diffusé publiquement. Les cartes et images présentées ici restent volontairement générales.</p>
@@ -327,7 +310,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
   </section>
 
   <!-- ===================== CLOTURE ===================== -->
-  <section class="ws-reveal ws-before-25">
+  <section class="ws-reveal">
     <div class="ws-in ws-close">
       <h2>Une stratégie appelée à évoluer</h2>
       <p>Amorcé en 2023, WaterShade se poursuit par l’analyse et le travail terrain, puis par la sélection des sites prioritaires à partir de 2025 et un suivi adaptatif dans les années suivantes. Les données, les méthodes et les priorités continueront d’être mises à jour au fil du projet.</p>
