@@ -141,7 +141,7 @@ layout: default
 {% assign show_body = false %}
 {% if extra_body_en != '' or extra_body_fr != '' %}{% assign show_body = true %}{% endif %}
 
-<article class="project-page">
+<article class="project-page project-page-{{ page.slug | default: page.title | slugify }}">
   <header class="project-hero{% if hero_image == '' %} project-hero-no-image{% endif %}"{% if hero_image != '' %} style="background-image: linear-gradient(rgba(17, 17, 17, 0.56), rgba(17, 17, 17, 0.72)), url('{{ hero_image | relative_url }}');"{% endif %}>
     <div class="project-hero-inner">
       <p class="section-label"><span data-lang="en">Project</span><span data-lang="fr">Projet</span></p>
