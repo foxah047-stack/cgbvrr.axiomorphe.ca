@@ -36,52 +36,52 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
       font-family:var(--body);
       font-weight:400;
       font-size:1.075rem;
-      line-height:1.72;
+      line-height:1.62;
       letter-spacing:.002em;
-      padding:clamp(2.5rem,6vw,5.5rem) 0 clamp(3rem,7vw,6rem);
+      padding:clamp(1.4rem,3vw,2.2rem) 0 clamp(1.6rem,3.5vw,2.6rem);
       -webkit-font-smoothing:antialiased;
     }
     .ws *{box-sizing:border-box;}
     .ws-in{max-width:680px;margin:0 auto;padding:0 24px;}
 
     /* ---- Hero ---- */
-    .ws-hero{max-width:760px;margin:0 auto clamp(2.5rem,5vw,4rem);padding:0 24px;}
-    .ws-mark{width:54px;height:auto;color:var(--river);opacity:.85;margin-bottom:1.4rem;}
+    .ws-hero{max-width:760px;margin:0 auto clamp(1.1rem,2.4vw,1.7rem);padding:0 24px;}
+    .ws-mark{width:54px;height:auto;color:var(--river);opacity:.85;margin-bottom:.65rem;}
     .ws-eyebrow{
       font-family:var(--body);font-weight:500;font-size:.78rem;
       letter-spacing:.18em;text-transform:uppercase;color:var(--teal);
-      margin:0 0 1.1rem;
+      margin:0 0 .5rem;
     }
     .ws h1{
       font-family:var(--display);font-weight:500;font-optical-sizing:auto;
       font-size:clamp(2.9rem,8vw,4.6rem);line-height:.98;letter-spacing:-.015em;
-      margin:0 0 1.1rem;color:var(--ink);
+      margin:0 0 .55rem;color:var(--ink);
     }
     .ws-lead{
       font-family:var(--display);font-weight:400;
       font-size:clamp(1.3rem,3.2vw,1.65rem);line-height:1.32;
-      color:var(--teal);margin:0 0 1.6rem;max-width:34ch;
+      color:var(--teal);margin:0 0 .75rem;max-width:34ch;
     }
     .ws-hero p.intro{font-size:1.15rem;color:var(--ink);margin:0;max-width:60ch;}
 
     /* ---- Rythme general ---- */
-    .ws section{margin:clamp(2.8rem,6vw,4.5rem) 0;}
+    .ws section{margin:clamp(1.1rem,2.5vw,1.8rem) 0;}
     .ws h2{
       font-family:var(--display);font-weight:500;font-optical-sizing:auto;
       font-size:clamp(1.7rem,4vw,2.2rem);line-height:1.12;letter-spacing:-.01em;
-      margin:0 0 1.1rem;color:var(--ink);
+      margin:0 0 .5rem;color:var(--ink);
     }
-    .ws p{margin:0 0 1.15rem;}
+    .ws p{margin:0 0 .55rem;}
     .ws p:last-child{margin-bottom:0;}
     .ws strong{font-weight:500;color:var(--ink);}
     .ws .num{font-weight:500;color:var(--teal);white-space:nowrap;}
     .ws .heat{color:var(--ember);font-weight:500;}
 
     /* ---- Demarche en 4 temps (sans boites) ---- */
-    .ws-steps{list-style:none;margin:1.6rem 0 0;padding:0;}
+    .ws-steps{list-style:none;margin:.75rem 0 0;padding:0;}
     .ws-steps li{
-      display:grid;grid-template-columns:auto 1fr;gap:1.4rem;
-      align-items:baseline;padding:1.4rem 0;border-top:1px solid var(--rule);
+      display:grid;grid-template-columns:auto 1fr;gap:.75rem;
+      align-items:baseline;padding:.7rem 0;border-top:1px solid var(--rule);
     }
     .ws-steps li:last-child{border-bottom:1px solid var(--rule);}
     .ws-steps .n{
@@ -90,17 +90,17 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
     }
     .ws-steps h3{
       font-family:var(--display);font-weight:500;font-size:1.22rem;
-      margin:0 0 .3rem;color:var(--ink);
+      margin:0 0 .15rem;color:var(--ink);
     }
     .ws-steps p{margin:0;color:var(--muted);font-size:1rem;}
 
     /* ---- Emplacements image (a remplacer) ---- */
-    .ws-fig{margin:clamp(2.6rem,6vw,4rem) auto;max-width:880px;padding:0 24px;}
+    .ws-fig{margin:clamp(1rem,2.5vw,1.7rem) auto;max-width:880px;padding:0 24px;}
     .ws-ph{
       position:relative;aspect-ratio:16/10;background:var(--panel);
       border:1px solid var(--rule);border-radius:3px;
       display:flex;flex-direction:column;align-items:center;justify-content:center;
-      text-align:center;padding:1.5rem;gap:.7rem;overflow:hidden;
+      text-align:center;padding:.9rem;gap:.35rem;overflow:hidden;
     }
     .ws-ph svg{width:46px;height:auto;color:var(--river);opacity:.5;}
     .ws-ph .tag{
@@ -110,19 +110,19 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
     .ws-ph .desc{font-size:.95rem;color:var(--muted);max-width:34ch;margin:0;}
     .ws figcaption{
       font-size:.88rem;font-style:italic;color:var(--muted);
-      margin-top:.7rem;text-align:center;
+      margin-top:.35rem;text-align:center;
     }
     /* Pour publier une vraie photo : retirer .ws-ph et activer l'<img> dans le HTML. */
     .ws-fig img{width:100%;height:auto;display:block;border-radius:3px;}
 
     /* ---- Sites associes (seul endroit avec des panneaux) ---- */
-    .ws-sites{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1.6rem;}
+    .ws-sites{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:.75rem;}
     .ws-site{
       background:var(--paper);border:1px solid var(--rule);border-top:3px solid var(--teal);
-      border-radius:3px;padding:1.6rem 1.5rem;
+      border-radius:3px;padding:.9rem 1rem;
     }
-    .ws-site h3{font-family:var(--display);font-weight:500;font-size:1.3rem;margin:0 0 .6rem;}
-    .ws-site p{font-size:1rem;color:var(--muted);margin:0 0 .9rem;}
+    .ws-site h3{font-family:var(--display);font-weight:500;font-size:1.3rem;margin:0 0 .3rem;}
+    .ws-site p{font-size:1rem;color:var(--muted);margin:0 0 .45rem;}
     .ws-site .soon{
       font-family:var(--body);font-weight:500;font-size:.74rem;
       letter-spacing:.13em;text-transform:uppercase;color:var(--teal);
@@ -131,17 +131,17 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
     /* ---- Note sensibilite ---- */
     .ws-note{
       border-left:3px solid var(--river);background:rgba(78,138,147,.07);
-      padding:1rem 1.3rem;border-radius:0 3px 3px 0;
+      padding:.65rem .85rem;border-radius:0 3px 3px 0;
       font-size:.98rem;color:var(--muted);max-width:60ch;
     }
     .ws-note p{margin:0;}
 
     /* ---- Cloture ---- */
-    .ws-close{border-top:1px solid var(--rule);padding-top:clamp(2rem,4vw,3rem);}
+    .ws-close{border-top:1px solid var(--rule);padding-top:clamp(.8rem,2vw,1.2rem);}
 
     @media (max-width:620px){
       .ws-sites{grid-template-columns:1fr;}
-      .ws-steps li{grid-template-columns:1fr;gap:.3rem;}
+      .ws-steps li{grid-template-columns:1fr;gap:.15rem;}
       .ws-steps .n{font-size:1.6rem;}
     }
 
