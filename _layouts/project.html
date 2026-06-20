@@ -140,8 +140,13 @@ layout: default
 {% if page.closing_show %}{% if closing_title_en != '' or closing_title_fr != '' or closing_body_en != '' or closing_body_fr != '' or show_closing_link %}{% assign show_closing = true %}{% endif %}{% endif %}
 {% assign show_body = false %}
 {% if extra_body_en != '' or extra_body_fr != '' %}{% assign show_body = true %}{% endif %}
+{% assign project_page_slug = page.slug | default: page.title | slugify %}
+{% assign project_page_extra_class = '' %}
+{% if page.slug == 'watershade' or page.url contains '/watershade/' %}
+  {% assign project_page_extra_class = ' project-page-watershade' %}
+{% endif %}
 
-<article class="project-page project-page-{{ page.slug | default: page.title | slugify }}">
+<article class="project-page project-page-{{ project_page_slug }}{{ project_page_extra_class }}">
   <header class="project-hero{% if hero_image == '' %} project-hero-no-image{% endif %}"{% if hero_image != '' %} style="background-image: linear-gradient(rgba(17, 17, 17, 0.56), rgba(17, 17, 17, 0.72)), url('{{ hero_image | relative_url }}');"{% endif %}>
     <div class="project-hero-inner">
       <p class="section-label"><span data-lang="en">Project</span><span data-lang="fr">Projet</span></p>

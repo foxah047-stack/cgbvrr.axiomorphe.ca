@@ -16,7 +16,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
 
-<article class="ws">
+<article class="ws project-page-watershade">
   <style>
     .ws{
       /* ---- Reglages rapides : couleurs et polices ---- */
