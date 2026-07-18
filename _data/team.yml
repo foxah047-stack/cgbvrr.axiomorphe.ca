@@ -85,10 +85,3 @@ items:
     photo: ''
     photo_alt_en: ''
     photo_alt_fr: ''
-  - type: group
-    label_en: english
-    label_fr: francais
-    title_en: english
-    title_fr: francais
-    description_en: english
-    description_fr: francais
