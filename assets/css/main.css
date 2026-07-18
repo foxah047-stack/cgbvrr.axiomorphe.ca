@@ -2855,3 +2855,37 @@ a.link-card p {
     width: calc(100% - 36px);
   }
 }
+
+/* ── INTERIOR HERO WIDTH SYSTEM ──
+   The homepage hero remains full-width. Interior page and project heroes
+   are centred panels so normal field photographs do not need extreme
+   panoramic crops. */
+.page-hero,
+.project-hero {
+  /* About 60% on a 1920px monitor, progressively wider on smaller screens. */
+  width: min(1160px, calc(30.75vw + 562px), calc(100% - 48px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-hero,
+.project-hero {
+  margin-top: clamp(22px, 3vw, 42px);
+}
+
+.project-hero:not(.project-hero-no-image) {
+  min-height: clamp(380px, 32vw, 560px);
+}
+
+/* Mobile heroes remain almost full-width with consistent page margins. */
+@media (max-width: 700px) {
+  .page-hero,
+  .project-hero {
+    width: calc(100% - 24px);
+    margin-top: 12px;
+  }
+
+  .project-hero:not(.project-hero-no-image) {
+    min-height: 320px;
+  }
+}
