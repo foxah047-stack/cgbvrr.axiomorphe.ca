@@ -1,59 +1,76 @@
 ---
 layout: default
-title: Donations
-lang: fr
+title: Dons / Donations
 permalink: /donations/
 ---
 
-<section class="page-hero structure-preview-hero">
+<section class="page-hero donations-hero">
   <div class="page-hero-inner">
-    <p class="section-label">Dons</p>
-    <h1>Appuyer la rivière Restigouche</h1>
-    <p class="page-lead">Une page simple pour expliquer comment les dons peuvent soutenir la conservation, la surveillance et les travaux de terrain du CGBVRR.</p>
-    <div class="preview-note">Contenu et méthode de don à confirmer avec l’équipe avant publication officielle.</div>
+    <p class="section-label">
+      <span data-lang="en">Donations</span>
+      <span data-lang="fr">Dons</span>
+    </p>
+    <h1>
+      <span data-lang="en">Support Restigouche salmon conservation</span>
+      <span data-lang="fr">Soutenir la conservation du saumon de la Restigouche</span>
+    </h1>
+    <p class="page-lead" data-lang="en">Download the campaign leaflet and the contribution form for your country of residence.</p>
+    <p class="page-lead" data-lang="fr">Téléchargez le dépliant de la campagne et le formulaire correspondant à votre pays de résidence.</p>
   </div>
 </section>
 
-<main class="detail-page">
-  <section class="detail-grid">
-    <article class="detail-main-card">
-      <p class="section-label">Soutien public</p>
-      <h2>Des dons pour soutenir un bassin versant vivant</h2>
-      <p>Le CGBVRR travaille à protéger le bassin versant de la rivière Restigouche, son habitat du saumon atlantique et les communautés qui dépendent de ce territoire. Les dons peuvent aider à soutenir la surveillance, la restauration, l’éducation et les communications publiques.</p>
-      <p>Cette page peut servir de point d’entrée clair pour les personnes, organismes ou entreprises qui souhaitent contribuer à la mission. Le mécanisme de don exact devra être confirmé avant d’ajouter un bouton de paiement ou des instructions officielles.</p>
-      <a class="btn-primary" href="/contact/">Contacter l’équipe</a>
-    </article>
+<main class="donations-page">
+  <section class="donation-panel" aria-labelledby="donation-panel-title">
+    <div class="donation-copy">
+      <p class="section-label">
+        <span data-lang="en">Contribution documents</span>
+        <span data-lang="fr">Documents de contribution</span>
+      </p>
 
-    <aside class="detail-side-card">
-      <h2>À confirmer</h2>
-      <dl class="snapshot-list">
-        <div><dt>Mode de don</dt><dd>Virement, chèque, plateforme externe ou autre méthode officielle.</dd></div>
-        <div><dt>Reçus</dt><dd>Information fiscale et processus administratif à valider.</dd></div>
-        <div><dt>Contact</dt><dd>Coordonnées publiques de la personne responsable à confirmer.</dd></div>
-      </dl>
-    </aside>
-  </section>
+      <h2 id="donation-panel-title">
+        <span data-lang="en">Choose the appropriate document</span>
+        <span data-lang="fr">Choisissez le document approprié</span>
+      </h2>
 
-  <section class="content-blocks">
-    <div class="content-block">
-      <h2>Ce que les dons peuvent soutenir</h2>
-      <ul class="clean-list">
-        <li>La surveillance terrain et la présence sur le bassin versant.</li>
-        <li>Les projets de restauration d’habitat et de protection des berges.</li>
-        <li>Le suivi scientifique, les cartes publiques et les communications.</li>
-        <li>Les activités d’éducation, de sensibilisation et de mobilisation communautaire.</li>
-      </ul>
+      <p data-lang="en">Contributions are made through the foundation corresponding to the donor’s country of residence. Download the appropriate form, complete it, and follow the return instructions printed on the document.</p>
+      <p data-lang="fr">Les contributions sont faites par l’entremise de la fondation correspondant au pays de résidence du donateur. Téléchargez le formulaire approprié, remplissez-le et suivez les instructions de retour indiquées dans le document.</p>
+
+      <div class="donation-downloads">
+        <a class="donation-download" href="{{ '/assets/docs/donations/fundraising-campaign-leaflet.pdf' | relative_url }}" download>
+          <span>
+            <span data-lang="en">Fundraising campaign leaflet</span>
+            <span data-lang="fr">Dépliant de la campagne de financement</span>
+          </span>
+          <strong>PDF</strong>
+        </a>
+
+        <a class="donation-download" href="{{ '/assets/docs/donations/contribution-form-canada.pdf' | relative_url }}" download>
+          <span>
+            <span data-lang="en">Contribution form — Canada</span>
+            <span data-lang="fr">Formulaire de contribution — Canada</span>
+          </span>
+          <strong>PDF</strong>
+        </a>
+
+        <a class="donation-download" href="{{ '/assets/docs/donations/contribution-form-united-states.pdf' | relative_url }}" download>
+          <span>
+            <span data-lang="en">Contribution form — United States</span>
+            <span data-lang="fr">Formulaire de contribution — États-Unis</span>
+          </span>
+          <strong>PDF</strong>
+        </a>
+      </div>
     </div>
 
-    <div class="content-block placeholder-block">
-      <h2>Espace pour les instructions officielles</h2>
-      <p>Une fois la méthode de don confirmée, cet espace pourra recevoir les instructions exactes : bouton externe, adresse postale, courriel, informations pour les reçus ou personne à joindre.</p>
-      <div class="map-placeholder">Méthode de don à confirmer</div>
-    </div>
-  </section>
-
-  <section class="decision-prompt soft-prompt">
-    <h2>Avant le lancement</h2>
-    <p>Le CGBVRR devrait valider le statut fiscal, les règles de reçu, les coordonnées publiques et la méthode de paiement avant de publier une invitation officielle à donner.</p>
+    <figure class="donation-image">
+      <img
+        src="{{ '/assets/img/donations-salmon.webp' | relative_url }}"
+        alt="Atlantic salmon underwater"
+        data-i18n-alt
+        data-alt-en="Atlantic salmon underwater"
+        data-alt-fr="Saumons atlantiques sous l’eau"
+        loading="eager"
+        decoding="async">
+    </figure>
   </section>
 </main>
