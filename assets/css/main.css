@@ -2755,3 +2755,103 @@ a.link-card p {
     padding-right: 18px;
   }
 }
+
+/* ── TEAM CMS ROSTER ── */
+.team-roster {
+  width: min(var(--page-max), calc(100% - 48px));
+  margin: clamp(24px, 5vw, 52px) auto;
+}
+
+.team-roster-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.team-group-heading {
+  grid-column: 1 / -1;
+  padding: clamp(28px, 4vw, 42px) 0 0;
+  margin: clamp(10px, 3vw, 28px) 0 4px;
+  border-top: 1px solid var(--hairline);
+}
+
+.team-group-heading:first-of-type {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: 0;
+}
+
+.team-group-heading h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--moss);
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.12;
+  margin-bottom: 0;
+}
+
+.team-group-heading > p {
+  color: rgba(58, 58, 50, 0.78);
+  line-height: 1.65;
+}
+
+.team-roster-grid .person-card {
+  min-width: 0;
+  height: 100%;
+}
+
+.person-photo {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, rgba(46,107,122,0.12), rgba(58,90,46,0.16));
+  border: 1px solid rgba(58,90,46,0.12);
+}
+
+.person-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.person-description {
+  margin: 0 !important;
+  font-size: 15px !important;
+  line-height: 1.62 !important;
+  color: rgba(58, 58, 50, 0.78) !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .team-roster-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-group-heading {
+    display: block;
+  }
+
+  .team-group-heading > p {
+    max-width: none;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .team-roster {
+    width: calc(100% - 36px);
+  }
+}

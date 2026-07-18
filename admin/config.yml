@@ -233,3 +233,71 @@ collections:
       - { label: Closing link URL / URL du lien final, name: closing_link_url, widget: string, required: false, hint: "Use a full URL for external sites, or a site path such as /resources/. / Utilisez une URL complète pour les sites externes, ou un chemin du site comme /resources/." }
       - { label: English extra body content / Contenu additionnel anglais, name: extra_body_en, widget: markdown, required: false, hint: "Optional extra content after the structured sections. Fill both languages before publishing. / Contenu additionnel optionnel après les sections structurées. Remplir les deux langues avant publication." }
       - { label: French extra body content / Contenu additionnel français, name: extra_body_fr, widget: markdown, required: false, hint: "Optional. If left blank, the page may fall back to English. / Optionnel. Si laissé vide, la page peut afficher l'anglais par défaut." }
+
+  - name: site_pages
+    label: Site pages / Pages du site
+    icon: web
+    files:
+      - name: team
+        label: Team / Équipe
+        file: _data/team.yml
+        fields:
+          - { label: English hero label / Petit libellé anglais du bandeau, name: hero_label_en, widget: string, default: Team }
+          - { label: French hero label / Petit libellé français du bandeau, name: hero_label_fr, widget: string, default: Équipe }
+          - { label: English page title / Titre anglais de la page, name: hero_title_en, widget: string, default: Team }
+          - { label: French page title / Titre français de la page, name: hero_title_fr, widget: string, default: Équipe }
+          - { label: English page introduction / Introduction anglaise de la page, name: hero_lead_en, widget: text }
+          - { label: French page introduction / Introduction française de la page, name: hero_lead_fr, widget: text }
+
+          - { label: English organization label / Petit libellé anglais de l'introduction, name: intro_label_en, widget: string, default: Organization }
+          - { label: French organization label / Petit libellé français de l'introduction, name: intro_label_fr, widget: string, default: Organisation }
+          - { label: English organization title / Titre anglais de l'introduction, name: intro_title_en, widget: string }
+          - { label: French organization title / Titre français de l'introduction, name: intro_title_fr, widget: string }
+          - { label: English organization text / Texte anglais de l'introduction, name: intro_body_en, widget: text }
+          - { label: French organization text / Texte français de l'introduction, name: intro_body_fr, widget: text }
+
+          - label: Team layout / Organisation de l'équipe
+            name: items
+            widget: list
+            label_singular: Group or profile / Groupe ou profil
+            summary: "{{type}} — {{name}}{{title_en}}{{title_fr}}"
+            thumbnail: photo
+            collapsed: auto
+            minimize_collapsed: auto
+            allow_add: true
+            allow_remove: true
+            allow_duplicate: true
+            allow_reorder: true
+            hint: "Add group headings and profiles in the exact order they should appear. A group heading spans the full row; profiles display three per row. Move a profile below another group heading to place it in that group. Deleting a group heading never deletes the profiles. / Ajoutez les titres de groupe et les profils dans l'ordre exact d'affichage. Un titre de groupe occupe toute la rangée; les profils s'affichent trois par rangée. Déplacez un profil sous un autre titre de groupe pour le changer de groupe. La suppression d'un titre de groupe ne supprime jamais les profils."
+            types:
+              - name: group
+                label: Group heading / Titre de groupe
+                fields:
+                  - { label: English small label / Petit libellé anglais, name: label_en, widget: string, required: false }
+                  - { label: French small label / Petit libellé français, name: label_fr, widget: string, required: false }
+                  - { label: English group title / Titre anglais du groupe, name: title_en, widget: string }
+                  - { label: French group title / Titre français du groupe, name: title_fr, widget: string }
+                  - { label: English group description / Description anglaise du groupe, name: description_en, widget: text, required: false }
+                  - { label: French group description / Description française du groupe, name: description_fr, widget: text, required: false }
+
+              - name: profile
+                label: Person profile / Profil d'une personne
+                fields:
+                  - label: Show on website / Afficher sur le site
+                    name: visible
+                    widget: boolean
+                    default: true
+                    required: false
+                    hint: "Turn this off to hide the profile temporarily without deleting it. / Désactivez cette option pour masquer temporairement le profil sans le supprimer."
+                  - { label: Name / Nom, name: name, widget: string }
+                  - { label: English title / Titre anglais, name: title_en, widget: string }
+                  - { label: French title / Titre français, name: title_fr, widget: string }
+                  - { label: English description / Description anglaise, name: description_en, widget: text, required: false }
+                  - { label: French description / Description française, name: description_fr, widget: text, required: false }
+                  - label: Photo
+                    name: photo
+                    widget: image
+                    required: false
+                    hint: "Use a web-ready JPG or WebP image, ideally under 500 KB. Use lowercase filenames with hyphens and no accents or spaces. / Utilisez une image JPG ou WebP prête pour le web, idéalement sous 500 Ko. Utilisez un nom de fichier en minuscules, avec des traits d'union, sans accents ni espaces."
+                  - { label: English photo alt text / Texte alternatif anglais de la photo, name: photo_alt_en, widget: string, required: false }
+                  - { label: French photo alt text / Texte alternatif français de la photo, name: photo_alt_fr, widget: string, required: false }

@@ -5,128 +5,149 @@ lang: fr
 permalink: /team/
 ---
 
+{% assign team = site.data.team %}
+
 <section class="page-hero structure-preview-hero team-hero">
   <div class="page-hero-inner">
-    <p class="section-label">Équipe</p>
-    <h1>Équipe</h1>
-    <p class="page-lead">Coordination, projets, terrain et collaborateurs.</p>
-    <div class="preview-note">Cette page présente une structure simple pour organiser les rôles publics du CGBVRR. Les noms, photos et coordonnées pourront être ajoutés seulement après validation.</div>
+    <p class="section-label">
+      <span data-lang="en">{{ team.hero_label_en | default: "Team" }}</span>
+      <span data-lang="fr">{{ team.hero_label_fr | default: "Équipe" }}</span>
+    </p>
+    <h1>
+      <span data-lang="en">{{ team.hero_title_en | default: "Team" }}</span>
+      <span data-lang="fr">{{ team.hero_title_fr | default: "Équipe" }}</span>
+    </h1>
+    <p class="page-lead" data-lang="en">{{ team.hero_lead_en }}</p>
+    <p class="page-lead" data-lang="fr">{{ team.hero_lead_fr }}</p>
   </div>
 </section>
 
 <main class="detail-page">
   <section class="team-intro-card">
-    <p class="section-label">Organisation</p>
-    <h2>Des rôles complémentaires sur le terrain et dans la gestion des projets</h2>
-    <p>Le CGBVRR réunit des rôles de coordination, de gestion de projets, de surveillance terrain et de soutien technique. Cette structure permet de présenter l’équipe selon les responsabilités réelles, sans imposer un organigramme trop rigide.</p>
+    <p class="section-label">
+      <span data-lang="en">{{ team.intro_label_en | default: "Organization" }}</span>
+      <span data-lang="fr">{{ team.intro_label_fr | default: "Organisation" }}</span>
+    </p>
+    <h2>
+      <span data-lang="en">{{ team.intro_title_en }}</span>
+      <span data-lang="fr">{{ team.intro_title_fr }}</span>
+    </h2>
+    <p data-lang="en">{{ team.intro_body_en }}</p>
+    <p data-lang="fr">{{ team.intro_body_fr }}</p>
   </section>
 
-  <section class="team-section-preview" id="management">
-    <div class="section-heading-row">
-      <div>
-        <p class="section-label"><span data-lang="en">Internal roles</span><span data-lang="fr">Rôles internes</span></p>
-        <h2><span data-lang="en">Management and coordination</span><span data-lang="fr">Coordination et gestion</span></h2>
-      </div>
-      <p>Direction, coordination des projets, supervision des secteurs et suivi administratif.</p>
-    </div>
-    <div class="people-grid">
-      <article class="person-card">
-        <div class="person-photo-placeholder">Photo</div>
-        <h3>Directeur général</h3>
-        <p class="person-role">Direction de l’organisation, relations avec les partenaires et priorités générales.</p>
-      </article>
-      <article class="person-card">
-        <div class="person-photo-placeholder">Photo</div>
-        <h3>Gestionnaire de projets scientifiques</h3>
-        <p class="person-role">Coordination des projets, suivis techniques, données et collaboration scientifique.</p>
-      </article>
-      <article class="person-card">
-        <div class="person-photo-placeholder">Photo</div>
-        <h3>Superviseur(e) de secteur</h3>
-        <p class="person-role">Encadrement des activités terrain, soutien aux équipes saisonnières et suivi des sites.</p>
-      </article>
-    </div>
-  </section>
+  <section class="team-roster" aria-labelledby="team-roster-title">
+    <h2 class="visually-hidden" id="team-roster-title">
+      <span data-lang="en">Team roster</span>
+      <span data-lang="fr">Liste des membres de l’équipe</span>
+    </h2>
 
-  <section class="team-section-preview" id="science">
-    <div class="section-heading-row">
-      <div>
-        <p class="section-label"><span data-lang="en">Specialized support</span><span data-lang="fr">Soutien spécialisé</span></p>
-        <h2><span data-lang="en">Projects, science and technical support</span><span data-lang="fr">Projets, science et soutien technique</span></h2>
-      </div>
-      <p>Une section souple pour présenter les expertises internes ou externes qui appuient les projets.</p>
-    </div>
-    <div class="people-grid">
-      <article class="person-card">
-        <div class="person-photo-placeholder">Photo</div>
-        <h3>Soutien technique</h3>
-        <p class="person-role">Cartographie, suivi de données, documents de terrain et appui aux projets.</p>
-      </article>
-      <article class="person-card">
-        <div class="person-photo-placeholder">Photo</div>
-        <h3>Suivi scientifique</h3>
-        <p class="person-role">Température de l’eau, refuges d’eau froide, habitat du saumon et observations terrain.</p>
-      </article>
-      <article class="person-card">
-        <div class="person-photo-placeholder">Photo</div>
-        <h3>Collaborateurs spécialisés</h3>
-        <p class="person-role">Universités, consultants, organismes partenaires et expertise ponctuelle.</p>
-      </article>
-    </div>
-  </section>
+    <div class="team-roster-grid">
+      {% assign group_seen = false %}
+      {% assign fallback_shown = false %}
 
-  <section class="team-section-preview" id="field">
-    <div class="section-heading-row">
-      <div>
-        <p class="section-label"><span data-lang="en">Field</span><span data-lang="fr">Terrain</span></p>
-        <h2><span data-lang="en">Field operations and monitoring</span><span data-lang="fr">Terrain et surveillance</span></h2>
-      </div>
-      <p>Les rôles saisonniers et opérationnels peuvent être présentés clairement, sans publier d’information personnelle inutile.</p>
-    </div>
-    <div class="people-grid">
-      <article class="person-card">
-        <div class="person-photo-placeholder">Photo</div>
-        <h3>Gardien(ne) de fosse</h3>
-        <p class="person-role">Surveillance des fosses, présence terrain et signalement des situations à risque.</p>
-      </article>
-      <article class="person-card">
-        <div class="person-photo-placeholder">Photo</div>
-        <h3>Ouvrier(ère) de terrain</h3>
-        <p class="person-role">Travaux pratiques, soutien logistique, entretien, restauration et appui aux sites.</p>
-      </article>
-      <article class="person-card">
-        <div class="person-photo-placeholder">Photo</div>
-        <h3>Appui saisonnier</h3>
-        <p class="person-role">Renfort lors des périodes de surveillance, de suivi ou de travaux sur le bassin versant.</p>
-      </article>
+      {% for item in team.items %}
+        {% case item.type %}
+          {% when "group" %}
+            {% assign group_seen = true %}
+            <header class="team-group-heading section-heading-row">
+              <div>
+                {% if item.label_en != blank or item.label_fr != blank %}
+                  <p class="section-label">
+                    <span data-lang="en">{{ item.label_en }}</span>
+                    <span data-lang="fr">{{ item.label_fr }}</span>
+                  </p>
+                {% endif %}
+                <h2>
+                  <span data-lang="en">{{ item.title_en }}</span>
+                  <span data-lang="fr">{{ item.title_fr }}</span>
+                </h2>
+              </div>
+              {% if item.description_en != blank or item.description_fr != blank %}
+                <p>
+                  <span data-lang="en">{{ item.description_en }}</span>
+                  <span data-lang="fr">{{ item.description_fr }}</span>
+                </p>
+              {% endif %}
+            </header>
+
+          {% when "profile" %}
+            {% unless item.visible == false %}
+              {% unless group_seen or fallback_shown %}
+                {% assign fallback_shown = true %}
+                <header class="team-group-heading section-heading-row team-fallback-heading">
+                  <div>
+                    <p class="section-label">
+                      <span data-lang="en">Team</span>
+                      <span data-lang="fr">Équipe</span>
+                    </p>
+                    <h2>
+                      <span data-lang="en">Other team members</span>
+                      <span data-lang="fr">Autres membres de l’équipe</span>
+                    </h2>
+                  </div>
+                </header>
+              {% endunless %}
+
+              <article class="person-card">
+                {% if item.photo != blank %}
+                  <div class="person-photo">
+                    <img
+                      src="{{ item.photo | relative_url }}"
+                      alt="{{ item.photo_alt_en | default: item.name | escape }}"
+                      data-i18n-alt
+                      data-alt-en="{{ item.photo_alt_en | default: item.name | escape }}"
+                      data-alt-fr="{{ item.photo_alt_fr | default: item.name | escape }}"
+                      loading="lazy"
+                      decoding="async">
+                  </div>
+                {% else %}
+                  <div class="person-photo-placeholder" aria-hidden="true">
+                    <span data-lang="en">Photo</span>
+                    <span data-lang="fr">Photo</span>
+                  </div>
+                {% endif %}
+
+                <h3>{{ item.name }}</h3>
+
+                {% if item.title_en != blank or item.title_fr != blank %}
+                  <p class="person-role">
+                    <span data-lang="en">{{ item.title_en }}</span>
+                    <span data-lang="fr">{{ item.title_fr }}</span>
+                  </p>
+                {% endif %}
+
+                {% if item.description_en != blank or item.description_fr != blank %}
+                  <p class="person-description" data-lang="en">{{ item.description_en }}</p>
+                  <p class="person-description" data-lang="fr">{{ item.description_fr }}</p>
+                {% endif %}
+              </article>
+            {% endunless %}
+        {% endcase %}
+      {% endfor %}
     </div>
   </section>
 
   <section class="team-section-preview muted-section">
-    <p class="section-label">Réseau</p>
-    <h2>Collaborateurs et partenaires</h2>
-    <p>Le travail du CGBVRR s’appuie aussi sur des partenaires publics, des communautés, des organismes de bassin versant, des institutions de recherche, des propriétaires riverains et d’autres acteurs du territoire. Les logos et emblèmes officiels pourront être ajoutés seulement avec autorisation.</p>
-    <div class="text-chip-row">
-      <span>Premières Nations</span>
-      <span>Organismes publics</span>
-      <span>Organismes de bassin versant</span>
-      <span>Institutions de recherche</span>
-      <span>Propriétaires riverains</span>
-      <span>Camps de pêche</span>
+    <p class="section-label"><span data-lang="en">Network</span><span data-lang="fr">Réseau</span></p>
+    <h2><span data-lang="en">Collaborators and partners</span><span data-lang="fr">Collaborateurs et partenaires</span></h2>
+    <p data-lang="en">The Council's work is also supported by public partners, communities, watershed organizations, research institutions, riparian landowners and other local actors.</p>
+    <p data-lang="fr">Le travail du CGBVRR s’appuie aussi sur des partenaires publics, des communautés, des organismes de bassin versant, des institutions de recherche, des propriétaires riverains et d’autres acteurs du territoire.</p>
+    <div class="text-chip-row" aria-label="Partner categories">
+      <span data-lang="en">First Nations</span><span data-lang="fr">Premières Nations</span>
+      <span data-lang="en">Public organizations</span><span data-lang="fr">Organismes publics</span>
+      <span data-lang="en">Watershed organizations</span><span data-lang="fr">Organismes de bassin versant</span>
+      <span data-lang="en">Research institutions</span><span data-lang="fr">Institutions de recherche</span>
+      <span data-lang="en">Riparian landowners</span><span data-lang="fr">Propriétaires riverains</span>
+      <span data-lang="en">Fishing camps</span><span data-lang="fr">Camps de pêche</span>
     </div>
   </section>
-
 
   <section class="decision-prompt soft-prompt" id="employment">
     <p class="section-label"><span data-lang="en">Employment</span><span data-lang="fr">Emploi</span></p>
     <h2><span data-lang="en">Working with the Council</span><span data-lang="fr">Travailler avec le Conseil</span></h2>
-    <p data-lang="en">Employment should be announced through News, while applications and employment inquiries should point to the Contact page. This gives visitors several pathways without creating duplicate job pages.</p>
-    <p data-lang="fr">Les offres d’emploi devraient être annoncées dans les Nouvelles, tandis que les candidatures et demandes d’emploi devraient pointer vers la page Contact. Cela donne plusieurs chemins aux visiteurs sans créer plusieurs pages d’emploi contradictoires.</p>
+    <p data-lang="en">Employment opportunities are announced through News. Applications and employment inquiries can be sent through the Contact page.</p>
+    <p data-lang="fr">Les offres d’emploi sont annoncées dans les Nouvelles. Les candidatures et demandes d’emploi peuvent être envoyées par la page Contact.</p>
     <a class="btn-primary" href="/contact/#employment"><span data-lang="en">Employment inquiries</span><span data-lang="fr">Demandes d’emploi</span></a>
-  </section>
-
-  <section class="decision-prompt soft-prompt">
-    <h2>Contenu à préciser</h2>
-    <p>Les titres, catégories, photos et coordonnées publiques pourront être ajustés selon la structure réelle de l’organisation et les informations que le CGBVRR souhaite rendre visibles.</p>
   </section>
 </main>
