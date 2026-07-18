@@ -2870,7 +2870,7 @@ a.link-card p {
 
 .page-hero,
 .project-hero {
-  margin-top: clamp(22px, 3vw, 42px);
+  margin-top: 0;
 }
 
 .project-hero:not(.project-hero-no-image) {
@@ -2882,7 +2882,7 @@ a.link-card p {
   .page-hero,
   .project-hero {
     width: calc(100% - 24px);
-    margin-top: 12px;
+    margin-top: 0;
   }
 
   .project-hero:not(.project-hero-no-image) {
