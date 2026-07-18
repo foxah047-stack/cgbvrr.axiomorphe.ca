@@ -4,14 +4,12 @@ hero_title_en: Team
 hero_title_fr: Équipe
 hero_lead_en: Coordination, projects, field operations and monitoring.
 hero_lead_fr: Coordination, projets, terrain et surveillance.
-
 intro_label_en: Organization
 intro_label_fr: Organisation
 intro_title_en: Complementary roles in project management and field work
 intro_title_fr: Des rôles complémentaires sur le terrain et dans la gestion des projets
 intro_body_en: The Council brings together coordination, project management and field-monitoring roles. The roster below can be reorganized directly through the CMS without imposing a rigid organizational chart.
 intro_body_fr: Le CGBVRR réunit des rôles de coordination, de gestion de projets et de surveillance terrain. L’équipe ci-dessous peut être réorganisée directement dans le CMS, sans imposer un organigramme trop rigide.
-
 items:
   - type: group
     label_en: Internal roles
@@ -20,40 +18,36 @@ items:
     title_fr: Coordination et gestion
     description_en: Direction, project coordination, sector supervision and administrative follow-up.
     description_fr: Direction, coordination des projets, supervision des secteurs et suivi administratif.
-
   - type: profile
-    visible: true
-    name: Profile to complete
     title_en: Executive director
     title_fr: Directeur général
     description_en: Organizational leadership, partner relations and overall priorities.
     description_fr: Direction de l’organisation, relations avec les partenaires et priorités générales.
-    photo: ""
-    photo_alt_en: ""
-    photo_alt_fr: ""
-
-  - type: profile
     visible: true
     name: Profile to complete
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
+  - type: profile
     title_en: Scientific project manager
     title_fr: Gestionnaire de projets scientifiques
     description_en: Project coordination, technical follow-up, data and scientific collaboration.
     description_fr: Coordination des projets, suivis techniques, données et collaboration scientifique.
-    photo: ""
-    photo_alt_en: ""
-    photo_alt_fr: ""
-
-  - type: profile
     visible: true
     name: Profile to complete
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
+  - type: profile
     title_en: Sector supervisor
     title_fr: Superviseur ou superviseure de secteur
     description_en: Field activity supervision, seasonal team support and site follow-up.
     description_fr: Encadrement des activités terrain, soutien aux équipes saisonnières et suivi des sites.
-    photo: ""
-    photo_alt_en: ""
-    photo_alt_fr: ""
-
+    visible: true
+    name: Profile to complete
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
   - type: group
     label_en: Field
     label_fr: Terrain
@@ -61,36 +55,40 @@ items:
     title_fr: Terrain et surveillance
     description_en: Seasonal and operational roles can be presented clearly without publishing unnecessary personal information.
     description_fr: Les rôles saisonniers et opérationnels peuvent être présentés clairement, sans publier d’information personnelle inutile.
-
   - type: profile
-    visible: true
-    name: Profile to complete
     title_en: Pool guardian
     title_fr: Gardien ou gardienne de fosse
     description_en: Pool monitoring, field presence and reporting situations that may put the river at risk.
     description_fr: Surveillance des fosses, présence terrain et signalement des situations à risque.
-    photo: ""
-    photo_alt_en: ""
-    photo_alt_fr: ""
-
-  - type: profile
     visible: true
     name: Profile to complete
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
+  - type: profile
     title_en: Field worker
     title_fr: Ouvrier ou ouvrière de terrain
     description_en: Practical work, logistics, maintenance, restoration and site support.
     description_fr: Travaux pratiques, soutien logistique, entretien, restauration et appui aux sites.
-    photo: ""
-    photo_alt_en: ""
-    photo_alt_fr: ""
-
-  - type: profile
     visible: true
     name: Profile to complete
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
+  - type: profile
     title_en: Seasonal support
     title_fr: Appui saisonnier
     description_en: Additional capacity during monitoring, assessment and watershed field-work periods.
     description_fr: Renfort lors des périodes de surveillance, de suivi ou de travaux sur le bassin versant.
-    photo: ""
-    photo_alt_en: ""
-    photo_alt_fr: ""
+    visible: true
+    name: Profile to complete
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
+  - type: group
+    label_en: english
+    label_fr: francais
+    title_en: english
+    title_fr: francais
+    description_en: english
+    description_fr: francais
