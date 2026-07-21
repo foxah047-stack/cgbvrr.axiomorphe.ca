@@ -289,7 +289,7 @@ collections:
                     default: true
                     required: false
                     hint: "Désactivez cette option pour masquer temporairement le profil sans le supprimer. / Turn this off to hide the profile temporarily without deleting it."
-                  - { label: Nom / Name, name: name, widget: string }
+                  - { label: Nom / Name, name: name, widget: string, required: false, hint: "Laissez vide si le nom n'est pas encore public. / Leave blank if the name isn't public yet." }
                   - { label: Titre français / French title, name: title_fr, widget: string }
                   - { label: Titre anglais / English title, name: title_en, widget: string }
                   - { label: Description française / French description, name: description_fr, widget: text, required: false }

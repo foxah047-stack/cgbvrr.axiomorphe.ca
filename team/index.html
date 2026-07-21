@@ -108,7 +108,9 @@ permalink: /team/
                   </div>
                 {% endif %}
 
-                <h3>{{ item.name }}</h3>
+                {% if item.name != empty %}
+                  <h3>{{ item.name }}</h3>
+                {% endif %}
 
                 {% if item.title_en != blank or item.title_fr != blank %}
                   <p class="person-role">

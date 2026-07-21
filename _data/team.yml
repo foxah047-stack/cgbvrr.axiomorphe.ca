@@ -24,7 +24,7 @@ items:
     description_en: Organizational leadership, partner relations and overall priorities.
     description_fr: Direction de l’organisation, relations avec les partenaires et priorités générales.
     visible: true
-    name: Profile to complete
+    name: ''
     photo: ''
     photo_alt_en: ''
     photo_alt_fr: ''
@@ -34,7 +34,7 @@ items:
     description_en: Project coordination, technical follow-up, data and scientific collaboration.
     description_fr: Coordination des projets, suivis techniques, données et collaboration scientifique.
     visible: true
-    name: Profile to complete
+    name: ''
     photo: ''
     photo_alt_en: ''
     photo_alt_fr: ''
@@ -44,7 +44,7 @@ items:
     description_en: Field activity supervision, seasonal team support and site follow-up.
     description_fr: Encadrement des activités terrain, soutien aux équipes saisonnières et suivi des sites.
     visible: true
-    name: Profile to complete
+    name: ''
     photo: ''
     photo_alt_en: ''
     photo_alt_fr: ''
@@ -61,7 +61,7 @@ items:
     description_en: Pool monitoring, field presence and reporting situations that may put the river at risk.
     description_fr: Surveillance des fosses, présence terrain et signalement des situations à risque.
     visible: true
-    name: Profile to complete
+    name: ''
     photo: ''
     photo_alt_en: ''
     photo_alt_fr: ''
@@ -71,7 +71,7 @@ items:
     description_en: Practical work, logistics, maintenance, restoration and site support.
     description_fr: Travaux pratiques, soutien logistique, entretien, restauration et appui aux sites.
     visible: true
-    name: Profile to complete
+    name: ''
     photo: ''
     photo_alt_en: ''
     photo_alt_fr: ''
@@ -81,7 +81,7 @@ items:
     description_en: Additional capacity during monitoring, assessment and watershed field-work periods.
     description_fr: Renfort lors des périodes de surveillance, de suivi ou de travaux sur le bassin versant.
     visible: true
-    name: Profile to complete
+    name: ''
     photo: ''
     photo_alt_en: ''
     photo_alt_fr: ''
