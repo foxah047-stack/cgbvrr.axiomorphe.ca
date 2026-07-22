@@ -1,15 +1,15 @@
-hero_label_en: Team
-hero_label_fr: Équipe
+hero_label_en: Inspired by nature
+hero_label_fr: Inspirée par la nature
 hero_title_en: Team
 hero_title_fr: Équipe
-hero_lead_en: Coordination, projects, field operations and monitoring.
-hero_lead_fr: Coordination, projets, terrain et surveillance.
+hero_lead_en: Our multidisciplinary team is motivated by maintaining a healthy environment and conserving healthy ecosystems.
+hero_lead_fr: Notre équipe multidisciplinaire est motivée par le maintien d’un environnement sain et la conservation d’écosystèmes en santé.
 intro_label_en: Organization
 intro_label_fr: Organisation
 intro_title_en: Complementary roles in project management and field work
 intro_title_fr: Des rôles complémentaires sur le terrain et dans la gestion des projets
-intro_body_en: The Council brings together coordination, project management and field-monitoring roles. The roster below can be reorganized directly through the CMS without imposing a rigid organizational chart.
-intro_body_fr: Le CGBVRR réunit des rôles de coordination, de gestion de projets et de surveillance terrain. L’équipe ci-dessous peut être réorganisée directement dans le CMS, sans imposer un organigramme trop rigide.
+intro_body_en: The Council brings together coordination, project management and field-monitoring roles.
+intro_body_fr: Le CGBVRR réunit des rôles de coordination, de gestion de projets et de surveillance terrain.
 items:
   - type: group
     label_en: Internal roles
