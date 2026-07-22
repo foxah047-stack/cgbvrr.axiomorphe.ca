@@ -24,7 +24,7 @@ items:
     description_en: Organizational leadership, partner relations and overall priorities.
     description_fr: Direction de l’organisation, relations avec les partenaires et priorités générales.
     visible: true
-    name: ''
+    name: Jean-Daniel Savard
     photo: ''
     photo_alt_en: ''
     photo_alt_fr: ''
@@ -34,17 +34,27 @@ items:
     description_en: Project coordination, technical follow-up, data and scientific collaboration.
     description_fr: Coordination des projets, suivis techniques, données et collaboration scientifique.
     visible: true
-    name: ''
+    name: Renaud Quilbé
     photo: ''
     photo_alt_en: ''
     photo_alt_fr: ''
   - type: profile
-    title_en: Sector supervisor
-    title_fr: Superviseur ou superviseure de secteur
+    title_en: Sector supervisor – Upsalquitch
+    title_fr: Superviseure – Secteur Upsalquitch
     description_en: Field activity supervision, seasonal team support and site follow-up.
     description_fr: Encadrement des activités terrain, soutien aux équipes saisonnières et suivi des sites.
     visible: true
-    name: ''
+    name: Christine Haché
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
+  - type: profile
+    title_en: Sector supervisor – Kedgwick
+    title_fr: Superviseur – Secteur Kedgwick
+    description_en: Field activity supervision, seasonal team support and site follow-up.
+    description_fr: Encadrement des activités terrain, soutien aux équipes saisonnières et suivi des sites.
+    visible: true
+    name: Jocelyn Lepage
     photo: ''
     photo_alt_en: ''
     photo_alt_fr: ''
@@ -56,22 +66,82 @@ items:
     description_en: Seasonal and operational roles can be presented clearly without publishing unnecessary personal information.
     description_fr: Les rôles saisonniers et opérationnels peuvent être présentés clairement, sans publier d’information personnelle inutile.
   - type: profile
-    title_en: Pool guardian
-    title_fr: Gardien ou gardienne de fosse
-    description_en: Pool monitoring, field presence and reporting situations that may put the river at risk.
-    description_fr: Surveillance des fosses, présence terrain et signalement des situations à risque.
+    title_en: Field worker – Kedgwick
+    title_fr: Ouvrier de terrain – Secteur Kedgwick
+    description_en: Practical work, logistics, maintenance, restoration and site support.
+    description_fr: Travaux pratiques, soutien logistique, entretien, restauration et appui aux sites.
     visible: true
-    name: ''
+    name: Francis Smith
     photo: ''
     photo_alt_en: ''
     photo_alt_fr: ''
   - type: profile
-    title_en: Field worker
-    title_fr: Ouvrier ou ouvrière de terrain
+    title_en: Field worker – Upsalquitch
+    title_fr: Ouvrier de terrain – Secteur Upsalquitch
     description_en: Practical work, logistics, maintenance, restoration and site support.
     description_fr: Travaux pratiques, soutien logistique, entretien, restauration et appui aux sites.
     visible: true
-    name: ''
+    name: Randal Bernatchez
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
+  - type: profile
+    title_en: Pool guardian – Kedgwick Forks
+    title_fr: Gardien de fosse – Fourche de Kedgwick
+    description_en: Pool monitoring, field presence and reporting situations that may put the river at risk.
+    description_fr: Surveillance des fosses, présence terrain et signalement des situations à risque.
+    visible: true
+    name: Marcel Martel
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
+  - type: profile
+    title_en: Pool guardian – Kedgwick Forks
+    title_fr: Gardien de fosse – Fourche de Kedgwick
+    description_en: Pool monitoring, field presence and reporting situations that may put the river at risk.
+    description_fr: Surveillance des fosses, présence terrain et signalement des situations à risque.
+    visible: true
+    name: Gilles Thibeault
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
+  - type: profile
+    title_en: Pool guardian – 10 Mile Barrier
+    title_fr: Gardien de fosse – Barrière du 10 Mile
+    description_en: Pool monitoring, field presence and reporting situations that may put the river at risk.
+    description_fr: Surveillance des fosses, présence terrain et signalement des situations à risque.
+    visible: true
+    name: Jason Côté
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
+  - type: profile
+    title_en: Pool guardian – 10 Mile Barrier
+    title_fr: Gardien de fosse – Barrière du 10 Mile
+    description_en: Pool monitoring, field presence and reporting situations that may put the river at risk.
+    description_fr: Surveillance des fosses, présence terrain et signalement des situations à risque.
+    visible: true
+    name: Gilles Laliberté
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
+  - type: profile
+    title_en: Pool guardian – 10 Mile Barrier
+    title_fr: Gardien de fosse – Barrière du 10 Mile
+    description_en: Pool monitoring, field presence and reporting situations that may put the river at risk.
+    description_fr: Surveillance des fosses, présence terrain et signalement des situations à risque.
+    visible: true
+    name: Marc St-Pierre
+    photo: ''
+    photo_alt_en: ''
+    photo_alt_fr: ''
+  - type: profile
+    title_en: Pool guardian – 10 Mile Barrier
+    title_fr: Gardien de fosse – Barrière du 10 Mile
+    description_en: Pool monitoring, field presence and reporting situations that may put the river at risk.
+    description_fr: Surveillance des fosses, présence terrain et signalement des situations à risque.
+    visible: true
+    name: Yves Thériault
     photo: ''
     photo_alt_en: ''
     photo_alt_fr: ''
