@@ -1408,6 +1408,9 @@ button.lang-toggle:hover { background: var(--river-light); }
   gap: 28px;
   padding: 0 60px;
 }
+.content-blocks-stacked {
+  grid-template-columns: 1fr;
+}
 .timeline-preview,
 .decision-prompt,
 .team-intro-card,
