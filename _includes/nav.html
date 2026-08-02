@@ -144,6 +144,12 @@
       </div>
     </li>
 
+    {% assign contact_has_subsections = false %}
+    {% if site.data.contact.employment_show or site.data.contact.volunteer_show or site.data.contact.contact_form_show %}
+      {% assign contact_has_subsections = true %}
+    {% endif %}
+
+    {% if contact_has_subsections %}
     <li class="nav-item nav-has-panel">
       <a class="nav-panel-trigger" href="/contact/" aria-expanded="false" aria-controls="contact-panel">
         <span data-lang="en">Contact</span><span data-lang="fr">Contact</span>
@@ -162,13 +168,22 @@
           <p data-lang="fr">Demandes générales, emploi, bénévolat et formulaires futurs.</p>
         </div>
         <div class="nav-panel-links">
-          <a href="/contact/"><span data-lang="en">Contact overview</span><span data-lang="fr">Vue d’ensemble</span><small>Public contact information</small></a>
+          <a href="/contact/"><span data-lang="en">Contact us</span><span data-lang="fr">Nous joindre</span><small>Public contact information</small></a>
+          {% if site.data.contact.employment_show %}
           <a href="/contact/#employment"><span data-lang="en">Employment inquiries</span><span data-lang="fr">Demandes d’emploi</span><small>Apply through official channels</small></a>
+          {% endif %}
+          {% if site.data.contact.volunteer_show %}
           <a href="/contact/#volunteer"><span data-lang="en">Volunteer / internship</span><span data-lang="fr">Bénévolat / stage</span><small>Future inquiry pathway</small></a>
+          {% endif %}
+          {% if site.data.contact.contact_form_show %}
           <a href="/contact/#contact-form"><span data-lang="en">Contact form</span><span data-lang="fr">Formulaire</span><small>Placeholder form area</small></a>
+          {% endif %}
         </div>
       </div>
     </li>
+    {% else %}
+    <li><a href="/contact/" data-lang="en">Contact us</a><a href="/contact/" data-lang="fr">Nous joindre</a></li>
+    {% endif %}
 
     <li><a href="/donations/" data-lang="en">Donate</a><a href="/donations/" data-lang="fr">Dons</a></li>
     <li><button class="lang-toggle" id="lang-btn" type="button" onclick="toggleLang()" aria-label="Passer au français" aria-pressed="false">FR</button></li>

@@ -238,6 +238,26 @@ collections:
     label: Pages du site / Site pages
     icon: web
     files:
+      - name: contact
+        label: Contact
+        file: _data/contact.yml
+        fields:
+          - label: Afficher la section Emploi / Show Employment section
+            name: employment_show
+            widget: boolean
+            default: false
+            hint: "Affiche la section et le lien de menu « Emploi ». Désactivez si aucun poste n'est à combler. / Shows the Employment section and its menu link. Turn off if there are no open positions."
+          - label: Afficher la section Bénévolat / stage / Show Volunteer / internship section
+            name: volunteer_show
+            widget: boolean
+            default: false
+            hint: "Affiche la section et le lien de menu « Bénévolat / stage ». / Shows the Volunteer/internship section and its menu link."
+          - label: Afficher le formulaire de contact / Show contact form
+            name: contact_form_show
+            widget: boolean
+            default: false
+            hint: "Affiche le formulaire de contact et son lien de menu. / Shows the contact form and its menu link."
+
       - name: team
         label: Équipe / Team
         file: _data/team.yml

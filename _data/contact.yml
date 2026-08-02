@@ -1,0 +1,5 @@
+# Contrôle d'affichage des sections optionnelles de la page Contact.
+# Quand une section est désactivée, elle disparaît de la page ET du menu déroulant Contact.
+employment_show: false
+volunteer_show: false
+contact_form_show: false

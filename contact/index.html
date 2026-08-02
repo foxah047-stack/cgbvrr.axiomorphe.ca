@@ -31,14 +31,18 @@ permalink: /contact/
     <aside class="detail-side-card">
       <h2><span data-lang="en">Fast links</span><span data-lang="fr">Liens rapides</span></h2>
       <dl class="snapshot-list">
+        {% if site.data.contact.employment_show %}
         <div><dt><span data-lang="en">Jobs</span><span data-lang="fr">Emplois</span></dt><dd><a href="#employment"><span data-lang="en">Employment inquiries</span><span data-lang="fr">Demandes d’emploi</span></a></dd></div>
+        {% endif %}
         <div><dt><span data-lang="en">News</span><span data-lang="fr">Nouvelles</span></dt><dd><a href="/news/"><span data-lang="en">See current announcements</span><span data-lang="fr">Voir les annonces actuelles</span></a></dd></div>
         <div><dt><span data-lang="en">Support</span><span data-lang="fr">Soutien</span></dt><dd><a href="/donations/"><span data-lang="en">Donate or support</span><span data-lang="fr">Donner ou appuyer</span></a></dd></div>
       </dl>
     </aside>
   </section>
 
+  {% if site.data.contact.employment_show or site.data.contact.volunteer_show %}
   <section class="content-blocks">
+    {% if site.data.contact.employment_show %}
     <div class="content-block" id="employment">
       <h2><span data-lang="en">Employment inquiries</span><span data-lang="fr">Demandes d’emploi</span></h2>
       <p data-lang="en">Job openings can be announced in the News section. This contact section gives applicants a stable place to understand how to apply, where to send documents and what information to include.</p>
@@ -50,14 +54,19 @@ permalink: /contact/
       </ul>
       <a class="btn-primary" href="/news/"><span data-lang="en">View news and job posts</span><span data-lang="fr">Voir les nouvelles et offres d’emploi</span></a>
     </div>
+    {% endif %}
 
+    {% if site.data.contact.volunteer_show %}
     <div class="content-block" id="volunteer">
       <h2><span data-lang="en">Volunteer, internship &amp; collaboration inquiries</span><span data-lang="fr">Bénévolat, stages et collaborations</span></h2>
       <p data-lang="en">This section can support students, researchers, community members and partners who want to connect with the Council outside a formal job posting.</p>
       <p data-lang="fr">Cette section peut servir aux étudiants, chercheurs, membres de la communauté et partenaires qui souhaitent joindre le Conseil en dehors d’une offre d’emploi officielle.</p>
     </div>
+    {% endif %}
   </section>
+  {% endif %}
 
+  {% if site.data.contact.contact_form_show %}
   <section class="contact-section" id="contact-form">
     <div class="contact-info-block">
       <div class="section-label"><span data-lang="en">Message</span><span data-lang="fr">Message</span></div>
@@ -84,4 +93,5 @@ permalink: /contact/
       </form>
     </div>
   </section>
+  {% endif %}
 </main>
