@@ -1936,8 +1936,7 @@ textarea:focus-visible {
 
 /* Interior page headers: quieter and smaller than the homepage hero. */
 .page-hero {
-  background:
-    linear-gradient(145deg, rgba(42, 42, 36, 0.98), rgba(26, 48, 47, 0.96));
+  background: var(--charcoal);
   color: var(--cream);
   padding: clamp(54px, 7vw, 76px) clamp(24px, 5vw, 60px) clamp(44px, 6vw, 64px);
   position: relative;
@@ -1945,10 +1944,8 @@ textarea:focus-visible {
 }
 
 .page-hero::before {
-  background:
-    radial-gradient(ellipse at 16% 80%, rgba(46, 107, 122, 0.18), transparent 46%),
-    radial-gradient(ellipse at 84% 12%, rgba(58, 90, 46, 0.24), transparent 42%);
-  opacity: 0.9;
+  background: none;
+  opacity: 0;
 }
 
 .page-hero-inner {

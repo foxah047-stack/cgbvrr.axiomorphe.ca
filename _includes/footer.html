@@ -26,10 +26,11 @@
       <h5><span data-lang="en">Main pages</span><span data-lang="fr">Pages principales</span></h5>
       <ul>
         <li><a href="/about/"><span data-lang="en">About</span><span data-lang="fr">À propos</span></a></li>
+        <li><a href="/team/"><span data-lang="en">Team</span><span data-lang="fr">Équipe</span></a></li>
         <li><a href="/projects/"><span data-lang="en">Projects</span><span data-lang="fr">Projets</span></a></li>
         <li><a href="/news/"><span data-lang="en">News</span><span data-lang="fr">Nouvelles</span></a></li>
+        <li><a href="/members-and-partners/"><span data-lang="en">Members and Partners</span><span data-lang="fr">Membres et partenaires</span></a></li>
         <li><a href="/resources/"><span data-lang="en">Resources</span><span data-lang="fr">Ressources</span></a></li>
-        <li><a href="/team/"><span data-lang="en">Team</span><span data-lang="fr">Équipe</span></a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -38,7 +39,7 @@
         <li><a href="/about/#territory"><span data-lang="en">Territory</span><span data-lang="fr">Territoire</span></a></li>
         <li><a href="/about/#governance"><span data-lang="en">Governance</span><span data-lang="fr">Gouvernance</span></a></li>
         <li><a href="/about/#advisory-committees"><span data-lang="en">Advisory committees</span><span data-lang="fr">Comités consultatifs</span></a></li>
-        <li><a href="/about/#partners-funders"><span data-lang="en">Partners &amp; funders</span><span data-lang="fr">Partenaires et bailleurs</span></a></li>
+        <li><a href="/members-and-partners/#board"><span data-lang="en">Board of Directors</span><span data-lang="fr">Conseil d’administration</span></a></li>
         <li><a href="/donations/"><span data-lang="en">Donate</span><span data-lang="fr">Dons</span></a></li>
       </ul>
     </div>
@@ -47,7 +48,9 @@
       <ul>
         <li><a href="/resources/research/"><span data-lang="en">Reports &amp; publications</span><span data-lang="fr">Rapports et publications</span></a></li>
         <li><a href="/resources/gis-tools/"><span data-lang="en">GIS tools</span><span data-lang="fr">Outils SIG</span></a></li>
+        {% if site.data.contact.employment_show %}
         <li><a href="/contact/#employment"><span data-lang="en">Employment</span><span data-lang="fr">Emploi</span></a></li>
+        {% endif %}
         <li><a href="/contact/"><span data-lang="en">Contact</span><span data-lang="fr">Contact</span></a></li>
       </ul>
     </div>
