@@ -1,13 +1,13 @@
 ---
 layout: project
-title: surveillance-anti-braconnage
+title: protection
 status: published
 featured: true
-order: 2
-title_fr: Réseau de surveillance anti-braconnage
-title_en: Anti-poaching camera network
-subtitle_fr: Déploiement de caméras à distance aux bassins prioritaires en coordination avec la GRC et la Sûreté du Québec, pour réduire la pression de prélèvement illégal pendant la fraie.
-subtitle_en: Remote cameras deployed at priority salmon pools, coordinated with the RCMP and the Sûreté du Québec, to reduce illegal harvest pressure during spawning season.
+order: 6
+title_fr: Protection
+title_en: Protection
+subtitle_fr: Réseau de caméras de surveillance aux bassins prioritaires, en coordination avec la GRC et la Sûreté du Québec, pour réduire la pression de prélèvement illégal pendant la fraie.
+subtitle_en: A camera surveillance network at priority pools, coordinated with the RCMP and the Sûreté du Québec, to reduce illegal harvest pressure during spawning season.
 hero_image: /assets/img/news-cameras.jpg
 hero_alt_fr: Équipement de caméra à déclenchement automatique installé près d'un point d'accès à la rivière
 hero_alt_en: Remote-trigger camera equipment installed near a river access point

@@ -1,5 +1,4 @@
-# Éditer ce fichier pour mettre à jour les projets sur le site
-# Chaque projet apparaît automatiquement sur la page d'accueil
+# Éditer ce fichier pour mettre à jour les projets sur la page d'accueil
 
 - titre_fr: "WATERSHADE"
   titre_en: "WATERSHADE"
@@ -10,53 +9,59 @@
   is_active: true
   description_fr: "Cartographie des refuges thermiques sur plus de 400 km de rivière où le saumon se réfugie lors des épisodes de chaleur. Combine l'imagerie thermique aérienne, les relevés de terrain et la modélisation hydrologique pour prioriser les sites d'intervention."
   description_en: "Mapping thermal refuges across more than 400 km of river where salmon take shelter during heat events. Combines aerial thermal imagery, field surveys and hydrological modelling to prioritize intervention sites."
+  url: "/projects/watershade/"
 
-- titre_fr: "Inventaire de migration des smolts"
-  titre_en: "Smolt migration inventory"
-  annee_fr: "2021 — EN COURS"
-  annee_en: "2021 — ONGOING"
+- titre_fr: "Mitigation de la sédimentation"
+  titre_en: "Sediment mitigation"
+  annee_fr: "EN COURS"
+  annee_en: "ONGOING"
   statut_fr: "Actif"
   statut_en: "Active"
   is_active: true
-  description_fr: "Relevés annuels par électropêche et télémétrie PIT pour suivre la migration des juvéniles de saumon et les taux de survie dans six sous-bassins."
-  description_en: "Annual surveys using electrofishing and PIT telemetry to track juvenile salmon migration and survival rates across six sub-basins."
+  description_fr: "Réduction du transport de sédiments vers la rivière issus de la voirie forestière et des sites de transformation, en collaboration avec l'industrie."
+  description_en: "Reducing sediment transport into the river from forestry roads and processing sites, in collaboration with industry."
+  url: "/projects/sedimentation/"
 
-- titre_fr: "Réseau de surveillance anti-braconnage"
-  titre_en: "Anti-poaching camera network"
+- titre_fr: "Barrages à castor"
+  titre_en: "Beaver dams"
+  annee_fr: "DEPUIS PRÈS DE 10 ANS"
+  annee_en: "FOR CLOSE TO 10 YEARS"
+  statut_fr: "Actif"
+  statut_en: "Active"
+  is_active: true
+  description_fr: "Repérage aérien et gestion des barrages à castor qui nuisent à l'habitat de reproduction du saumon sur les tributaires de la Restigouche."
+  description_en: "Aerial surveying and management of beaver dams that impede salmon spawning habitat on Restigouche tributaries."
+  url: "/projects/barrages-a-castor/"
+
+- titre_fr: "Projet Éco-Action 2024-2027"
+  titre_en: "Éco-Action project 2024-2027"
+  annee_fr: "2024 — 2027"
+  annee_en: "2024 — 2027"
+  statut_fr: "Actif"
+  statut_en: "Active"
+  is_active: true
+  description_fr: "Solutions d'aménagement basées sur la nature pour préserver les régimes hydrologiques du bassin versant du ruisseau Five Fingers."
+  description_en: "Nature-based design solutions to preserve hydrological regimes in the Five Fingers Brook watershed."
+  url: "/projects/eco-action/"
+
+- titre_fr: "Contrats avec le MRN-NB"
+  titre_en: "Contracts with NB DNR"
+  annee_fr: "EN COURS"
+  annee_en: "ONGOING"
+  statut_fr: "Actif"
+  statut_en: "Active"
+  is_active: true
+  description_fr: "Maintenance des sites du programme récréatif et des eaux de la Couronne, et surveillance des fosses prioritaires pour la province du Nouveau-Brunswick."
+  description_en: "Maintaining recreational and Crown-water sites, and monitoring priority pools, on behalf of the Province of New Brunswick."
+  url: "/projects/contrats-mrn-nb/"
+
+- titre_fr: "Protection"
+  titre_en: "Protection"
   annee_fr: "2025 — EN COURS"
   annee_en: "2025 — ONGOING"
   statut_fr: "Actif"
   statut_en: "Active"
   is_active: true
-  description_fr: "Déploiement de caméras à distance aux bassins prioritaires en coordination avec la GRC et la Sûreté du Québec, pour réduire la pression de prélèvement illégal pendant la fraie."
-  description_en: "Deployment of remote cameras at priority pools in coordination with the RCMP and the Sûreté du Québec, to reduce illegal harvest pressure during spawning."
-
-- titre_fr: "Relevé aérien LIDAR et thermique"
-  titre_en: "Aerial LIDAR and thermal survey"
-  annee_fr: "2018 — COMPLÉTÉ"
-  annee_en: "2018 — COMPLETED"
-  statut_fr: "Complété"
-  statut_en: "Completed"
-  is_active: false
-  description_fr: "15 000 photographies aériennes et cartographie LIDAR complète de plus de 400 km de rivières — faisant de la Restigouche l'un des systèmes fluviaux à saumon les mieux documentés en Amérique du Nord."
-  description_en: "15,000 aerial photographs and complete LIDAR mapping of more than 400 km of rivers — making the Restigouche one of the best-documented salmon river systems in North America."
-
-- titre_fr: "Programme de réduction des sédiments"
-  titre_en: "Sediment reduction program"
-  annee_fr: "2024 — EN COURS"
-  annee_en: "2024 — ONGOING"
-  statut_fr: "Actif"
-  statut_en: "Active"
-  is_active: true
-  description_fr: "Collaboration avec les opérateurs forestiers et les municipalités pour réduire l'érosion dans les zones de frai critiques du saumon."
-  description_en: "Collaboration with forestry operators and municipalities to reduce erosion in critical salmon spawning areas."
-
-- titre_fr: "Réseau de surveillance de la qualité de l'eau"
-  titre_en: "Water quality monitoring network"
-  annee_fr: "2024 — EN COURS"
-  annee_en: "2024 — ONGOING"
-  statut_fr: "Actif"
-  statut_en: "Active"
-  is_active: true
-  description_fr: "Enregistrement continu de la température et de la qualité de l'eau dans 18 stations du bassin versant, alimentant l'entrepôt de données aquatiques du MPO."
-  description_en: "Continuous recording of temperature and water quality at 18 stations across the watershed, feeding the DFO's aquatic data warehouse."
+  description_fr: "Réseau de caméras de surveillance aux bassins prioritaires, en coordination avec la GRC et la Sûreté du Québec, pour réduire la pression de prélèvement illégal pendant la fraie."
+  description_en: "A camera surveillance network at priority pools, coordinated with the RCMP and the Sûreté du Québec, to reduce illegal harvest pressure during spawning season."
+  url: "/projects/protection/"

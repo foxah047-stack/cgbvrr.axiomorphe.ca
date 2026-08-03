@@ -168,7 +168,8 @@ lang: fr
   <div class="projects-grid">
     {% assign projets = site.data.projets %}
     {% for projet in projets %}
-    <div class="project-card">
+    {% assign projet_url = projet.url | default: '' | strip %}
+    {% if projet_url != '' %}<a class="project-card" href="{{ projet_url | relative_url }}">{% else %}<div class="project-card">{% endif %}
       <div class="project-year"><span data-lang="en">{{ projet.annee_en }}</span><span data-lang="fr">{{ projet.annee_fr }}</span></div>
       <h3><span data-lang="en">{{ projet.titre_en }}</span><span data-lang="fr">{{ projet.titre_fr }}</span></h3>
       <p><span data-lang="en">{{ projet.description_en }}</span><span data-lang="fr">{{ projet.description_fr }}</span></p>
@@ -176,7 +177,7 @@ lang: fr
         {% if projet.is_active %}<div class="status-dot"></div>{% else %}✓ {% endif %}
         <span data-lang="en">{{ projet.statut_en }}</span><span data-lang="fr">{{ projet.statut_fr }}</span>
       </div>
-    </div>
+    {% if projet_url != '' %}</a>{% else %}</div>{% endif %}
     {% endfor %}
   </div>
 </section>
