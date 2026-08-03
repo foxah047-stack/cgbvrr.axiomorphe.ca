@@ -1,95 +1,95 @@
 ---
 layout: project
 title: preview-template-do-not-delete
-status: published
-featured: true
-order: 50
-title_en: English Title
+status: draft
+featured: false
+order: 90
 title_fr: Titre français
-hero_title_en: English hero title
-hero_title_fr: Titre principal français
-subtitle_en: English subtitle / Sous-titre anglais
-subtitle_fr: French subtitle / Sous-titre français
+title_en: English title
+subtitle_fr: Sous-titre français
+subtitle_en: English subtitle
 hero_image: /assets/img/hero-2560.webp
-hero_alt_en: English hero image alt text
 hero_alt_fr: Texte alternatif français
-hero_caption_en: English hero image caption
+hero_alt_en: English hero image alt text
 hero_caption_fr: Légende française
-summary_kicker_en: English overview label
-summary_kicker_fr: Petit libellé français de l'aperçu
-summary_title_en: English summary title
-summary_title_fr: Titre de résumé français
-summary_en: English Summary
-summary_fr: Résumé français
-intro_en: English Intro
-intro_fr: Introduction française
-context_show: true
-context_kicker_en: English context label
-context_kicker_fr: Petit libellé français du contexte
-context_title_en: English context title
-context_title_fr: Titre de contexte français
-context_body_en: English context body
-context_body_fr: Texte de context français
-image_1_show: true
-image_1: /assets/img/map1.png
-image_1_alt_en: English image 1 alt text
-image_1_alt_fr: Texte alternatif français image 1
-image_1_caption_en: English image 1 caption
-image_1_caption_fr: Légende francçaise image 1
-key_concept_show: true
-key_concept_kicker_en: English key concept label
-key_concept_kicker_fr: Petit libellé français du concept clé
-key_concept_title_en: English key concept title
-key_concept_title_fr: Titre français de concept clé
-key_concept_body_en: English key concept body
-key_concept_body_fr: Texte français du concept clé
-process_show: true
-process_kicker_en: English process label
-process_kicker_fr: Petit libellé français du processus
-process_title_en: English process title
-process_title_fr: Titre français du processus
-process_intro_en: English process intro
-process_intro_fr: Introduction française de processus
-steps: []
-image_2_show: true
-image_2: /assets/img/news-cameras.jpg
-image_2_alt_en: English image 2 alt text
-image_2_alt_fr: Texte alternatif français image 1
-image_2_caption_en: English image 2 caption
-image_2_caption_fr: Légende française image 2
-scope_show: true
-scope_kicker_en: English scope label
-scope_kicker_fr: Petit libellé français de la portée
-scope_title_en: English scope title
-scope_title_fr: Titre français de portée
-scope_body_en: English scope body
-scope_body_fr: Texte français de portée
-stats: []
-related_show: true
-related_kicker_en: English related label
-related_kicker_fr: Petit libellé français des liens
-related_title_en: English related section title
-related_title_fr: Titre français des cartes liées
-related_cards: []
-image_3_show: true
-image_3: /assets/img/trappes-sediments.jpg
-image_3_alt_en: English image 3 alt text
-image_3_alt_fr: Texte alternatif français image 3
-image_3_caption_en: English image 3 caption
-image_3_caption_fr: Légende française image 3
-note_show: true
-note_title_en: English note title
-note_title_fr: Titre français de la note
-note_body_en: English note body
-note_body_fr: Texte français de la note
-closing_show: true
-closing_title_en: English closing title
-closing_title_fr: Titre français de conclusion
-closing_body_en: English closing body
-closing_body_fr: Texte français de conclusion
-closing_link_label_en: English closing link label
-closing_link_label_fr: Libellé français du lien final
-closing_link_url: https://axiomorphe.ca
-extra_body_en: English extra body content
-extra_body_fr: Contenu additionnel français
+hero_caption_en: English hero image caption
+
+sections:
+  - type: text
+    kicker_fr: Petit libellé français (optionnel)
+    kicker_en: Optional English small label
+    title_fr: Titre de section (optionnel)
+    title_en: Optional section title
+    body_fr: |
+      Ceci est un bloc de texte simple. C'est le type de section le plus utilisé — un ou deux blocs de texte suffisent pour la plupart des pages de projet.
+    body_en: |
+      This is a simple text block. This is the most commonly used section type — one or two text blocks are enough for most project pages.
+    image_show: false
+    image: /assets/img/map1.png
+    image_alt_fr: Texte alternatif français de l'image
+    image_alt_en: English image alt text
+    image_caption_fr: Légende française de l'image
+    image_caption_en: English image caption
+
+  - type: steps
+    kicker_fr: Petit libellé français (optionnel)
+    kicker_en: Optional English small label
+    title_fr: Titre des étapes (optionnel)
+    title_en: Optional steps title
+    intro_fr: Texte d'introduction avant la liste des étapes.
+    intro_en: Intro text before the list of steps.
+    steps:
+      - title_fr: Étape 1
+        title_en: Step 1
+        text_fr: Description courte de la première étape.
+        text_en: Short description of the first step.
+      - title_fr: Étape 2
+        title_en: Step 2
+        text_fr: Description courte de la deuxième étape.
+        text_en: Short description of the second step.
+    image_show: false
+    image: /assets/img/news-cameras.jpg
+    image_alt_fr: Texte alternatif français de l'image
+    image_alt_en: English image alt text
+    image_caption_fr: Légende française de l'image
+    image_caption_en: English image caption
+
+  - type: stats
+    kicker_fr: Petit libellé français (optionnel)
+    kicker_en: Optional English small label
+    title_fr: Titre des statistiques (optionnel)
+    title_en: Optional stats title
+    body_fr: Texte optionnel avant les statistiques.
+    body_en: Optional text before the stats.
+    stats:
+      - value_fr: "12"
+        value_en: "12"
+        label_fr: Sites surveillés
+        label_en: Sites monitored
+      - value_fr: "48"
+        value_en: "48"
+        label_fr: Documents publiés
+        label_en: Documents published
+
+  - type: related
+    kicker_fr: Petit libellé français (optionnel)
+    kicker_en: Optional English small label
+    title_fr: Travaux liés (optionnel)
+    title_en: Optional related work title
+    cards:
+      - label_fr: Projet
+        label_en: Project
+        title_fr: WaterShade
+        title_en: WaterShade
+        text_fr: Brève description de la carte liée.
+        text_en: Short description of the related card.
+        url: /projects/watershade/
+
+  - type: note
+    title_fr: Titre de la note (optionnel)
+    title_en: Optional note title
+    body_fr: |
+      Utilisez ce type de section pour les avertissements ou notes de sensibilité. Ne publiez pas d'emplacements sensibles précis sans approbation de la direction.
+    body_en: |
+      Use this section type for warnings or sensitivity notes. Do not publish exact sensitive locations without approval from the direction.
 ---

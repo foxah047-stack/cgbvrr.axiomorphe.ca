@@ -1,17 +1,17 @@
 {% assign image_show = include.show %}
 {% assign image_path = include.image | default: '' | strip %}
-{% assign image_alt_en = include.alt_en | default: include.alt | default: '' | strip %}
-{% assign image_alt_fr = include.alt_fr | default: image_alt_en | strip %}
-{% assign image_caption_en = include.caption_en | default: include.caption | default: '' | strip %}
-{% assign image_caption_fr = include.caption_fr | default: image_caption_en | strip %}
+{% assign image_alt_fr = include.alt_fr | default: include.alt | default: '' | strip %}
+{% assign image_alt_en = include.alt_en | default: image_alt_fr | strip %}
+{% assign image_caption_fr = include.caption_fr | default: include.caption | default: '' | strip %}
+{% assign image_caption_en = include.caption_en | default: image_caption_fr | strip %}
 {% if image_path != '' %}
   {% if image_show == true or image_show == 'true' %}
     <figure class="project-image-frame {{ include.class }}">
-      <img src="{{ image_path | relative_url }}" alt="{{ image_alt_en | escape }}" data-i18n-alt data-alt-en="{{ image_alt_en | escape }}" data-alt-fr="{{ image_alt_fr | escape }}" loading="lazy">
-      {% if image_caption_en != '' or image_caption_fr != '' %}
+      <img src="{{ image_path | relative_url }}" alt="{{ image_alt_fr | escape }}" data-i18n-alt data-alt-en="{{ image_alt_en | escape }}" data-alt-fr="{{ image_alt_fr | escape }}" loading="lazy">
+      {% if image_caption_fr != '' or image_caption_en != '' %}
         <figcaption>
-          {% if image_caption_en != '' %}<span data-lang="en">{{ image_caption_en }}</span>{% endif %}
           {% if image_caption_fr != '' %}<span data-lang="fr">{{ image_caption_fr }}</span>{% endif %}
+          {% if image_caption_en != '' %}<span data-lang="en">{{ image_caption_en }}</span>{% endif %}
         </figcaption>
       {% endif %}
     </figure>

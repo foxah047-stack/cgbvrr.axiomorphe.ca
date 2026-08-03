@@ -30,216 +30,159 @@ collections:
       - { label: Contenu anglais / English body, name: body_en, widget: markdown }
 
   - name: projects
-    label: Projects / Projets
+    label: Projets / Projects
     folder: _projects
     create: true
     slug: "{{slug}}"
-    summary: "{{title}} — {{status}}"
+    summary: "{{title_fr}} — {{status}}"
     fields:
       - { label: Layout, name: layout, widget: hidden, default: project }
-      - label: Internal slug / Identifiant interne
+      - label: Identifiant interne / Internal slug
         name: title
         widget: string
-        hint: "Use lowercase letters, numbers, and hyphens only. This becomes the page URL. Example: watershade creates https://cgbvrr.axiomorphe.ca/projects/watershade/. Do not use spaces, accents, apostrophes, symbols, or punctuation. / Utilisez uniquement des lettres minuscules, des chiffres et des traits d'union. Ce champ devient l'URL de la page. Exemple: watershade crée https://cgbvrr.axiomorphe.ca/projects/watershade/. Ne pas utiliser d'espaces, d'accents, d'apostrophes, de symboles ou de ponctuation."
+        hint: "Utilisez uniquement des lettres minuscules, des chiffres et des traits d'union. Ce champ devient l'URL de la page. Exemple: watershade crée https://cgbvrr.axiomorphe.ca/projects/watershade/. Ne pas utiliser d'espaces, d'accents, d'apostrophes, de symboles ou de ponctuation. / Use lowercase letters, numbers, and hyphens only. This becomes the page URL. Example: watershade creates https://cgbvrr.axiomorphe.ca/projects/watershade/. Do not use spaces, accents, apostrophes, symbols, or punctuation."
         pattern:
           - "^[a-z0-9-]+$"
-          - "Use lowercase letters, numbers, and hyphens only. / Utilisez uniquement des minuscules, chiffres et traits d'union."
-      - label: Status / Statut
+          - "Utilisez uniquement des minuscules, chiffres et traits d'union. / Use lowercase letters, numbers, and hyphens only."
+      - label: Statut / Status
         name: status
         widget: select
         default: draft
-        hint: "Draft is not ready. Review is accessible by direct URL but hidden from the project listing. Published appears in the public project listing. / Brouillon n'est pas prêt. Révision est accessible par URL directe, mais masqué de la liste des projets. Publié apparaît dans la liste publique des projets."
+        hint: "Brouillon n'est pas prêt. Révision est accessible par URL directe, mais masqué de la liste des projets. Publié apparaît dans la liste publique des projets. / Draft is not ready. Review is accessible by direct URL but hidden from the project listing. Published appears in the public project listing."
         options:
-          - { label: "Draft - Hidden from listing / Brouillon - Masqué de la liste", value: draft }
-          - { label: "Review - Direct URL only / Révision - URL directe seulement", value: review }
-          - { label: "Published - Shown in project listing / Publié - Affiché dans la liste des projets", value: published }
-      - { label: Featured / Mis en vedette, name: featured, widget: boolean, default: false, required: false }
-      - { label: Listing order / Ordre d'affichage, name: order, widget: number, default: 50, required: false, value_type: int }
+          - { label: "Brouillon - Masqué de la liste / Draft - Hidden from listing", value: draft }
+          - { label: "Révision - URL directe seulement / Review - Direct URL only", value: review }
+          - { label: "Publié - Affiché dans la liste des projets / Published - Shown in project listing", value: published }
+      - { label: Mis en vedette / Featured, name: featured, widget: boolean, default: false, required: false }
+      - { label: Ordre d'affichage / Listing order, name: order, widget: number, default: 50, required: false, value_type: int }
 
-      - { label: English title / Titre anglais, name: title_en, widget: string, required: false, hint: "Public English title. Fill both English and French before publishing. / Titre public anglais. Remplir l'anglais et le français avant publication." }
-      - { label: French title / Titre français, name: title_fr, widget: string, required: false, hint: "Public French title. If left blank, the page may fall back to English. / Titre public français. Si laissé vide, la page peut afficher l'anglais par défaut." }
-      - { label: English hero title / Titre principal anglais, name: hero_title_en, widget: string, required: false }
-      - { label: French hero title / Titre principal français, name: hero_title_fr, widget: string, required: false }
-      - { label: English subtitle / Sous-titre anglais, name: subtitle_en, widget: text, required: false }
-      - { label: French subtitle / Sous-titre français, name: subtitle_fr, widget: text, required: false }
+      - { label: Titre français / French title, name: title_fr, widget: string, required: false, hint: "Titre public français. Remplir le français et l'anglais avant publication. / Public French title. Fill both French and English before publishing." }
+      - { label: Titre anglais / English title, name: title_en, widget: string, required: false, hint: "Titre public anglais. Si laissé vide, la page peut afficher le français par défaut. / Public English title. If left blank, the page may fall back to French." }
+      - { label: Sous-titre français / French subtitle, name: subtitle_fr, widget: text, required: false }
+      - { label: Sous-titre anglais / English subtitle, name: subtitle_en, widget: text, required: false }
 
-      - label: Hero image / Image principale
+      - label: Image principale / Hero image
         name: hero_image
         widget: image
         required: false
-        hint: "Use JPG or WebP. Hero images: under 2 MB, about 2400 px wide. Use lowercase filenames with hyphens only. No spaces, accents, # symbols, or special characters. / JPG ou WebP. Images principales: moins de 2 Mo, environ 2400 px de large. Noms en minuscules avec traits d'union seulement. Pas d'espaces, d'accents, de # ou de caractères spéciaux."
-      - { label: English hero image alt text / Texte alternatif anglais, name: hero_alt_en, widget: string, required: false }
-      - { label: French hero image alt text / Texte alternatif français, name: hero_alt_fr, widget: string, required: false }
-      - { label: English hero image caption / Légende anglaise, name: hero_caption_en, widget: text, required: false }
-      - { label: French hero image caption / Légende française, name: hero_caption_fr, widget: text, required: false }
+        hint: "JPG ou WebP. Images principales: moins de 2 Mo, environ 2400 px de large. Noms en minuscules avec traits d'union seulement. Pas d'espaces, d'accents, de # ou de caractères spéciaux. / Use JPG or WebP. Hero images: under 2 MB, about 2400 px wide. Use lowercase filenames with hyphens only. No spaces, accents, # symbols, or special characters."
+      - { label: Texte alternatif français de l'image principale / French hero image alt text, name: hero_alt_fr, widget: string, required: false }
+      - { label: Texte alternatif anglais de l'image principale / English hero image alt text, name: hero_alt_en, widget: string, required: false }
+      - { label: Légende française de l'image principale / French hero image caption, name: hero_caption_fr, widget: text, required: false }
+      - { label: Légende anglaise de l'image principale / English hero image caption, name: hero_caption_en, widget: text, required: false }
 
-      - { label: English overview label / Petit libellé anglais de l'aperçu, name: summary_kicker_en, widget: string, required: false, hint: "Optional short label above this section. Leave blank to use the default. / Petit libellé optionnel au-dessus de cette section. Laisser vide pour utiliser le libellé par défaut." }
-      - { label: French overview label / Petit libellé français de l'aperçu, name: summary_kicker_fr, widget: string, required: false, hint: "Optional. Leave blank to use the default. / Optionnel. Laisser vide pour utiliser le libellé par défaut." }
-      - { label: English summary title / Titre de résumé anglais, name: summary_title_en, widget: string, required: false }
-      - { label: French summary title / Titre de résumé français, name: summary_title_fr, widget: string, required: false }
-      - { label: English summary / Résumé anglais, name: summary_en, widget: markdown, required: false }
-      - { label: French summary / Résumé français, name: summary_fr, widget: markdown, required: false }
-      - { label: English intro / Introduction anglaise, name: intro_en, widget: markdown, required: false }
-      - { label: French intro / Introduction française, name: intro_fr, widget: markdown, required: false }
-
-      - label: Show context section / Afficher la section contexte
-        name: context_show
-        widget: boolean
-        default: true
-        required: false
-        hint: "Turn this on only if the section has content. Empty sections are hidden automatically. / Activez seulement si la section contient du contenu. Les sections vides sont masquées automatiquement."
-      - { label: English context label / Petit libellé anglais du contexte, name: context_kicker_en, widget: string, required: false, hint: "Optional. Leave blank to use the default label. / Optionnel. Laisser vide pour utiliser le libellé par défaut." }
-      - { label: French context label / Petit libellé français du contexte, name: context_kicker_fr, widget: string, required: false, hint: "Optional. Leave blank to use the default label. / Optionnel. Laisser vide pour utiliser le libellé par défaut." }
-      - { label: English context title / Titre de contexte anglais, name: context_title_en, widget: string, required: false }
-      - { label: French context title / Titre de contexte français, name: context_title_fr, widget: string, required: false }
-      - { label: English context body / Texte de contexte anglais, name: context_body_en, widget: markdown, required: false }
-      - { label: French context body / Texte de contexte français, name: context_body_fr, widget: markdown, required: false }
-      - { label: Show image 1 / Afficher l'image 1, name: image_1_show, widget: boolean, default: false, required: false }
-      - label: Image 1
-        name: image_1
-        widget: image
-        required: false
-        hint: "Normal page images: JPG or WebP, under 1.5 MB, about 1600 px wide. Use lowercase filenames with hyphens only. No spaces, accents, # symbols, or special characters. / Images normales: JPG ou WebP, moins de 1,5 Mo, environ 1600 px. Noms en minuscules avec traits d'union seulement. Pas d'espaces, d'accents, de # ou de caractères spéciaux."
-      - { label: English image 1 alt text / Texte alternatif anglais image 1, name: image_1_alt_en, widget: string, required: false }
-      - { label: French image 1 alt text / Texte alternatif français image 1, name: image_1_alt_fr, widget: string, required: false }
-      - { label: English image 1 caption / Légende anglaise image 1, name: image_1_caption_en, widget: text, required: false }
-      - { label: French image 1 caption / Légende française image 1, name: image_1_caption_fr, widget: text, required: false }
-
-      - label: Show key concept section / Afficher la section concept clé
-        name: key_concept_show
-        widget: boolean
-        default: true
-        required: false
-        hint: "Turn this on only if the section has content. Empty sections are hidden automatically. / Activez seulement si la section contient du contenu. Les sections vides sont masquées automatiquement."
-      - { label: English key concept label / Petit libellé anglais du concept clé, name: key_concept_kicker_en, widget: string, required: false, hint: "Optional. Leave blank to use the default label. / Optionnel. Laisser vide pour utiliser le libellé par défaut." }
-      - { label: French key concept label / Petit libellé français du concept clé, name: key_concept_kicker_fr, widget: string, required: false, hint: "Optional. Leave blank to use the default label. / Optionnel. Laisser vide pour utiliser le libellé par défaut." }
-      - { label: English key concept title / Titre anglais du concept clé, name: key_concept_title_en, widget: string, required: false }
-      - { label: French key concept title / Titre français du concept clé, name: key_concept_title_fr, widget: string, required: false }
-      - { label: English key concept body / Texte anglais du concept clé, name: key_concept_body_en, widget: markdown, required: false }
-      - { label: French key concept body / Texte français du concept clé, name: key_concept_body_fr, widget: markdown, required: false }
-
-      - label: Show process / steps section / Afficher la section processus
-        name: process_show
-        widget: boolean
-        default: true
-        required: false
-        hint: "Turn this on only if the section has content. Empty sections are hidden automatically. / Activez seulement si la section contient du contenu. Les sections vides sont masquées automatiquement."
-      - { label: English process label / Petit libellé anglais du processus, name: process_kicker_en, widget: string, required: false, hint: "Optional. Leave blank to use the default label. / Optionnel. Laisser vide pour utiliser le libellé par défaut." }
-      - { label: French process label / Petit libellé français du processus, name: process_kicker_fr, widget: string, required: false, hint: "Optional. Leave blank to use the default label. / Optionnel. Laisser vide pour utiliser le libellé par défaut." }
-      - { label: English process title / Titre anglais du processus, name: process_title_en, widget: string, required: false }
-      - { label: French process title / Titre français du processus, name: process_title_fr, widget: string, required: false }
-      - { label: English process intro / Introduction anglaise du processus, name: process_intro_en, widget: markdown, required: false }
-      - { label: French process intro / Introduction française du processus, name: process_intro_fr, widget: markdown, required: false }
-      - label: Steps / Étapes
-        name: steps
+      - label: Contenu de la page / Page content
+        name: sections
         widget: list
-        required: false
-        fields:
-          - { label: English step title / Titre anglais de l'étape, name: title_en, widget: string, required: false }
-          - { label: French step title / Titre français de l'étape, name: title_fr, widget: string, required: false }
-          - { label: English step text / Texte anglais de l'étape, name: text_en, widget: text, required: false }
-          - { label: French step text / Texte français de l'étape, name: text_fr, widget: text, required: false }
-      - { label: Show image 2 / Afficher l'image 2, name: image_2_show, widget: boolean, default: false, required: false }
-      - label: Image 2
-        name: image_2
-        widget: image
-        required: false
-        hint: "Normal page images: JPG or WebP, under 1.5 MB, about 1600 px wide. Use lowercase filenames with hyphens only. No spaces, accents, # symbols, or special characters. / Images normales: JPG ou WebP, moins de 1,5 Mo, environ 1600 px. Noms en minuscules avec traits d'union seulement. Pas d'espaces, d'accents, de # ou de caractères spéciaux."
-      - { label: English image 2 alt text / Texte alternatif anglais image 2, name: image_2_alt_en, widget: string, required: false }
-      - { label: French image 2 alt text / Texte alternatif français image 2, name: image_2_alt_fr, widget: string, required: false }
-      - { label: English image 2 caption / Légende anglaise image 2, name: image_2_caption_en, widget: text, required: false }
-      - { label: French image 2 caption / Légende française image 2, name: image_2_caption_fr, widget: text, required: false }
+        label_singular: Section
+        summary: "{{type}} — {{title_fr}}{{title_en}}"
+        collapsed: auto
+        minimize_collapsed: auto
+        allow_add: true
+        allow_remove: true
+        allow_duplicate: true
+        allow_reorder: true
+        hint: "Ajoutez seulement les sections nécessaires, dans l'ordre exact d'affichage. Évitez de multiplier les sections: une page simple avec un ou deux blocs de texte est souvent préférable. / Add only the sections you need, in the exact order they should appear. Avoid stacking too many sections: a simple page with one or two text blocks is often better."
+        types:
+          - name: text
+            label: Section de texte / Text section
+            fields:
+              - { label: Petit libellé français (optionnel) / French small label (optional), name: kicker_fr, widget: string, required: false }
+              - { label: Petit libellé anglais (optionnel) / English small label (optional), name: kicker_en, widget: string, required: false }
+              - { label: Titre français (optionnel) / French title (optional), name: title_fr, widget: string, required: false }
+              - { label: Titre anglais (optionnel) / English title (optional), name: title_en, widget: string, required: false }
+              - { label: Texte français / French body, name: body_fr, widget: markdown, required: false }
+              - { label: Texte anglais / English body, name: body_en, widget: markdown, required: false }
+              - { label: Afficher une image / Show an image, name: image_show, widget: boolean, default: false, required: false }
+              - label: Image
+                name: image
+                widget: image
+                required: false
+                hint: "JPG ou WebP, moins de 1,5 Mo, environ 1600 px. Noms en minuscules avec traits d'union seulement. / JPG or WebP, under 1.5 MB, about 1600 px wide. Use lowercase filenames with hyphens only."
+              - { label: Texte alternatif français de l'image / French image alt text, name: image_alt_fr, widget: string, required: false }
+              - { label: Texte alternatif anglais de l'image / English image alt text, name: image_alt_en, widget: string, required: false }
+              - { label: Légende française de l'image / French image caption, name: image_caption_fr, widget: text, required: false }
+              - { label: Légende anglaise de l'image / English image caption, name: image_caption_en, widget: text, required: false }
 
-      - label: Show scope / stats section / Afficher la section portée et statistiques
-        name: scope_show
-        widget: boolean
-        default: true
-        required: false
-        hint: "Turn this on only if the section has content. Empty sections are hidden automatically. / Activez seulement si la section contient du contenu. Les sections vides sont masquées automatiquement."
-      - { label: English scope label / Petit libellé anglais de la portée, name: scope_kicker_en, widget: string, required: false, hint: "Optional. Leave blank to use the default label. / Optionnel. Laisser vide pour utiliser le libellé par défaut." }
-      - { label: French scope label / Petit libellé français de la portée, name: scope_kicker_fr, widget: string, required: false, hint: "Optional. Leave blank to use the default label. / Optionnel. Laisser vide pour utiliser le libellé par défaut." }
-      - { label: English scope title / Titre anglais de portée, name: scope_title_en, widget: string, required: false }
-      - { label: French scope title / Titre français de portée, name: scope_title_fr, widget: string, required: false }
-      - { label: English scope body / Texte anglais de portée, name: scope_body_en, widget: markdown, required: false }
-      - { label: French scope body / Texte français de portée, name: scope_body_fr, widget: markdown, required: false }
-      - label: Stats / Statistiques
-        name: stats
-        widget: list
-        required: false
-        fields:
-          - { label: English value / Valeur anglaise, name: value_en, widget: string, required: false }
-          - { label: French value / Valeur française, name: value_fr, widget: string, required: false }
-          - { label: English label / Étiquette anglaise, name: label_en, widget: text, required: false }
-          - { label: French label / Étiquette française, name: label_fr, widget: text, required: false }
+          - name: steps
+            label: Étapes du processus / Process steps
+            fields:
+              - { label: Petit libellé français (optionnel) / French small label (optional), name: kicker_fr, widget: string, required: false }
+              - { label: Petit libellé anglais (optionnel) / English small label (optional), name: kicker_en, widget: string, required: false }
+              - { label: Titre français (optionnel) / French title (optional), name: title_fr, widget: string, required: false }
+              - { label: Titre anglais (optionnel) / English title (optional), name: title_en, widget: string, required: false }
+              - { label: Introduction française (optionnel) / French intro (optional), name: intro_fr, widget: markdown, required: false }
+              - { label: Introduction anglaise (optionnel) / English intro (optional), name: intro_en, widget: markdown, required: false }
+              - label: Étapes / Steps
+                name: steps
+                widget: list
+                required: false
+                fields:
+                  - { label: Titre français de l'étape / French step title, name: title_fr, widget: string, required: false }
+                  - { label: Titre anglais de l'étape / English step title, name: title_en, widget: string, required: false }
+                  - { label: Texte français de l'étape / French step text, name: text_fr, widget: text, required: false }
+                  - { label: Texte anglais de l'étape / English step text, name: text_en, widget: text, required: false }
+              - { label: Afficher une image / Show an image, name: image_show, widget: boolean, default: false, required: false }
+              - label: Image
+                name: image
+                widget: image
+                required: false
+                hint: "JPG ou WebP, moins de 1,5 Mo, environ 1600 px. / JPG or WebP, under 1.5 MB, about 1600 px wide."
+              - { label: Texte alternatif français de l'image / French image alt text, name: image_alt_fr, widget: string, required: false }
+              - { label: Texte alternatif anglais de l'image / English image alt text, name: image_alt_en, widget: string, required: false }
+              - { label: Légende française de l'image / French image caption, name: image_caption_fr, widget: text, required: false }
+              - { label: Légende anglaise de l'image / English image caption, name: image_caption_en, widget: text, required: false }
 
-      - label: Show related project/site cards / Afficher les cartes liées
-        name: related_show
-        widget: boolean
-        default: true
-        required: false
-        hint: "Turn this on only if there is a section title or at least one related card. / Activez seulement s'il y a un titre de section ou au moins une carte liée."
-      - { label: English related label / Petit libellé anglais des liens, name: related_kicker_en, widget: string, required: false, hint: "Optional. Leave blank to use the default label. / Optionnel. Laisser vide pour utiliser le libellé par défaut." }
-      - { label: French related label / Petit libellé français des liens, name: related_kicker_fr, widget: string, required: false, hint: "Optional. Leave blank to use the default label. / Optionnel. Laisser vide pour utiliser le libellé par défaut." }
-      - { label: English related section title / Titre anglais des cartes liées, name: related_title_en, widget: string, required: false }
-      - { label: French related section title / Titre français des cartes liées, name: related_title_fr, widget: string, required: false }
-      - label: Related cards / Cartes liées
-        name: related_cards
-        widget: list
-        required: false
-        fields:
-          - { label: English label / Étiquette anglaise, name: label_en, widget: string, required: false }
-          - { label: French label / Étiquette française, name: label_fr, widget: string, required: false }
-          - { label: English title / Titre anglais, name: title_en, widget: string, required: false }
-          - { label: French title / Titre français, name: title_fr, widget: string, required: false }
-          - { label: English text / Texte anglais, name: text_en, widget: text, required: false }
-          - { label: French text / Texte français, name: text_fr, widget: text, required: false }
-          - { label: URL / Lien, name: url, widget: string, required: false }
+          - name: stats
+            label: Statistiques / Stats
+            fields:
+              - { label: Petit libellé français (optionnel) / French small label (optional), name: kicker_fr, widget: string, required: false }
+              - { label: Petit libellé anglais (optionnel) / English small label (optional), name: kicker_en, widget: string, required: false }
+              - { label: Titre français (optionnel) / French title (optional), name: title_fr, widget: string, required: false }
+              - { label: Titre anglais (optionnel) / English title (optional), name: title_en, widget: string, required: false }
+              - { label: Texte français (optionnel) / French body (optional), name: body_fr, widget: markdown, required: false }
+              - { label: Texte anglais (optionnel) / English body (optional), name: body_en, widget: markdown, required: false }
+              - label: Statistiques / Stats
+                name: stats
+                widget: list
+                required: false
+                fields:
+                  - { label: Valeur française / French value, name: value_fr, widget: string, required: false }
+                  - { label: Valeur anglaise / English value, name: value_en, widget: string, required: false }
+                  - { label: Étiquette française / French label, name: label_fr, widget: text, required: false }
+                  - { label: Étiquette anglaise / English label, name: label_en, widget: text, required: false }
 
-      - { label: Show image 3 / Afficher l'image 3, name: image_3_show, widget: boolean, default: false, required: false }
-      - label: Image 3
-        name: image_3
-        widget: image
-        required: false
-        hint: "Normal page images: JPG or WebP, under 1.5 MB, about 1600 px wide. Use lowercase filenames with hyphens only. No spaces, accents, # symbols, or special characters. / Images normales: JPG ou WebP, moins de 1,5 Mo, environ 1600 px. Noms en minuscules avec traits d'union seulement. Pas d'espaces, d'accents, de # ou de caractères spéciaux."
-      - { label: English image 3 alt text / Texte alternatif anglais image 3, name: image_3_alt_en, widget: string, required: false }
-      - { label: French image 3 alt text / Texte alternatif français image 3, name: image_3_alt_fr, widget: string, required: false }
-      - { label: English image 3 caption / Légende anglaise image 3, name: image_3_caption_en, widget: text, required: false }
-      - { label: French image 3 caption / Légende française image 3, name: image_3_caption_fr, widget: text, required: false }
+          - name: related
+            label: Travaux liés / Related work
+            fields:
+              - { label: Petit libellé français (optionnel) / French small label (optional), name: kicker_fr, widget: string, required: false }
+              - { label: Petit libellé anglais (optionnel) / English small label (optional), name: kicker_en, widget: string, required: false }
+              - { label: Titre français (optionnel) / French title (optional), name: title_fr, widget: string, required: false }
+              - { label: Titre anglais (optionnel) / English title (optional), name: title_en, widget: string, required: false }
+              - label: Cartes / Cards
+                name: cards
+                widget: list
+                required: false
+                fields:
+                  - { label: Étiquette française / French label, name: label_fr, widget: string, required: false }
+                  - { label: Étiquette anglaise / English label, name: label_en, widget: string, required: false }
+                  - { label: Titre français / French title, name: title_fr, widget: string, required: false }
+                  - { label: Titre anglais / English title, name: title_en, widget: string, required: false }
+                  - { label: Texte français / French text, name: text_fr, widget: text, required: false }
+                  - { label: Texte anglais / English text, name: text_en, widget: text, required: false }
+                  - { label: URL / Lien, name: url, widget: string, required: false, hint: "Utilisez une URL complète pour les sites externes, ou un chemin du site comme /resources/. / Use a full URL for external sites, or a site path such as /resources/." }
 
-      - label: Show note / warning box / Afficher l'encadré note ou avertissement
-        name: note_show
-        widget: boolean
-        default: true
-        required: false
-        hint: "Use this for warnings, sensitivity notes, or important context. Do not publish exact sensitive field locations, cold-water refuge locations, private access points, or unpublished monitoring data unless approved by direction. / À utiliser pour les avertissements, notes de sensibilité ou contexte important. Ne publiez pas d'emplacements sensibles précis, de refuges d'eau froide, de points d'accès privés ou de données de suivi non publiées sans approbation de la direction."
-      - { label: English note title / Titre anglais de la note, name: note_title_en, widget: string, required: false }
-      - { label: French note title / Titre français de la note, name: note_title_fr, widget: string, required: false }
-      - label: English note body / Texte anglais de la note
-        name: note_body_en
-        widget: markdown
-        required: false
-        hint: "Use this for warnings, sensitivity notes, or context. Do not publish exact sensitive field locations, cold-water refuge locations, private access points, or unpublished monitoring data unless approved by direction. / À utiliser pour les avertissements, notes de sensibilité ou contexte. Ne publiez pas d'emplacements sensibles précis, de refuges d'eau froide, de points d'accès privés ou de données de suivi non publiées sans approbation de la direction."
-      - label: French note body / Texte français de la note
-        name: note_body_fr
-        widget: markdown
-        required: false
-        hint: "Ne publiez pas d'emplacements sensibles précis, de refuges d'eau froide, de points d'accès privés ou de données de suivi non publiées sans approbation de la direction. / Do not publish exact sensitive field locations, cold-water refuge locations, private access points, or unpublished monitoring data unless approved by direction."
-
-      - label: Show closing section / Afficher la conclusion
-        name: closing_show
-        widget: boolean
-        default: true
-        required: false
-        hint: "Turn this on only if the section has content. Empty sections are hidden automatically. / Activez seulement si la section contient du contenu. Les sections vides sont masquées automatiquement."
-      - { label: English closing title / Titre anglais de conclusion, name: closing_title_en, widget: string, required: false }
-      - { label: French closing title / Titre français de conclusion, name: closing_title_fr, widget: string, required: false }
-      - { label: English closing body / Texte anglais de conclusion, name: closing_body_en, widget: markdown, required: false }
-      - { label: French closing body / Texte français de conclusion, name: closing_body_fr, widget: markdown, required: false }
-      - { label: English closing link label / Libellé anglais du lien final, name: closing_link_label_en, widget: string, required: false }
-      - { label: French closing link label / Libellé français du lien final, name: closing_link_label_fr, widget: string, required: false }
-      - { label: Closing link URL / URL du lien final, name: closing_link_url, widget: string, required: false, hint: "Use a full URL for external sites, or a site path such as /resources/. / Utilisez une URL complète pour les sites externes, ou un chemin du site comme /resources/." }
-      - { label: English extra body content / Contenu additionnel anglais, name: extra_body_en, widget: markdown, required: false, hint: "Optional extra content after the structured sections. Fill both languages before publishing. / Contenu additionnel optionnel après les sections structurées. Remplir les deux langues avant publication." }
-      - { label: French extra body content / Contenu additionnel français, name: extra_body_fr, widget: markdown, required: false, hint: "Optional. If left blank, the page may fall back to English. / Optionnel. Si laissé vide, la page peut afficher l'anglais par défaut." }
+          - name: note
+            label: Encadré note ou avertissement / Note or warning box
+            fields:
+              - { label: Titre français (optionnel) / French title (optional), name: title_fr, widget: string, required: false }
+              - { label: Titre anglais (optionnel) / English title (optional), name: title_en, widget: string, required: false }
+              - label: Texte français / French body
+                name: body_fr
+                widget: markdown
+                required: false
+                hint: "À utiliser pour les avertissements, notes de sensibilité ou contexte important. Ne publiez pas d'emplacements sensibles précis, de refuges d'eau froide, de points d'accès privés ou de données de suivi non publiées sans approbation de la direction. / Use this for warnings, sensitivity notes, or important context. Do not publish exact sensitive field locations, cold-water refuge locations, private access points, or unpublished monitoring data unless approved by direction."
+              - { label: Texte anglais / English body, name: body_en, widget: markdown, required: false }
 
   - name: site_pages
     label: Pages du site / Site pages
