@@ -1,0 +1,224 @@
+# Rapports et publications — organisés par catégorie.
+# Chaque catégorie devient une section repliable (accordéon) sur la page.
+categories:
+  - key: committee-reports
+    label_fr: "Rapports des comités"
+    label_en: "Committee reports"
+    documents:
+      - title_fr: "Rapport du comité de protection — 2012"
+        title_en: "Protection Committee Report — 2012"
+        date: "2013-09-06"
+        file: /assets/documents/comite-protection2012protection-committee.pdf
+      - title_fr: "Rapport du comité science — 2012"
+        title_en: "Science Committee Report — 2012"
+        date: "2013-09-06"
+        file: /assets/documents/science-committee-report-for-year2012.pdf
+      - title_fr: "Présentation du comité science — 2013"
+        title_en: "Science Committee Presentation — 2013"
+        date: "2014-03-04"
+        file: /assets/documents/science-presentation-for-year2013.pdf
+      - title_fr: "Rapport du comité science — 2013"
+        title_en: "Science Committee Report — 2013"
+        date: "2014-03-04"
+        file: /assets/documents/science-committee-report-year2013.pdf
+      - title_fr: "Rapport du comité science — 2016"
+        title_en: "Science Committee Report — 2016"
+        date: "2017-03-08"
+        file: /assets/documents/science-committee-report-2016eng.pdf
+      - title_fr: "Rapport du comité science — 2017"
+        title_en: "Science Committee Report — 2017"
+        date: "2018-03-28"
+        file: /assets/documents/science-committee-report-2017eng.pdf
+      - title_fr: "Rapport du comité science — 2018"
+        title_en: "Science Committee Report — 2018"
+        date: "2019-02-26"
+        file: /assets/documents/science-committee-report-2018.pdf
+      - title_fr: "Présentation du comité science — 2018"
+        title_en: "Science Committee Presentation — 2018"
+        date: "2019-02-26"
+        file: /assets/documents/presentation-science-year2018.pdf
+      - title_fr: "Rapport du comité science — AGA 2020"
+        title_en: "Science Committee Report — AGM 2020"
+        date: "2020-03-10"
+        file: /assets/documents/science-committee-report-rrwmc-agm2020.pdf
+      - title_fr: "Rapport du comité science — 2021"
+        title_en: "Science Committee Report — 2021"
+        date: "2021-04-15"
+        file: /assets/documents/science-committee-report-2021.pdf
+      - title_fr: "Rapport du comité science — 2022"
+        title_en: "Science Committee Report — 2022"
+        date: "2022-03-25"
+        file: /assets/documents/science-committee-report-2022.pdf
+      - title_fr: "Rapport du comité science — 2023"
+        title_en: "Science Committee Report — 2023"
+        date: "2023-03-30"
+        file: /assets/documents/science-committee-report-2023.pdf
+
+  - key: environmental-documentation
+    label_fr: "Documentation environnementale"
+    label_en: "Environmental documentation"
+    documents:
+      - title_fr: "Fiche d'information sur le Didymo"
+        title_en: "Didymo Information Sheet"
+        date: "2013-09-06"
+        file: /assets/documents/information-didymo.pdf
+      - title_fr: "Présentation scientifique — AGA 2012"
+        title_en: "Science Presentation — AGM 2012"
+        date: "2013-09-06"
+        file: /assets/documents/presentation-science-aga-agm-2012.pdf
+      - title_fr: "Rapport ECA — Restigouche, 2010"
+        title_en: "ECA Report — Restigouche, 2010"
+        date: "2016-03-10"
+        file: /assets/documents/eca-report-year-2010-restigouche-nov-2012.pdf
+
+  - key: maps
+    label_fr: "Cartes"
+    label_en: "Maps"
+    documents:
+      - title_fr: "Dépliant du bassin versant — 2013"
+        title_en: "Watershed Flyer — 2013"
+        date: "2013-08-13"
+        file: /assets/documents/flyer-layout-2013.pdf
+      - title_fr: "Carte d'élévation"
+        title_en: "Elevation Map"
+        date: "2013-09-06"
+        file: /assets/documents/carte-elevation-map.pdf
+      - title_fr: "Carte des sections de pêche du N.-B."
+        title_en: "NB Fishing Stretches Map"
+        date: "2013-09-06"
+        file: /assets/documents/fishing-stretches-nb-sections-peche.pdf
+
+  - key: communication-tools
+    label_fr: "Outils de communication"
+    label_en: "Communication tools"
+    documents:
+      - title_fr: "Conférence scientifique — 2009"
+        title_en: "Science Conference — 2009"
+        date: "2013-08-13"
+        file: /assets/documents/conference-science-09.pdf
+      - title_fr: "Rapport du directeur général — 2012"
+        title_en: "Executive Director's Report — 2012"
+        date: "2013-09-06"
+        file: /assets/documents/annee-year2012executive-director-report.pdf
+      - title_fr: "Signaler un poisson à nageoire coupée"
+        title_en: "Reporting Fin-Clipped Fish"
+        date: "2013-09-06"
+        file: /assets/documents/fin-clipped-fish-to-report.pdf
+      - title_fr: "Bulletin — 2013"
+        title_en: "Newsletter — 2013"
+        date: "2013-09-06"
+        file: /assets/documents/rrwmc-newsletter-2013-bulletin-cgbvrr-internet.pdf
+      - title_fr: "Signaler une truite arc-en-ciel"
+        title_en: "Reporting Rainbow Trout"
+        date: "2013-09-06"
+        file: /assets/documents/report-rainbow-trout-truite-arc-en-ciel.pdf
+      - title_fr: "Signaler un poisson à nageoire coupée (variante)"
+        title_en: "Reporting Fin-Clipped Fish (alternate)"
+        date: "2013-09-06"
+        file: /assets/documents/fin-clipped-fish-to-report-0.pdf
+      - title_fr: "Bulletin — février 2014"
+        title_en: "Newsletter — February 2014"
+        date: "2014-02-27"
+        file: /assets/documents/bulletin-info-fev2014-newsletter-feb2014.pdf
+      - title_fr: "Rapport du directeur — AGA 2014"
+        title_en: "Director's Report — AGM 2014"
+        date: "2014-03-04"
+        file: /assets/documents/director-report-agm2014.pdf
+      - title_fr: "Bulletin — 2015"
+        title_en: "Newsletter — 2015"
+        date: "2015-03-04"
+        file: /assets/documents/newsletter-2015-final.pdf
+      - title_fr: "Bulletin — 2016"
+        title_en: "Newsletter — 2016"
+        date: "2016-03-17"
+        file: /assets/documents/newsletter-2016-final.pdf
+      - title_fr: "Bulletin — 2017"
+        title_en: "Newsletter — 2017"
+        date: "2017-03-08"
+        file: /assets/documents/newsletter-2017-21-02-17.pdf
+      - title_fr: "Bulletin — 2018"
+        title_en: "Newsletter — 2018"
+        date: "2018-02-22"
+        file: /assets/documents/newletter-2018-final-feb.pdf
+      - title_fr: "Bulletin de liaison — 2018"
+        title_en: "Liaison Bulletin — 2018"
+        date: "2018-02-22"
+        file: /assets/documents/bulletin-liaison-2018.pdf
+      - title_fr: "Présentation scientifique — AGA 2018"
+        title_en: "Science Presentation — AGM 2018"
+        date: "2018-03-28"
+        file: /assets/documents/science-presentation-agm2018.pdf
+      - title_fr: "Bulletin — 2019"
+        title_en: "Newsletter — 2019"
+        date: "2019-02-26"
+        file: /assets/documents/newletter-2019-final.pdf
+      - title_fr: "Bulletin — 2020"
+        title_en: "Newsletter — 2020"
+        date: "2020-03-10"
+        file: /assets/documents/newletter-2020.pdf
+      - title_fr: "Bulletin de liaison — 2021"
+        title_en: "Newsletter — 2021"
+        date: "2021-04-15"
+        file: /assets/documents/newsletter-2021-bulletin-liaison.pdf
+      - title_fr: "Bulletin de liaison — 2022"
+        title_en: "Liaison Bulletin — 2022"
+        date: "2022-03-25"
+        file: /assets/documents/bulletin-de-lisaison-2022-newsletter.pdf
+      - title_fr: "Bulletin — Saison 2023"
+        title_en: "Newsletter — 2023 Season"
+        date: "2023-03-30"
+        file: /assets/documents/newsletter-2023-season.pdf
+
+  - key: ecotourism
+    label_fr: "Écotourisme"
+    label_en: "Ecotourism"
+    documents:
+      - title_fr: "Liste d'équipement pour canoteurs"
+        title_en: "Canoeist Equipment List"
+        date: "2013-09-06"
+        file: /assets/documents/equipment-list-canoeist.pdf
+      - title_fr: "Carte du code d'éthique — 2013"
+        title_en: "Code of Ethics Map — 2013"
+        date: "2013-09-06"
+        file: /assets/documents/carte-map-code-ethic-2013.pdf
+
+  - key: projects-and-others
+    label_fr: "Projets et autres"
+    label_en: "Projects and others"
+    documents:
+      - title_fr: "Conférence scientifique — 2009 (partie 2)"
+        title_en: "Science Conference — 2009 (part 2)"
+        date: "2013-08-13"
+        file: /assets/documents/conference-science-09-7.pdf
+      - title_fr: "Conférence scientifique — 2009 (partie 3)"
+        title_en: "Science Conference — 2009 (part 3)"
+        date: "2013-08-13"
+        file: /assets/documents/conference-science-09-8.pdf
+      - title_fr: "Embâcle du ruisseau Jardine — 2012"
+        title_en: "Jardine Brook Logjam — 2012"
+        date: "2013-09-06"
+        file: /assets/documents/embacle-jardine-brook-logjam-2012.pdf
+      - title_fr: "États financiers — 2012"
+        title_en: "Financial Statement — 2012"
+        date: "2013-09-06"
+        file: /assets/documents/financial-statement-year12.pdf
+      - title_fr: "Stabilisation de la fourche de Kedgwick — 2012"
+        title_en: "Kedgwick Forks Stabilization — 2012"
+        date: "2013-09-06"
+        file: /assets/documents/kedgwick-forks-stabilisation-2012.pdf
+      - title_fr: "Projet d'imagerie thermique — 2011-2012"
+        title_en: "Thermal Imagery Project — 2011–2012"
+        date: "2013-09-06"
+        file: /assets/documents/thermal-imagery-project2011-2012.pdf
+      - title_fr: "Restigouche Wilderness Waterway — résumé"
+        title_en: "Restigouche Wilderness Waterway — Abstract"
+        date: "2013-09-06"
+        file: /assets/documents/rww-abstract-dec12th.pdf
+      - title_fr: "Politique WaterShade — v1"
+        title_en: "WaterShade Policy — v1"
+        date: "2023-11-30"
+        file: "/assets/documents/watershade-policy-version-1.pdf"
+      - title_fr: "Plan de mise en œuvre WaterShade — v1"
+        title_en: "WaterShade Implementation Plan — v1"
+        date: "2023-11-30"
+        file: "/assets/documents/watershade-implementation-plan-version-1.pdf"

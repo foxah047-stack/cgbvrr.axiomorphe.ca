@@ -1,69 +1,39 @@
 ---
 layout: default
-title: Études, publications et recherche
-lang: fr
+title: Rapports et publications
 permalink: /resources/research/
 ---
 
 <section class="page-hero structure-preview-hero">
   <div class="page-hero-inner">
-    <p class="section-label"><span data-lang="en">Research</span><span data-lang="fr">Recherche</span></p>
-    <h1><span data-lang="en">Studies, publications and research</span><span data-lang="fr">Études, publications et recherche</span></h1>
-    <p class="page-lead"><span data-lang="en">A section for public documents that support conservation, restoration and management of the Restigouche watershed.</span><span data-lang="fr">Une section pour présenter les documents publics qui soutiennent la conservation, la restauration et la gestion du bassin versant de la Restigouche.</span></p>
-    <div class="preview-note"><span data-lang="en">Content to validate. Do not publish sensitive data without approval.</span><span data-lang="fr">Contenu à valider. Ne pas publier de données sensibles sans approbation.</span></div>
+    <p class="section-label"><span data-lang="en">Resources</span><span data-lang="fr">Ressources</span></p>
+    <h1><span data-lang="en">Reports &amp; publications</span><span data-lang="fr">Rapports et publications</span></h1>
+    <p class="page-lead"><span data-lang="en">Committee reports, newsletters, environmental documentation, maps and project records published by the Council over the years.</span><span data-lang="fr">Rapports de comités, bulletins, documentation environnementale, cartes et documents de projets publiés par le Conseil au fil des ans.</span></p>
   </div>
 </section>
 
 <main class="detail-page">
-  <section class="detail-grid">
-    <article class="detail-main-card">
-      <p class="section-label"><span data-lang="en">Public documents</span><span data-lang="fr">Documents publics</span></p>
-      <h2><span data-lang="en">Making science accessible without publishing what should remain internal</span><span data-lang="fr">Rendre la science accessible sans publier ce qui doit rester interne</span></h2>
-      <p><span data-lang="en">This page can gather studies, publications, public reports, technical documents and research resources that support CGBVRR work.</span><span data-lang="fr">Cette page peut regrouper les études, publications, rapports publics, documents techniques et ressources de recherche qui appuient les travaux du CGBVRR.</span></p>
-      <p><span data-lang="en">The rule is simple: publish what helps the public understand the watershed, but validate sensitive data, precise locations and internal documents before anything goes online.</span><span data-lang="fr">La règle à garder est simple : publier ce qui aide le public à comprendre le bassin versant, mais valider les données sensibles, les localisations précises et les documents internes avant toute mise en ligne.</span></p>
-    </article>
-
-    <aside class="detail-side-card">
-      <h2><span data-lang="en">Categories</span><span data-lang="fr">Catégories</span></h2>
-      <dl class="snapshot-list">
-        <div><dt><span data-lang="en">Studies</span><span data-lang="fr">Études</span></dt><dd><span data-lang="en">Scientific work, monitoring and publishable analyses.</span><span data-lang="fr">Travaux scientifiques, suivis et analyses publiables.</span></dd></div>
-        <div><dt>Publications</dt><dd><span data-lang="en">Official documents, public reports and communications.</span><span data-lang="fr">Documents officiels, rapports publics et communications.</span></dd></div>
-        <div><dt><span data-lang="en">Research</span><span data-lang="fr">Recherche</span></dt><dd><span data-lang="en">Technical resources, references and plain-language data.</span><span data-lang="fr">Ressources techniques, références et données vulgarisées.</span></dd></div>
-      </dl>
-    </aside>
-  </section>
-
-  <section class="content-blocks">
-    <div class="content-block">
-      <h2><span data-lang="en">Documents to add</span><span data-lang="fr">Documents à ajouter</span></h2>
-      <ul class="clean-list">
-        <li><span data-lang="en">Public reports validated by the CGBVRR.</span><span data-lang="fr">Rapports publics validés par le CGBVRR.</span></li>
-        <li><span data-lang="en">Studies related to Atlantic salmon, habitat and thermal refuges.</span><span data-lang="fr">Études liées au saumon atlantique, à l’habitat et aux refuges thermiques.</span></li>
-        <li><span data-lang="en">Plain-language documents for communities and partners.</span><span data-lang="fr">Documents de vulgarisation pour les communautés et partenaires.</span></li>
-        <li><span data-lang="en">Links to relevant research institutions or organizations.</span><span data-lang="fr">Liens vers les institutions ou organismes de recherche pertinents.</span></li>
+  <section class="reports-accordion">
+    {% assign categories = site.data.reports.categories %}
+    {% for cat in categories %}
+    <details class="report-category">
+      <summary>
+        <span class="report-category-title">
+          <span data-lang="en">{{ cat.label_en }}</span><span data-lang="fr">{{ cat.label_fr }}</span>
+        </span>
+        <span class="report-category-count">{{ cat.documents.size }}</span>
+      </summary>
+      <ul class="report-list">
+        {% for doc in cat.documents %}
+        <li class="report-item">
+          <a href="{{ doc.file | relative_url }}" target="_blank" rel="noopener">
+            <span class="report-item-title"><span data-lang="en">{{ doc.title_en }}</span><span data-lang="fr">{{ doc.title_fr }}</span></span>
+            <span class="report-item-date">{{ doc.date | date: "%Y" }}</span>
+          </a>
+        </li>
+        {% endfor %}
       </ul>
-    </div>
-
-    <div class="content-block placeholder-block">
-      <h2><span data-lang="en">Library space</span><span data-lang="fr">Espace bibliothèque</span></h2>
-      <p><span data-lang="en">This area can become a list of downloadable documents with title, year, document type, related project and link to the file or official source.</span><span data-lang="fr">Cette zone pourra devenir une liste de documents téléchargeables, avec titre, année, type de document, projet associé et lien vers le fichier ou la source officielle.</span></p>
-      <div class="map-placeholder"><span data-lang="en">Documents to confirm</span><span data-lang="fr">Documents à confirmer</span></div>
-    </div>
-  </section>
-
-  <section class="timeline-preview">
-    <p class="section-label"><span data-lang="en">Possible structure</span><span data-lang="fr">Structure possible</span></p>
-    <h2><span data-lang="en">Resource organization</span><span data-lang="fr">Organisation des ressources</span></h2>
-    <div class="timeline-steps">
-      <div><span>01</span><strong><span data-lang="en">Validation</span><span data-lang="fr">Validation</span></strong><p><span data-lang="en">Confirm that the document can be made public.</span><span data-lang="fr">Confirmer que le document peut être rendu public.</span></p></div>
-      <div><span>02</span><strong><span data-lang="en">Classification</span><span data-lang="fr">Classement</span></strong><p><span data-lang="en">Identify the type, year, project and intended audience.</span><span data-lang="fr">Identifier le type, l’année, le projet et le public visé.</span></p></div>
-      <div><span>03</span><strong><span data-lang="en">Publication</span><span data-lang="fr">Publication</span></strong><p><span data-lang="en">Add the document or link within a clear structure.</span><span data-lang="fr">Ajouter le document ou le lien dans une structure claire.</span></p></div>
-      <div><span>04</span><strong><span data-lang="en">Update</span><span data-lang="fr">Mise à jour</span></strong><p><span data-lang="en">Remove or replace outdated documents.</span><span data-lang="fr">Retirer ou remplacer les documents dépassés.</span></p></div>
-    </div>
-  </section>
-
-  <section class="decision-prompt soft-prompt">
-    <h2><span data-lang="en">Future CMS management</span><span data-lang="fr">Gestion future dans le CMS</span></h2>
-    <p><span data-lang="en">When the first real documents are confirmed, this section can become an editable collection in Sveltia with fields such as title, year, category, project, file and short description.</span><span data-lang="fr">Quand les premiers documents réels seront confirmés, cette section pourra devenir une collection éditable dans Sveltia avec des champs comme titre, année, catégorie, projet, fichier et description courte.</span></p>
+    </details>
+    {% endfor %}
   </section>
 </main>

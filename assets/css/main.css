@@ -3027,3 +3027,74 @@ a.link-card p {
     padding: 6px;
   }
 }
+
+/* ── REPORTS & PUBLICATIONS ACCORDION ── */
+.reports-accordion {
+  width: min(880px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+.report-category {
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  background: var(--paper);
+}
+.report-category summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--moss);
+}
+.report-category summary::-webkit-details-marker { display: none; }
+.report-category summary::before {
+  content: "+";
+  font-family: 'DM Mono', monospace;
+  font-size: 18px;
+  color: var(--river);
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+.report-category[open] summary::before { content: "–"; }
+.report-category-title { flex: 1; }
+.report-category-count {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--river);
+  background: var(--mist);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+.report-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 22px 18px;
+  display: grid;
+  gap: 2px;
+}
+.report-item a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-top: 1px solid var(--hairline);
+  text-decoration: none;
+  color: var(--ink);
+}
+.report-item:first-child a { border-top: none; }
+.report-item a:hover .report-item-title { color: var(--river); text-decoration: underline; }
+.report-item-title { font-size: 15px; }
+.report-item-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--fern);
+  flex-shrink: 0;
+}
