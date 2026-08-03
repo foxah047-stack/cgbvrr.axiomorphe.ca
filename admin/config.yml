@@ -12,15 +12,22 @@ collections:
     folder: _posts
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title_fr}}"
     fields:
       - { label: Layout, name: layout, widget: hidden, default: post }
-      - { label: Titre, name: title, widget: string }
+      - { label: Titre (interne, non affiché) / Internal title (not displayed), name: title, widget: hidden, default: "", required: false }
+      - { label: Titre français / French title, name: title_fr, widget: string }
+      - { label: Titre anglais / English title, name: title_en, widget: string }
       - { label: Image, name: image, widget: image, required: false }
-      - { label: Catégorie, name: categorie, widget: string }
-      - { label: Projet, name: projet, widget: string }
-      - { label: Auteur, name: auteur, widget: string }
-      - { label: Extrait, name: excerpt, widget: text }
-      - { label: Contenu, name: body, widget: markdown }
+      - { label: Catégorie française / French category, name: categorie_fr, widget: string, required: false }
+      - { label: Catégorie anglaise / English category, name: categorie_en, widget: string, required: false }
+      - { label: Projet, name: projet, widget: string, required: false }
+      - { label: Auteur français / French author, name: auteur_fr, widget: string, required: false }
+      - { label: Auteur anglais / English author, name: auteur_en, widget: string, required: false }
+      - { label: Extrait français / French excerpt, name: excerpt_fr, widget: text }
+      - { label: Extrait anglais / English excerpt, name: excerpt_en, widget: text }
+      - { label: Contenu français / French body, name: body_fr, widget: markdown }
+      - { label: Contenu anglais / English body, name: body_en, widget: markdown }
 
   - name: projects
     label: Projects / Projets

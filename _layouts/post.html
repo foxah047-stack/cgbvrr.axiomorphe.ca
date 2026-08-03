@@ -5,20 +5,31 @@ layout: default
   <header class="post-header">
     <div class="post-header-inner">
       <div class="section-label">
-        {% if page.categorie %}{{ page.categorie }}{% else %}<span data-lang="en">News</span><span data-lang="fr">Nouvelles</span>{% endif %}
+        {% if page.categorie_en or page.categorie_fr %}
+          <span data-lang="en">{{ page.categorie_en | default: page.categorie_fr }}</span><span data-lang="fr">{{ page.categorie_fr | default: page.categorie_en }}</span>
+        {% else %}
+          <span data-lang="en">News</span><span data-lang="fr">Nouvelles</span>
+        {% endif %}
       </div>
-      <h1>{{ page.title }}</h1>
+      <h1><span data-lang="en">{{ page.title_en | default: page.title }}</span><span data-lang="fr">{{ page.title_fr | default: page.title }}</span></h1>
       {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
       <div class="post-meta">
         <span class="post-date">{{ page.date | date: "%d %B %Y" }}</span>
-        {% if page.auteur %}<span class="post-author">— {{ page.auteur }}</span>{% endif %}
+        {% if page.auteur_en or page.auteur_fr %}
+          <span class="post-author">— <span data-lang="en">{{ page.auteur_en | default: page.auteur_fr }}</span><span data-lang="fr">{{ page.auteur_fr | default: page.auteur_en }}</span></span>
+        {% endif %}
       </div>
     </div>
   </header>
 
   <div class="post-body">
     <div class="post-content">
-      {{ content }}
+      {% if page.body_en or page.body_fr %}
+        <div data-lang="en">{{ page.body_en | default: page.body_fr | markdownify }}</div>
+        <div data-lang="fr">{{ page.body_fr | default: page.body_en | markdownify }}</div>
+      {% else %}
+        {{ content }}
+      {% endif %}
     </div>
 
     <aside class="post-sidebar">
@@ -51,13 +62,13 @@ layout: default
       {% if page.previous.url %}
       <a href="{{ page.previous.url | relative_url }}" class="post-nav-link prev">
         <span class="nav-label"><span data-lang="en">← Previous article</span><span data-lang="fr">← Article précédent</span></span>
-        <span class="nav-title">{{ page.previous.title }}</span>
+        <span class="nav-title"><span data-lang="en">{{ page.previous.title_en | default: page.previous.title }}</span><span data-lang="fr">{{ page.previous.title_fr | default: page.previous.title }}</span></span>
       </a>
       {% endif %}
       {% if page.next.url %}
       <a href="{{ page.next.url | relative_url }}" class="post-nav-link next">
         <span class="nav-label"><span data-lang="en">Next article →</span><span data-lang="fr">Article suivant →</span></span>
-        <span class="nav-title">{{ page.next.title }}</span>
+        <span class="nav-title"><span data-lang="en">{{ page.next.title_en | default: page.next.title }}</span><span data-lang="fr">{{ page.next.title_fr | default: page.next.title }}</span></span>
       </a>
       {% endif %}
     </div>

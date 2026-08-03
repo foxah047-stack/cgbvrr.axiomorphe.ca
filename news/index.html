@@ -18,9 +18,15 @@ permalink: /news/
         <svg width="36" height="36" viewBox="0 0 56 56" fill="none"><path d="M8 36 Q16 22 24 28 Q32 34 40 22 Q48 10 52 18" stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="28" cy="20" rx="9" ry="5" stroke="rgba(255,255,255,0.25)" stroke-width="2" fill="none"/></svg>
       </div>
       <div class="news-body">
-        <div class="news-tag">{% if post.categorie %}{{ post.categorie }}{% else %}<span data-lang="en">News</span><span data-lang="fr">Nouvelles</span>{% endif %}</div>
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        <div class="news-tag">
+          {% if post.categorie_en or post.categorie_fr %}
+            <span data-lang="en">{{ post.categorie_en | default: post.categorie_fr }}</span><span data-lang="fr">{{ post.categorie_fr | default: post.categorie_en }}</span>
+          {% else %}
+            <span data-lang="en">News</span><span data-lang="fr">Nouvelles</span>
+          {% endif %}
+        </div>
+        <h2><a href="{{ post.url | relative_url }}"><span data-lang="en">{{ post.title_en | default: post.title }}</span><span data-lang="fr">{{ post.title_fr | default: post.title }}</span></a></h2>
+        <p><span data-lang="en">{{ post.excerpt_en | default: post.excerpt | strip_html | truncate: 160 }}</span><span data-lang="fr">{{ post.excerpt_fr | default: post.excerpt | strip_html | truncate: 160 }}</span></p>
         <div class="news-date">{{ post.date | date: "%d %B %Y" }}</div>
       </div>
     </article>
