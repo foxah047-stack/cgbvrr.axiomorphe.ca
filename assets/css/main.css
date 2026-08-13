@@ -1946,6 +1946,11 @@ textarea:focus-visible {
   opacity: 0;
 }
 
+.page-hero-photo {
+  background-size: cover;
+  background-position: center;
+}
+
 .page-hero-inner {
   width: min(var(--page-max), 100%);
   margin: 0 auto;

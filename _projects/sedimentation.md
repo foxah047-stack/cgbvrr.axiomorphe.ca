@@ -8,6 +8,9 @@ title_fr: Mitigation de la sédimentation
 title_en: Sediment mitigation
 subtitle_fr: Réduire le transport de sédiments vers la rivière issus de la voirie forestière et des sites de transformation, en collaboration avec l'industrie.
 subtitle_en: Reducing sediment transport into the river from forestry roads and processing sites, in collaboration with industry.
+hero_image: /assets/img/ruissellement-agricole.jpg
+hero_alt_fr: Ruissellement agricole vers un cours d'eau
+hero_alt_en: Agricultural runoff into a waterway
 
 sections:
   - type: text

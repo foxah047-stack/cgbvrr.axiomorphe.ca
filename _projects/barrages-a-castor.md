@@ -8,6 +8,9 @@ title_fr: Barrages à castor
 title_en: Beaver dams
 subtitle_fr: Repérage aérien et gestion des barrages à castor qui nuisent à l'habitat de reproduction du saumon sur les tributaires de la Restigouche.
 subtitle_en: Aerial surveying and management of beaver dams that impede salmon spawning habitat on Restigouche tributaries.
+hero_image: /assets/img/barrage-castor.jpg
+hero_alt_fr: Barrage à castor sur un tributaire de la rivière Restigouche
+hero_alt_en: Beaver dam on a Restigouche River tributary
 
 sections:
   - type: text

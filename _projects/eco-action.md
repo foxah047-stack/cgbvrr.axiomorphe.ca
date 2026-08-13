@@ -8,6 +8,9 @@ title_fr: Projet Éco-Action 2024-2027
 title_en: Éco-Action project 2024-2027
 subtitle_fr: Solutions d'aménagement basées sur la nature pour préserver les régimes hydrologiques du bassin versant du ruisseau Five Fingers.
 subtitle_en: Nature-based design solutions to preserve hydrological regimes in the Five Fingers Brook watershed.
+hero_image: /assets/img/panoramas/pan4.png
+hero_alt_fr: Vue panoramique du bassin versant de la Restigouche
+hero_alt_en: Panoramic view of the Restigouche watershed
 
 sections:
   - type: text

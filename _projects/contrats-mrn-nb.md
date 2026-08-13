@@ -8,6 +8,9 @@ title_fr: Contrats avec le MRN-NB
 title_en: Contracts with NB DNR
 subtitle_fr: Maintenance des sites du programme récréatif et des eaux de la Couronne, et surveillance des fosses prioritaires pour la province du Nouveau-Brunswick.
 subtitle_en: Maintaining recreational and Crown-water sites, and monitoring priority pools, on behalf of the Province of New Brunswick.
+hero_image: /assets/img/panoramas/pan5.png
+hero_alt_fr: Vue panoramique du bassin versant de la Restigouche
+hero_alt_en: Panoramic view of the Restigouche watershed
 
 sections:
   - type: text
