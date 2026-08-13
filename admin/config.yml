@@ -254,6 +254,18 @@ collections:
       - { label: Contenu français / French body, name: body_fr, widget: markdown }
       - { label: Contenu anglais / English body, name: body_en, widget: markdown }
 
+  - name: events_settings
+    label: Événements / Events
+    icon: event
+    files:
+      - name: events
+        label: Page Événements / Events page
+        file: _data/events.yml
+        fields:
+          - { label: Message français / French message, name: message_fr, widget: text }
+          - { label: Message anglais / English message, name: message_en, widget: text, required: false, hint: "Si laissé vide, le message français sera affiché. / If left blank, the French message will be shown." }
+          - { label: Lien Facebook / Facebook link, name: facebook_url, widget: string, required: false }
+
   - name: resources
     label: Ressources / Resources
     icon: folder

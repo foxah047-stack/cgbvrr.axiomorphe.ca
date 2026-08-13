@@ -9,46 +9,19 @@ permalink: /news/events/
   <div class="page-hero-inner">
     <p class="section-label"><span data-lang="en">Events</span><span data-lang="fr">Événements</span></p>
     <h1><span data-lang="en">Events and public activities</span><span data-lang="fr">Événements et activités publiques</span></h1>
-    <p class="page-lead"><span data-lang="en">A page for gathering meetings, community activities, presentations, workshops and events related to the Restigouche watershed.</span><span data-lang="fr">Une page pour regrouper les rencontres, activités communautaires, présentations, ateliers et événements liés au bassin versant de la Restigouche.</span></p>
-    <div class="preview-note"><span data-lang="en">Starting structure. Events can become editable in the CMS later if needed.</span><span data-lang="fr">Structure de départ. Les événements pourront devenir éditables dans le CMS plus tard si nécessaire.</span></div>
   </div>
 </section>
 
-<main class="detail-page">
-  <section class="detail-grid">
-    <article class="detail-main-card">
-      <p class="section-label"><span data-lang="en">Public calendar</span><span data-lang="fr">Calendrier public</span></p>
-      <h2><span data-lang="en">Informing communities without mixing events into articles</span><span data-lang="fr">Informer les communautés sans mélanger les événements avec les articles</span></h2>
-      <p><span data-lang="en">News is for announcements, articles and field updates. Events deserve their own space so visitors can quickly find upcoming activities and public meetings.</span><span data-lang="fr">Les nouvelles servent aux annonces, aux articles et aux suivis de terrain. Les événements méritent leur propre espace afin que les visiteurs puissent rapidement trouver les activités à venir et les rencontres publiques.</span></p>
-      <p><span data-lang="en">For launch, this page can remain simple. Confirmed events can be added manually, then converted later into a CMS collection if the team publishes activities regularly.</span><span data-lang="fr">Pour le lancement, cette page peut rester simple. Les événements confirmés pourront être ajoutés manuellement, puis convertis plus tard en collection CMS si l’équipe veut publier régulièrement des activités.</span></p>
+<main class="editorial-page">
+  <section class="editorial-narrow about-intro-section">
+    <article class="about-intro-box">
+      <p data-lang="fr">{{ site.data.events.message_fr }}</p>
+      <p data-lang="en">{{ site.data.events.message_en | default: site.data.events.message_fr }}</p>
+      {% if site.data.events.facebook_url %}
+      <a class="btn-primary" href="{{ site.data.events.facebook_url }}" target="_blank" rel="noopener">
+        <span data-lang="en">Visit our Facebook page</span><span data-lang="fr">Visitez notre page Facebook</span>
+      </a>
+      {% endif %}
     </article>
-
-    <aside class="detail-side-card">
-      <h2><span data-lang="en">Event types</span><span data-lang="fr">Types d’événements</span></h2>
-      <dl class="snapshot-list">
-        <div><dt><span data-lang="en">Public</span><span data-lang="fr">Public</span></dt><dd><span data-lang="en">Meetings, presentations and community activities.</span><span data-lang="fr">Rencontres, présentations et activités communautaires.</span></dd></div>
-        <div><dt><span data-lang="en">Field</span><span data-lang="fr">Terrain</span></dt><dd><span data-lang="en">Restoration, awareness or observation activities.</span><span data-lang="fr">Activités de restauration, sensibilisation ou observation.</span></dd></div>
-        <div><dt><span data-lang="en">Partners</span><span data-lang="fr">Partenaires</span></dt><dd><span data-lang="en">Workshops, announcements and regional collaborations.</span><span data-lang="fr">Ateliers, annonces et collaborations régionales.</span></dd></div>
-      </dl>
-    </aside>
-  </section>
-
-  <section class="content-blocks">
-    <div class="content-block">
-      <h2><span data-lang="en">Upcoming events</span><span data-lang="fr">Événements à venir</span></h2>
-      <p><span data-lang="en">No public event confirmed at this time.</span><span data-lang="fr">Aucun événement public confirmé pour le moment.</span></p>
-      <p><span data-lang="en">This section can show the date, location, short description, intended audience and registration instructions once an event is validated.</span><span data-lang="fr">Cette section pourra présenter la date, le lieu, une courte description, les personnes visées et les instructions d’inscription lorsqu’un événement sera validé.</span></p>
-    </div>
-
-    <div class="content-block placeholder-block">
-      <h2><span data-lang="en">Past events</span><span data-lang="fr">Événements passés</span></h2>
-      <p><span data-lang="en">This section can keep a record of important activities: meetings, workshops, conferences, field days and community collaborations.</span><span data-lang="fr">Cette section pourra conserver une trace des activités importantes : assemblées, ateliers, conférences, journées terrain et collaborations communautaires.</span></p>
-      <div class="map-placeholder"><span data-lang="en">Calendar coming soon</span><span data-lang="fr">Calendrier à venir</span></div>
-    </div>
-  </section>
-
-  <section class="decision-prompt soft-prompt">
-    <h2><span data-lang="en">Future management</span><span data-lang="fr">Gestion future</span></h2>
-    <p><span data-lang="en">If events become frequent, the best next step will be a dedicated CMS collection so staff can add events without touching code.</span><span data-lang="fr">Si les événements deviennent fréquents, la meilleure prochaine étape sera une collection CMS dédiée afin que le personnel puisse ajouter des événements sans toucher au code.</span></p>
   </section>
 </main>
