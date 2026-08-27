@@ -179,17 +179,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
 
   <!-- ===================== IMAGE 1 ===================== -->
   <figure class="ws-fig ws-reveal">
-    <!-- Pour publier : décommentez l'image, ajustez le chemin, puis supprimez le bloc .ws-ph ci-dessous.
-    <img src="/assets/img/watershade/riviere.jpg" alt="Section ombragée de la rivière Restigouche">
-    -->
-    <div class="ws-ph">
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-        <path d="M2 12c10-8 18 8 28 0s18 8 28 0 18 8 20 6"/>
-        <path d="M2 24c10-8 18 8 28 0s18 8 28 0 18 8 20 6"/>
-      </svg>
-      <span class="tag">Image à venir</span>
-      <p class="desc">Rivière ombragée, bande riveraine boisée ou paysage représentatif de la Restigouche.</p>
-    </div>
+    <img src="{{ '/assets/img/watershade/watershade1.webp' | relative_url }}" alt="Section ombragée de la rivière Restigouche">
     <figcaption>Une rivière en santé et des berges boisées : la première ligne de défense des refuges d’eau froide.</figcaption>
   </figure>
 
@@ -242,17 +232,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
 
   <!-- ===================== IMAGE 2 ===================== -->
   <figure class="ws-fig ws-reveal">
-    <!-- Pour publier : décommentez l'image, ajustez le chemin, puis supprimez le bloc .ws-ph ci-dessous.
-    <img src="/assets/img/watershade/bassin.jpg" alt="Vue d'ensemble du bassin versant de la Restigouche">
-    -->
-    <div class="ws-ph">
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-        <path d="M2 12c10-8 18 8 28 0s18 8 28 0 18 8 20 6"/>
-        <path d="M2 24c10-8 18 8 28 0s18 8 28 0 18 8 20 6"/>
-      </svg>
-      <span class="tag">Image à venir</span>
-      <p class="desc">Vue large de la rivière ou paysage aérien donnant l’échelle du bassin versant.</p>
-    </div>
+    <img src="{{ '/assets/img/watershade/watershade2.webp' | relative_url }}" alt="Vue d'ensemble du bassin versant de la Restigouche">
     <figcaption>Le bassin versant s’étend sur des milliers de kilomètres carrés, de part et d’autre de la frontière.</figcaption>
   </figure>
 
@@ -286,17 +266,7 @@ subtitle_fr: Une stratégie à l’échelle du bassin versant pour protéger les
 
   <!-- ===================== IMAGE 3 ===================== -->
   <figure class="ws-fig ws-reveal">
-    <!-- Pour publier : décommentez l'image, ajustez le chemin, puis supprimez le bloc .ws-ph ci-dessous.
-    <img src="/assets/img/watershade/terrain.jpg" alt="Travaux de terrain le long d'un cours d'eau">
-    -->
-    <div class="ws-ph">
-      <svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-        <path d="M2 12c10-8 18 8 28 0s18 8 28 0 18 8 20 6"/>
-        <path d="M2 24c10-8 18 8 28 0s18 8 28 0 18 8 20 6"/>
-      </svg>
-      <span class="tag">Image à venir</span>
-      <p class="desc">Travail en rivière : suivi de température, stabilisation de berge, plantation ou équipe sur le terrain.</p>
-    </div>
+    <img src="{{ '/assets/img/watershade/watershade3.webp' | relative_url }}" alt="Travaux de terrain le long d'un cours d'eau">
     <figcaption>Sur le terrain, la protection des refuges passe par des gestes concrets et un suivi continu.</figcaption>
   </figure>
 
