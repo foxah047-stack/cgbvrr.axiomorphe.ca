@@ -134,9 +134,25 @@ body {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(0,0,0,0.58) 0%, rgba(0,0,0,0.34) 46%, rgba(0,0,0,0.08) 100%),
-    url('../img/hero-2560.webp');
+    url('../img/hero-mobile.webp');
   background-size: cover;
   background-position: center;
+}
+
+@media (min-width: 900px) {
+  .hero-bg {
+    background-image:
+      linear-gradient(90deg, rgba(0,0,0,0.58) 0%, rgba(0,0,0,0.34) 46%, rgba(0,0,0,0.08) 100%),
+      url('../img/hero-1920.webp');
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero-bg {
+    background-image:
+      linear-gradient(90deg, rgba(0,0,0,0.58) 0%, rgba(0,0,0,0.34) 46%, rgba(0,0,0,0.08) 100%),
+      url('../img/hero-2560.webp');
+  }
 }
 
   /* River texture overlay */
