@@ -787,6 +787,7 @@ body {
   }
 
   .contact-row .info { color: var(--mist); line-height: 1.5; opacity: 0.85; }
+  .contact-row .info a { color: inherit; text-decoration: underline; }
   .contact-row .info small {
     display: block;
     font-family: 'DM Mono', monospace;
