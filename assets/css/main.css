@@ -1083,6 +1083,10 @@ body {
 .rss-link { display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.4); text-decoration: none; margin-top: 16px; letter-spacing: 0.08em; }
 .rss-link:hover { color: var(--sage); }
 
+.social-link { display: inline-flex; align-items: center; gap: 7px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-decoration: none; color: var(--river); margin-top: 12px; }
+.social-link svg { flex-shrink: 0; }
+.social-link:hover { color: var(--moss); }
+
 /* ── CONTACT SECTION LAYOUT ── */
 .contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 90px 60px; background: var(--charcoal); color: var(--cream); align-items: start; }
 .contact-info-block h2 { font-family: 'Playfair Display', serif; font-size: 44px; color: var(--sage); margin-bottom: 20px; }

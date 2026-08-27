@@ -9,6 +9,12 @@ permalink: /news/
     <div class="section-label"><span data-lang="en">All news</span><span data-lang="fr">Toutes les nouvelles</span></div>
     <h1><span data-lang="en">From the field</span><span data-lang="fr">Du terrain</span></h1>
     <p><span data-lang="en">Articles, field reports and conservation alerts from the Restigouche watershed.</span><span data-lang="fr">Articles, rapports de terrain et alertes de conservation du bassin versant de la Restigouche.</span></p>
+    {% if site.data.events.facebook_url %}
+    <a class="social-link" href="{{ site.data.events.facebook_url }}" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6.3" stroke="currentColor" stroke-width="1.1"/><path d="M8.6 4.6H7.7c-.5 0-.7.2-.7.7v1h1.6l-.2 1.4H7v3.6H5.5V7.7H4.4V6.3h1.1V5.2c0-1.1.6-1.8 1.8-1.8h1.3v1.2Z" fill="currentColor"/></svg>
+      <span data-lang="en">Follow us on Facebook</span><span data-lang="fr">Suivez-nous sur Facebook</span>
+    </a>
+    {% endif %}
   </div>
 
   <div class="news-listing-grid">
