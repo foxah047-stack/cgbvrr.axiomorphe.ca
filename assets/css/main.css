@@ -613,6 +613,17 @@ body {
     padding: 28px;
     border-radius: 0 0 4px 4px;
     transition: background 0.2s, transform 0.2s;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .project-card:link,
+  .project-card:visited,
+  .project-card:hover,
+  .project-card:active {
+    text-decoration: none;
+    color: inherit;
   }
 
   .project-card:hover {
