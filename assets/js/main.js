@@ -13,6 +13,9 @@ function preferredDisplay(el) {
   if (forced) return forced;
 
   const tag = el.tagName;
+  if (tag === 'SMALL' && el.parentElement && el.parentElement.closest('.nav-panel-links')) {
+    return 'block';
+  }
   if (tag === 'SPAN' || tag === 'EM' || tag === 'STRONG' || tag === 'SMALL' || tag === 'B' || tag === 'I') {
     return 'inline';
   }
